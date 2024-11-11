@@ -17,6 +17,8 @@ github-repo: rstudio/bookdown-demo
 
 # Introduction to RStudio and Bookdown
 
+JUST MAKING SURE THESE CHANGES GET PROPERLY PUSHED
+
 This is a _tutorial_ book written in **Markdown** via the RStudio package Bookdown. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
 
 ## Why RStudio and Bookdown?
