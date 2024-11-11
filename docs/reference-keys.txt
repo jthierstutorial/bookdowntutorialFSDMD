@@ -23,3 +23,12 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
+drought-in-california
+introduction
+types-of-droughts
+causes-of-drought-in-california
+socioeconomic-impacts
+wildfire-risk
+climate-change-and-drought
+mitigation-strategies
+conclusion

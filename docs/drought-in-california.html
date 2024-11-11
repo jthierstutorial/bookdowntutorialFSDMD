@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Drought in California | Bookdown: Flexible Document Creation in RStudio</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Drought in California | Bookdown: Flexible Document Creation in RStudio" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/Bookcover.png" />
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Drought in California | Bookdown: Flexible Document Creation in RStudio" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="twitter:image" content="/images/Bookcover.png" />
+
+<meta name="author" content="Joseph Thiers" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="references.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to RStudio and Bookdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-rstudio-and-bookdown"><i class="fa fa-check"></i><b>1.1</b> Why RStudio and Bookdown?</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a>
+<ul>
+<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>4</b> Parts</a></li>
+<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
+<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
+<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
+<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
+<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="8" data-path="drought-in-california.html"><a href="drought-in-california.html"><i class="fa fa-check"></i><b>8</b> Drought in California</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="drought-in-california.html"><a href="drought-in-california.html#introduction"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="drought-in-california.html"><a href="drought-in-california.html#types-of-droughts"><i class="fa fa-check"></i><b>8.2</b> Types of Droughts</a></li>
+<li class="chapter" data-level="8.3" data-path="drought-in-california.html"><a href="drought-in-california.html#causes-of-drought-in-california"><i class="fa fa-check"></i><b>8.3</b> Causes of Drought in California</a></li>
+<li class="chapter" data-level="8.4" data-path="drought-in-california.html"><a href="drought-in-california.html#socioeconomic-impacts"><i class="fa fa-check"></i><b>8.4</b> Socioeconomic Impacts</a></li>
+<li class="chapter" data-level="8.5" data-path="drought-in-california.html"><a href="drought-in-california.html#wildfire-risk"><i class="fa fa-check"></i><b>8.5</b> Wildfire Risk</a></li>
+<li class="chapter" data-level="8.6" data-path="drought-in-california.html"><a href="drought-in-california.html#climate-change-and-drought"><i class="fa fa-check"></i><b>8.6</b> Climate Change and Drought</a></li>
+<li class="chapter" data-level="8.7" data-path="drought-in-california.html"><a href="drought-in-california.html#mitigation-strategies"><i class="fa fa-check"></i><b>8.7</b> Mitigation Strategies</a></li>
+<li class="chapter" data-level="8.8" data-path="drought-in-california.html"><a href="drought-in-california.html#conclusion"><i class="fa fa-check"></i><b>8.8</b> Conclusion</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bookdown: Flexible Document Creation in RStudio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="drought-in-california" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Drought in California<a href="drought-in-california.html#drought-in-california" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Introduction<a href="drought-in-california.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Droughts in California are a critical environmental issue that affects the state’s water availability, agricultural sectors, and overall economy. California is known for its agricultural products and growing population, but it is also known for frequent droughts that have severely impacted the state’s water resources. With the effects of climate change continuing to alter global weather patterns, droughts in the state are becoming more frequent and intense. These changes not only threaten the stability of California’s agriculture but also jeopardize the water supply for millions of residents, leading to severe economic and environmental consequences. Additionally, droughts increase the risk of wildfires, which can cause widespread destruction and further strain water resources. In order to better understand drought in California, this chapter will explore the phenomenon of drought by focusing on its causes, socioeconomic impacts, effects on wildfires, the links between climate change and drought, and potential mitigation strategies.</p>
+</div>
+<div id="types-of-droughts" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Types of Droughts<a href="drought-in-california.html#types-of-droughts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Droughts occur when there is a prolonged period of inadequate rainfall, resulting in a water shortage that impacts agricultural water supplies, municipal water systems, and natural ecosystems. Several types of droughts affect different aspects of the environment and society:</p>
+<ul>
+<li><strong>Meteorological drought</strong>: A deficiency in precipitation over a specific period, often measured against long-term regional averages, and typically the first indicator of drought conditions.</li>
+<li><strong>Agricultural drought</strong>: Occurs when insufficient soil moisture affects crop growth and yields, threatening food production and farming livelihoods.</li>
+<li><strong>Hydrological drought</strong>: Involves the depletion of water resources in rivers, lakes, reservoirs, and groundwater systems, often following extended meteorological drought periods, with significant consequences for irrigation, drinking water supplies, and industrial uses.</li>
+<li><strong>Socioeconomic drought</strong>: Arises when the demand for water exceeds the available supply, leading to economic disruptions, particularly in water-dependent sectors like agriculture and energy.</li>
+<li><strong>Ecological drought</strong>: Impacts ecosystem health, resulting in biodiversity loss, habitat disruption, and changes in ecosystem functions due to prolonged water shortages.</li>
+</ul>
+<p>In recent years, flash droughts, where conditions rapidly worsen due to rising temperatures, have become more frequent as a result of global climate change <span class="citation">(<a href="#ref-walker2023">Walker and Van 2023</a>)</span>.</p>
+</div>
+<div id="causes-of-drought-in-california" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Causes of Drought in California<a href="drought-in-california.html#causes-of-drought-in-california" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The causes of drought in California are multifaceted, involving both natural and anthropogenic factors. One primary natural cause is Pacific Sea surface temperature anomalies, which lead to persistent high-pressure systems that block rainstorms from reaching the state. This phenomenon disrupts atmospheric circulation and reduces precipitation across California, creating prolonged dry periods <span class="citation">(<a href="#ref-wei2016">Wei et al. 2016</a>)</span>. However, human-induced climate change has also significantly contributed to the severity of these droughts. Between 2012 and 2014, anthropogenic warming was estimated to account for 8-27% of the drought conditions experienced in California, exacerbating the natural variability of drought patterns in the region <span class="citation">(<a href="#ref-williams2015">Williams et al. 2015</a>)</span>. This combination of natural variability and human-induced changes has not only increased the frequency, length, and intensity of droughts but has also strained the state’s water infrastructure.</p>
+</div>
+<div id="socioeconomic-impacts" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Socioeconomic Impacts<a href="drought-in-california.html#socioeconomic-impacts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The socio-economic impacts of drought in California are profound. California’s agricultural industry is highly dependent on easily available water, but during periods of drought, it suffers significant losses. For instance, the 2015 drought led to a reduction of 2.6 million acre-feet in water supply and an economic loss of $1.8 billion. This caused approximately 564,000 acres of farmland to be fallowed, directly impacting agricultural revenues and employment <span class="citation">(<a href="#ref-sumner2015">Sumner et al. 2015</a>)</span>. The drought also highlighted inequalities in water access, with rural communities in agricultural regions, such as Tulare County, being disproportionately affected. These communities experienced domestic well failures, emphasizing the social aspect of water scarcity in the state <span class="citation">(<a href="#ref-pompeii2020">Pompeii 2020</a>)</span>. Environmental impacts are another significant concern, as droughts increase wildfire risks and degrade ecosystems dependent on adequate water supplies. Reduced water levels in rivers, lakes, and reservoirs also threaten fish and aquatic populations, leading to long-term ecological consequences.</p>
+</div>
+<div id="wildfire-risk" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Wildfire Risk<a href="drought-in-california.html#wildfire-risk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One of the most significant effects of prolonged drought in California is the increased frequency and intensity of wildfires. Droughts create dry conditions, causing vegetation like grasses and trees to lose moisture and become more flammable. Without adequate rainfall, even typically fire-resistant plants dry out, providing fuel for wildfires. According to <span class="citation">Westerling and Disclaimer (<a href="#ref-westerling2019">2019</a>)</span>, a significant portion of forest fires in the western United States can be linked to drought, which has extended fire seasons and increased the areas burned. Drought-induced wildfires have devastating effects on both the environment and human communities. They destroy homes, displace residents, and damage ecosystems while also leading to carbon emissions from burning vegetation <span class="citation">(<a href="#ref-abatzoglou2016">Abatzoglou and Williams 2016</a>)</span>.</p>
+</div>
+<div id="climate-change-and-drought" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Climate Change and Drought<a href="drought-in-california.html#climate-change-and-drought" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Climate change is a major driver of the increasing frequency and severity of droughts in California. As global temperatures continue to rise, so do evaporation rates, which reduces available surface water and soil moisture. This exacerbates the conditions that cause droughts, worsening their impacts on agriculture, water resources, and ecosystems. The 2013-2014 drought in California was partially attributed to climate change, which intensified the effects of naturally occurring weather patterns, like high-pressure systems that block rainfall <span class="citation">(<a href="#ref-mao2015">Mao, Nijssen, and Lettenmaier 2015</a>)</span>.</p>
+</div>
+<div id="mitigation-strategies" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Mitigation Strategies<a href="drought-in-california.html#mitigation-strategies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>California has implemented a range of strategies to mitigate the impacts of drought, focusing on both immediate responses and long-term solutions. Water conservation, wastewater recycling, and water transfers are among the most commonly used methods. Conservation efforts, such as public water-use restrictions and the promotion of water-efficient technologies in households and agriculture, play a significant role in reducing water demand during drought periods. Wastewater recycling, in particular, has been gaining traction as a long-term solution, although it continues to face political and public resistance <span class="citation">(<a href="#ref-keavney2022">Keavney 2022</a>)</span>. Water transfers, which involve reallocating water from one region to another, provide flexibility in water management, helping to address shortages where they are most acute. Replenishing groundwater aquifers is another critical strategy, as aquifer depletion during droughts can lead to long-term water scarcity. Managed aquifer recharge (MAR) initiatives, which involve intentionally refilling underground aquifers during wet periods, are increasingly recognized as a sustainable way to bolster water supplies for future droughts. During the 2012-2016 drought, ranchers in California adapted by employing more proactive drought management practices, such as drip irrigation and efficient water delivery systems, which were shaped by their past experiences with severe droughts <span class="citation">(<a href="#ref-woodmansee2021">Woodmansee et al. 2021</a>)</span>.</p>
+</div>
+<div id="conclusion" class="section level2 hasAnchor" number="8.8">
+<h2><span class="header-section-number">8.8</span> Conclusion<a href="drought-in-california.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Drought in California represents a vast and complex challenge that affects all aspects of life in the state, from agriculture to urban water supplies. The causes of drought are both natural and human-induced, showing a need for a comprehensive approach in addressing it. Climate change continues to play a critical role in exacerbating drought conditions, while the socio-economic impacts of drought are severe, particularly in rural agricultural communities and ecosystems that depend on reliable water supplies. Moving forward, a combination of policy reform, technological innovation, public engagement, and enhanced infrastructure for groundwater replenishment and water recycling will be crucial in addressing California’s long-term water challenges.</p>
+
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div class="csl-entry">
+Abatzoglou, J. T., and A. P. Williams. 2016. <span>“Impact of Anthropogenic Climate Change on Wildfire Across Western US Forests.”</span> <em>Proceedings of the National Academy of Sciences</em> 113 (42): 11770–75. <a href="https://doi.org/10.1073/pnas.1607171113">https://doi.org/10.1073/pnas.1607171113</a>.
+</div>
+<div class="csl-entry">
+Keavney, E. 2022. <span>“A Comparison of Strategies Used and Considered to Mitigate Droughts in California.”</span> <em>Applied Water Science</em> 12 (9). <a href="https://doi.org/10.1007/s13201-022-01744-x">https://doi.org/10.1007/s13201-022-01744-x</a>.
+</div>
+<div class="csl-entry">
+Mao, Y., B. Nijssen, and D. P. Lettenmaier. 2015. <span>“Is Climate Change Implicated in the 2013-2014 California Drought? A Hydrologic Perspective.”</span> <em>Geophysical Research Letters</em> 42 (8): 2805–13. <a href="https://doi.org/10.1002/2015gl063456">https://doi.org/10.1002/2015gl063456</a>.
+</div>
+<div class="csl-entry">
+Pompeii, B. 2020. <span>“The Social Production of the Great California Drought, 2012–2017.”</span> <em>Yearbook of the Association of Pacific Coast Geographers</em> 82 (82): 15–37. <a href="https://doi.org/10.1353/pcg.2020.0002">https://doi.org/10.1353/pcg.2020.0002</a>.
+</div>
+<div class="csl-entry">
+Sumner, D. A., E. Hanak, J. Mount, J. Medellín-Azuara, J. R. Lund, R. E. Howitt, and D. MacEwan. 2015. <span>“ARE Update: Special Issue-the Economics of the Drought for California Food and Agriculture.”</span> <em>ARE Update</em> 18 (5): 1–16. <a href="https://escholarship.org/uc/item/625288kx">https://escholarship.org/uc/item/625288kx</a>.
+</div>
+<div class="csl-entry">
+Walker, D. W., and A. F. Van. 2023. <span>“Droughts Are Coming on Faster.”</span> <em>Science</em> 380 (6641): 130–32. <a href="https://doi.org/10.1126/science.adh3097">https://doi.org/10.1126/science.adh3097</a>.
+</div>
+<div class="csl-entry">
+Wei, J., Q. Jin, Z.-L. Yang, and P. A. Dirmeyer. 2016. <span>“Role of Ocean Evaporation in California Droughts and Floods.”</span> <em>Geophysical Research Letters</em> 43 (12): 6554–62. <a href="https://doi.org/10.1002/2016gl069386">https://doi.org/10.1002/2016gl069386</a>.
+</div>
+<div class="csl-entry">
+Westerling, A., and M. Disclaimer. 2019. <span>“Wildfire Simulations for California’s Fourth Climate Change Assessment: Projecting Changes in Extreme Wildfire Events with a Warming Climate.”</span> California’s Fourth Climate Change Assessment. <a href="https://www.energy.ca.gov/sites/default/files/2019-11/Projections_CCCA4-CEC-2018-014_ADA.pdf">https://www.energy.ca.gov/sites/default/files/2019-11/Projections_CCCA4-CEC-2018-014_ADA.pdf</a>.
+</div>
+<div class="csl-entry">
+Williams, A. P., R. Seager, J. T. Abatzoglou, B. I. Cook, J. E. Smerdon, and E. R. Cook. 2015. <span>“Contribution of Anthropogenic Warming to California Drought During 2012–2014.”</span> <em>Geophysical Research Letters</em> 42 (16): 6819–28. <a href="https://doi.org/10.1002/2015gl064924">https://doi.org/10.1002/2015gl064924</a>.
+</div>
+<div class="csl-entry">
+Woodmansee, G., D. Macon, T. Schohr, and L. M. Roche. 2021. <span>“On-Ranch Adaptation to California’s Historic 2012-2016 Drought.”</span> <em>Rangelands</em> 43 (6): 222–30. <a href="https://doi.org/10.1016/j.rala.2021.10.003">https://doi.org/10.1016/j.rala.2021.10.003</a>.
+</div>
+<div class="csl-entry">
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
+</div>
+<div class="csl-entry">
+———. 2024. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-abatzoglou2016" class="csl-entry">
+Abatzoglou, J. T., and A. P. Williams. 2016. <span>“Impact of Anthropogenic Climate Change on Wildfire Across Western US Forests.”</span> <em>Proceedings of the National Academy of Sciences</em> 113 (42): 11770–75. <a href="https://doi.org/10.1073/pnas.1607171113">https://doi.org/10.1073/pnas.1607171113</a>.
+</div>
+<div id="ref-keavney2022" class="csl-entry">
+Keavney, E. 2022. <span>“A Comparison of Strategies Used and Considered to Mitigate Droughts in California.”</span> <em>Applied Water Science</em> 12 (9). <a href="https://doi.org/10.1007/s13201-022-01744-x">https://doi.org/10.1007/s13201-022-01744-x</a>.
+</div>
+<div id="ref-mao2015" class="csl-entry">
+Mao, Y., B. Nijssen, and D. P. Lettenmaier. 2015. <span>“Is Climate Change Implicated in the 2013-2014 California Drought? A Hydrologic Perspective.”</span> <em>Geophysical Research Letters</em> 42 (8): 2805–13. <a href="https://doi.org/10.1002/2015gl063456">https://doi.org/10.1002/2015gl063456</a>.
+</div>
+<div id="ref-pompeii2020" class="csl-entry">
+Pompeii, B. 2020. <span>“The Social Production of the Great California Drought, 2012–2017.”</span> <em>Yearbook of the Association of Pacific Coast Geographers</em> 82 (82): 15–37. <a href="https://doi.org/10.1353/pcg.2020.0002">https://doi.org/10.1353/pcg.2020.0002</a>.
+</div>
+<div id="ref-sumner2015" class="csl-entry">
+Sumner, D. A., E. Hanak, J. Mount, J. Medellín-Azuara, J. R. Lund, R. E. Howitt, and D. MacEwan. 2015. <span>“ARE Update: Special Issue-the Economics of the Drought for California Food and Agriculture.”</span> <em>ARE Update</em> 18 (5): 1–16. <a href="https://escholarship.org/uc/item/625288kx">https://escholarship.org/uc/item/625288kx</a>.
+</div>
+<div id="ref-walker2023" class="csl-entry">
+Walker, D. W., and A. F. Van. 2023. <span>“Droughts Are Coming on Faster.”</span> <em>Science</em> 380 (6641): 130–32. <a href="https://doi.org/10.1126/science.adh3097">https://doi.org/10.1126/science.adh3097</a>.
+</div>
+<div id="ref-wei2016" class="csl-entry">
+Wei, J., Q. Jin, Z.-L. Yang, and P. A. Dirmeyer. 2016. <span>“Role of Ocean Evaporation in California Droughts and Floods.”</span> <em>Geophysical Research Letters</em> 43 (12): 6554–62. <a href="https://doi.org/10.1002/2016gl069386">https://doi.org/10.1002/2016gl069386</a>.
+</div>
+<div id="ref-westerling2019" class="csl-entry">
+Westerling, A., and M. Disclaimer. 2019. <span>“Wildfire Simulations for California’s Fourth Climate Change Assessment: Projecting Changes in Extreme Wildfire Events with a Warming Climate.”</span> California’s Fourth Climate Change Assessment. <a href="https://www.energy.ca.gov/sites/default/files/2019-11/Projections_CCCA4-CEC-2018-014_ADA.pdf">https://www.energy.ca.gov/sites/default/files/2019-11/Projections_CCCA4-CEC-2018-014_ADA.pdf</a>.
+</div>
+<div id="ref-williams2015" class="csl-entry">
+Williams, A. P., R. Seager, J. T. Abatzoglou, B. I. Cook, J. E. Smerdon, and E. R. Cook. 2015. <span>“Contribution of Anthropogenic Warming to California Drought During 2012–2014.”</span> <em>Geophysical Research Letters</em> 42 (16): 6819–28. <a href="https://doi.org/10.1002/2015gl064924">https://doi.org/10.1002/2015gl064924</a>.
+</div>
+<div id="ref-woodmansee2021" class="csl-entry">
+Woodmansee, G., D. Macon, T. Schohr, and L. M. Roche. 2021. <span>“On-Ranch Adaptation to California’s Historic 2012-2016 Drought.”</span> <em>Rangelands</em> 43 (6): 222–30. <a href="https://doi.org/10.1016/j.rala.2021.10.003">https://doi.org/10.1016/j.rala.2021.10.003</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-drought-california.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"output_dir": "docs"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

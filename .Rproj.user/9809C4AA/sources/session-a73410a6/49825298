@@ -3,7 +3,7 @@
     "path": "~/Documents/School/Bookdown Tutorial/06-share.Rmd",
     "project_path": "06-share.Rmd",
     "type": "r_markdown",
-    "hash": "3568437921",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1730918198700.0,
@@ -11,7 +11,9 @@
     "relative_order": 9,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "3,0",
+        "scrollLine": "0"
     },
     "folds": "",
     "lastKnownWriteTime": 1730917897,

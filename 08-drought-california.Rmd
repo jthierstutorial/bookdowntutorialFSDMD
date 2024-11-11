@@ -1,0 +1,41 @@
+# Drought in California
+
+## Introduction
+
+Droughts in California are a critical environmental issue that affects the state’s water availability, agricultural sectors, and overall economy. California is known for its agricultural products and growing population, but it is also known for frequent droughts that have severely impacted the state’s water resources. With the effects of climate change continuing to alter global weather patterns, droughts in the state are becoming more frequent and intense. These changes not only threaten the stability of California’s agriculture but also jeopardize the water supply for millions of residents, leading to severe economic and environmental consequences. Additionally, droughts increase the risk of wildfires, which can cause widespread destruction and further strain water resources. In order to better understand drought in California, this chapter will explore the phenomenon of drought by focusing on its causes, socioeconomic impacts, effects on wildfires, the links between climate change and drought, and potential mitigation strategies.
+
+## Types of Droughts
+
+Droughts occur when there is a prolonged period of inadequate rainfall, resulting in a water shortage that impacts agricultural water supplies, municipal water systems, and natural ecosystems. Several types of droughts affect different aspects of the environment and society:
+
+- **Meteorological drought**: A deficiency in precipitation over a specific period, often measured against long-term regional averages, and typically the first indicator of drought conditions.
+- **Agricultural drought**: Occurs when insufficient soil moisture affects crop growth and yields, threatening food production and farming livelihoods.
+- **Hydrological drought**: Involves the depletion of water resources in rivers, lakes, reservoirs, and groundwater systems, often following extended meteorological drought periods, with significant consequences for irrigation, drinking water supplies, and industrial uses.
+- **Socioeconomic drought**: Arises when the demand for water exceeds the available supply, leading to economic disruptions, particularly in water-dependent sectors like agriculture and energy.
+- **Ecological drought**: Impacts ecosystem health, resulting in biodiversity loss, habitat disruption, and changes in ecosystem functions due to prolonged water shortages.
+
+In recent years, flash droughts, where conditions rapidly worsen due to rising temperatures, have become more frequent as a result of global climate change [@walker2023].
+
+## Causes of Drought in California
+
+The causes of drought in California are multifaceted, involving both natural and anthropogenic factors. One primary natural cause is Pacific Sea surface temperature anomalies, which lead to persistent high-pressure systems that block rainstorms from reaching the state. This phenomenon disrupts atmospheric circulation and reduces precipitation across California, creating prolonged dry periods [@wei2016]. However, human-induced climate change has also significantly contributed to the severity of these droughts. Between 2012 and 2014, anthropogenic warming was estimated to account for 8-27% of the drought conditions experienced in California, exacerbating the natural variability of drought patterns in the region [@williams2015]. This combination of natural variability and human-induced changes has not only increased the frequency, length, and intensity of droughts but has also strained the state's water infrastructure.
+
+## Socioeconomic Impacts
+
+The socio-economic impacts of drought in California are profound. California's agricultural industry is highly dependent on easily available water, but during periods of drought, it suffers significant losses. For instance, the 2015 drought led to a reduction of 2.6 million acre-feet in water supply and an economic loss of $1.8 billion. This caused approximately 564,000 acres of farmland to be fallowed, directly impacting agricultural revenues and employment [@sumner2015]. The drought also highlighted inequalities in water access, with rural communities in agricultural regions, such as Tulare County, being disproportionately affected. These communities experienced domestic well failures, emphasizing the social aspect of water scarcity in the state [@pompeii2020]. Environmental impacts are another significant concern, as droughts increase wildfire risks and degrade ecosystems dependent on adequate water supplies. Reduced water levels in rivers, lakes, and reservoirs also threaten fish and aquatic populations, leading to long-term ecological consequences.
+
+## Wildfire Risk
+
+One of the most significant effects of prolonged drought in California is the increased frequency and intensity of wildfires. Droughts create dry conditions, causing vegetation like grasses and trees to lose moisture and become more flammable. Without adequate rainfall, even typically fire-resistant plants dry out, providing fuel for wildfires. According to @westerling2019, a significant portion of forest fires in the western United States can be linked to drought, which has extended fire seasons and increased the areas burned. Drought-induced wildfires have devastating effects on both the environment and human communities. They destroy homes, displace residents, and damage ecosystems while also leading to carbon emissions from burning vegetation [@abatzoglou2016].
+
+## Climate Change and Drought
+
+Climate change is a major driver of the increasing frequency and severity of droughts in California. As global temperatures continue to rise, so do evaporation rates, which reduces available surface water and soil moisture. This exacerbates the conditions that cause droughts, worsening their impacts on agriculture, water resources, and ecosystems. The 2013-2014 drought in California was partially attributed to climate change, which intensified the effects of naturally occurring weather patterns, like high-pressure systems that block rainfall [@mao2015].
+
+## Mitigation Strategies
+
+California has implemented a range of strategies to mitigate the impacts of drought, focusing on both immediate responses and long-term solutions. Water conservation, wastewater recycling, and water transfers are among the most commonly used methods. Conservation efforts, such as public water-use restrictions and the promotion of water-efficient technologies in households and agriculture, play a significant role in reducing water demand during drought periods. Wastewater recycling, in particular, has been gaining traction as a long-term solution, although it continues to face political and public resistance [@keavney2022]. Water transfers, which involve reallocating water from one region to another, provide flexibility in water management, helping to address shortages where they are most acute. Replenishing groundwater aquifers is another critical strategy, as aquifer depletion during droughts can lead to long-term water scarcity. Managed aquifer recharge (MAR) initiatives, which involve intentionally refilling underground aquifers during wet periods, are increasingly recognized as a sustainable way to bolster water supplies for future droughts. During the 2012-2016 drought, ranchers in California adapted by employing more proactive drought management practices, such as drip irrigation and efficient water delivery systems, which were shaped by their past experiences with severe droughts [@woodmansee2021].
+
+## Conclusion
+
+Drought in California represents a vast and complex challenge that affects all aspects of life in the state, from agriculture to urban water supplies. The causes of drought are both natural and human-induced, showing a need for a comprehensive approach in addressing it. Climate change continues to play a critical role in exacerbating drought conditions, while the socio-economic impacts of drought are severe, particularly in rural agricultural communities and ecosystems that depend on reliable water supplies. Moving forward, a combination of policy reform, technological innovation, public engagement, and enhanced infrastructure for groundwater replenishment and water recycling will be crucial in addressing California’s long-term water challenges.
