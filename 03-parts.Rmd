@@ -1,12 +1,151 @@
-# Parts
+# Customizing Output
 
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file. 
+In this chapter, we’ll explore how to customize the output of your Bookdown project. Bookdown supports several output formats, such as HTML, PDF, and EPUB, and allows you to customize each format to match your project’s needs. We’ll cover choosing output formats, modifying appearance, and configuring output settings.
 
-Add a numbered part: `# (PART) Act one {-}` (followed by `# A chapter`)
+## Choosing an Output Format
 
-Add an unnumbered part: `# (PART\*) Act one {-}` (followed by `# A chapter`)
+Bookdown provides multiple output formats that allow you to publish your document in various ways:
 
-Add an appendix as a special kind of un-numbered part: `# (APPENDIX) Other stuff {-}` (followed by `# A chapter`). Chapters in an appendix are prepended with letters instead of numbers.
+- **HTML**: Ideal for online documentation or sharing on the web.
+- **PDF**: Useful for print-ready documents, especially for academic or professional reports.
+- **EPUB**: E-book format, compatible with e-readers for mobile access.
 
+To specify output formats, edit the `_output.yml` file in your project directory. Here’s an example configuration:
 
+```yaml
+bookdown::gitbook:
+  css: "style.css"
+  split_by: "chapter"
+
+bookdown::pdf_book:
+  latex_engine: xelatex
+  citation_package: natbib
+
+bookdown::epub_book: default
+```
+
+This configuration tells Bookdown to create HTML (using GitBook style), PDF, and EPUB formats. Customize each format’s settings to control the output style.
+
+## Customizing HTML Output
+
+To customize the HTML format, Bookdown offers the `bookdown::gitbook` and `bookdown::html_document2` options:
+
+- **GitBook**: The default HTML style, which includes a side navigation bar and a search function. This format is ideal for online documentation.
+- **HTML Document**: A simpler format without the sidebar, suitable for single-page reports.
+
+You can adjust HTML settings in `_output.yml`:
+
+```yaml
+bookdown::gitbook:
+  css: "style.css"
+  config:
+    toc:
+      collapse: section
+    download: ["pdf", "epub"]
+```
+
+## Customizing the HTML Appearance
+
+If you want to style your HTML output further, create a `style.css` file and link it in `_output.yml`. Here’s an example of CSS customization:
+
+```css
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #2A7AE2;
+}
+
+code {
+  background-color: #f5f5f5;
+  padding: 3px;
+}
+```
+
+This CSS will apply a custom font, change the color of headers, and style code blocks.
+
+## Customizing PDF Output
+
+To generate a high-quality PDF, you’ll need to install a LaTeX distribution like TinyTeX. If not already installed, you can do so in R:
+
+```r
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+
+In `_output.yml`, you can specify options to control PDF formatting:
+
+```yaml
+bookdown::pdf_book:
+  latex_engine: xelatex
+  citation_package: natbib
+```
+
+- **`latex_engine`**: Specifies the LaTeX engine (e.g., `xelatex`, `pdflatex`). Using `xelatex` improves font compatibility.
+- **`citation_package`**: Choose between `natbib` or `biblatex` for handling citations.
+
+## Customizing the PDF Appearance
+
+PDF customization often involves LaTeX commands. You can define appearance settings by adding a `preamble.tex` file and linking it in `_output.yml`:
+
+```yaml
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+```
+
+For example, to adjust line spacing and font size in `preamble.tex`:
+
+```tex
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{geometry}
+\geometry{margin=1in}
+```
+
+This customization adjusts the line spacing to 1.5 and sets the page margins to 1 inch.
+
+## Customizing EPUB Output
+
+To create an EPUB e-book, use `bookdown::epub_book` in `_output.yml`. Bookdown handles most EPUB formatting automatically, but you can make some modifications:
+
+```yaml
+bookdown::epub_book:
+  stylesheet: "style.css"
+  cover_image: "images/cover.jpg"
+  toc: yes
+```
+
+This configuration adds a cover image, applies the CSS stylesheet, and includes a table of contents.
+
+## Specifying Global Settings in `_bookdown.yml`
+
+The `_bookdown.yml` file allows you to set global configurations, such as the order of chapters, the naming convention for output files, and the label format for figures and tables. Here’s an example:
+
+```yaml
+book_filename: "my-book"
+rmd_files: ["index.Rmd", "01-introduction.Rmd", "02-writing-structuring-content.Rmd", "03-customizing-output.Rmd"]
+language:
+  label:
+    fig: "Figure "
+    tab: "Table "
+delete_merged_file: true
+```
+
+- **`book_filename`**: Sets the base filename for output files.
+- **`rmd_files`**: Specifies the order of chapters.
+- **`language.label`**: Customizes labels for figures and tables.
+- **`delete_merged_file`**: Deletes intermediary files after rendering, keeping the directory clean.
+
+## Example Output
+
+To render all formats simultaneously, you can use the `render_book()` function in the R console:
+
+```r
+bookdown::render_book("index.Rmd", output_format = "all")
+```
+
+This command generates HTML, PDF, and EPUB files as specified in `_output.yml`.
 

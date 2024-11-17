@@ -1,4 +1,15 @@
-h1:footnotes-and-citations Footnotes and citations
-h2:footnotes Footnotes
-h2:citations Citations
+h1:advanced-features-and-practical-example Advanced Features and Practical Example
+h2:adding-citations-and-managing-references Adding Citations and Managing References
+h3:step-1-create-a-.bib-file Step 1: Create a  File
+h3:step-2-link-the-.bib-file-in-index.rmd Step 2: Link the  File in 
+h3:step-3-cite-sources-in-your-text Step 3: Cite Sources in Your Text
+h3:step-4-customize-citation-style-optional Step 4: Customize Citation Style (Optional)
+h2:using-cross-references-with-citations Using Cross-References with Citations
+h2:practical-example-incorporating-an-existing-paper Practical Example: Incorporating an Existing Paper
+h3:step-1-import-the-document-content Step 1: Import the Document Content
+h3:step-2-add-figures-and-tables Step 2: Add Figures and Tables
+h3:step-3-integrate-citations Step 3: Integrate Citations
+h3:step-4-create-a-table-of-contents-and-links Step 4: Create a Table of Contents and Links
+h2:example-output-and-render-settings Example Output and Render Settings
+h2:conclusion Conclusion
 

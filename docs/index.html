@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bookdown: Flexible Document Creation in RStudio</title>
-  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+  <meta name="description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
@@ -13,7 +13,7 @@ set in the _output.yml file.</p>" />
   <meta property="og:title" content="Bookdown: Flexible Document Creation in RStudio" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/Bookcover.png" />
-  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+  <meta property="og:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -21,7 +21,7 @@ set in the _output.yml file.</p>" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Bookdown: Flexible Document Creation in RStudio" />
   
-  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+  <meta name="twitter:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="twitter:image" content="/images/Bookcover.png" />
@@ -36,7 +36,7 @@ set in the _output.yml file.</p>" />
   
   
 
-<link rel="next" href="hello-bookdown.html"/>
+<link rel="next" href="writing-and-structuring-content.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -171,14 +171,23 @@ div.csl-indent {
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to RStudio and Bookdown</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-rstudio-and-bookdown"><i class="fa fa-check"></i><b>1.1</b> Why RStudio and Bookdown?</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#what-youll-learn-in-this-tutorial"><i class="fa fa-check"></i><b>1.2</b> What You’ll Learn in This Tutorial</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#getting-started"><i class="fa fa-check"></i><b>1.3</b> Getting Started</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
+<li class="chapter" data-level="2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html"><i class="fa fa-check"></i><b>2</b> Writing and Structuring Content</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a>
+<li class="chapter" data-level="2.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#creatingchapters"><i class="fa fa-check"></i><b>2.1</b> Creating Chapters and Sections</a></li>
+<li class="chapter" data-level="2.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-sections-and-subsections"><i class="fa fa-check"></i><b>2.2</b> Adding Sections and Subsections</a></li>
+<li class="chapter" data-level="2.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#formatting-text-in-bookdown"><i class="fa fa-check"></i><b>2.3</b> Formatting Text in Bookdown</a></li>
+<li class="chapter" data-level="2.4" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-code-chunks"><i class="fa fa-check"></i><b>2.4</b> Adding Code Chunks</a>
 <ul>
-<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+<li class="chapter" data-level="2.4.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#customizing-code-chunk-options"><i class="fa fa-check"></i><b>2.4.1</b> Customizing Code Chunk Options</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections-figures-and-tables"><i class="fa fa-check"></i><b>2.5</b> Cross-Referencing Sections, Figures, and Tables</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections"><i class="fa fa-check"></i><b>2.5.1</b> Cross-Referencing Sections</a></li>
+<li class="chapter" data-level="2.5.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-figures"><i class="fa fa-check"></i><b>2.5.2</b> Cross-Referencing Figures</a></li>
+<li class="chapter" data-level="2.5.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-tables"><i class="fa fa-check"></i><b>2.5.3</b> Cross-Referencing Tables</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
@@ -186,11 +195,36 @@ div.csl-indent {
 <li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
 <li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>4</b> Parts</a></li>
-<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<li class="chapter" data-level="4" data-path="customizing-output.html"><a href="customizing-output.html"><i class="fa fa-check"></i><b>4</b> Customizing Output</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
-<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+<li class="chapter" data-level="4.1" data-path="customizing-output.html"><a href="customizing-output.html#choosing-an-output-format"><i class="fa fa-check"></i><b>4.1</b> Choosing an Output Format</a></li>
+<li class="chapter" data-level="4.2" data-path="customizing-output.html"><a href="customizing-output.html#customizing-html-output"><i class="fa fa-check"></i><b>4.2</b> Customizing HTML Output</a></li>
+<li class="chapter" data-level="4.3" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-html-appearance"><i class="fa fa-check"></i><b>4.3</b> Customizing the HTML Appearance</a></li>
+<li class="chapter" data-level="4.4" data-path="customizing-output.html"><a href="customizing-output.html#customizing-pdf-output"><i class="fa fa-check"></i><b>4.4</b> Customizing PDF Output</a></li>
+<li class="chapter" data-level="4.5" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-pdf-appearance"><i class="fa fa-check"></i><b>4.5</b> Customizing the PDF Appearance</a></li>
+<li class="chapter" data-level="4.6" data-path="customizing-output.html"><a href="customizing-output.html#customizing-epub-output"><i class="fa fa-check"></i><b>4.6</b> Customizing EPUB Output</a></li>
+<li class="chapter" data-level="4.7" data-path="customizing-output.html"><a href="customizing-output.html#specifying-global-settings-in-_bookdown.yml"><i class="fa fa-check"></i><b>4.7</b> Specifying Global Settings in <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="4.8" data-path="customizing-output.html"><a href="customizing-output.html#example-output"><i class="fa fa-check"></i><b>4.8</b> Example Output</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html"><i class="fa fa-check"></i><b>5</b> Advanced Features and Practical Example</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#adding-citations-and-managing-references"><i class="fa fa-check"></i><b>5.1</b> Adding Citations and Managing References</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-create-a-.bib-file"><i class="fa fa-check"></i><b>5.1.1</b> Step 1: Create a <code>.bib</code> File</a></li>
+<li class="chapter" data-level="5.1.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-link-the-.bib-file-in-index.rmd"><i class="fa fa-check"></i><b>5.1.2</b> Step 2: Link the <code>.bib</code> File in <code>index.Rmd</code></a></li>
+<li class="chapter" data-level="5.1.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-cite-sources-in-your-text"><i class="fa fa-check"></i><b>5.1.3</b> Step 3: Cite Sources in Your Text</a></li>
+<li class="chapter" data-level="5.1.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-customize-citation-style-optional"><i class="fa fa-check"></i><b>5.1.4</b> Step 4: Customize Citation Style (Optional)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#using-cross-references-with-citations"><i class="fa fa-check"></i><b>5.2</b> Using Cross-References with Citations</a></li>
+<li class="chapter" data-level="5.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#practical-example-incorporating-an-existing-paper"><i class="fa fa-check"></i><b>5.3</b> Practical Example: Incorporating an Existing Paper</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-import-the-document-content"><i class="fa fa-check"></i><b>5.3.1</b> Step 1: Import the Document Content</a></li>
+<li class="chapter" data-level="5.3.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-add-figures-and-tables"><i class="fa fa-check"></i><b>5.3.2</b> Step 2: Add Figures and Tables</a></li>
+<li class="chapter" data-level="5.3.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-integrate-citations"><i class="fa fa-check"></i><b>5.3.3</b> Step 3: Integrate Citations</a></li>
+<li class="chapter" data-level="5.3.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-create-a-table-of-contents-and-links"><i class="fa fa-check"></i><b>5.3.4</b> Step 4: Create a Table of Contents and Links</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#example-output-and-render-settings"><i class="fa fa-check"></i><b>5.4</b> Example Output and Render Settings</a></li>
+<li class="chapter" data-level="5.5" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#conclusion"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
 <ul>
@@ -204,7 +238,6 @@ div.csl-indent {
 <li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
 <li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="8" data-path="drought-in-california.html"><a href="drought-in-california.html"><i class="fa fa-check"></i><b>8</b> Drought in California</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="drought-in-california.html"><a href="drought-in-california.html#introduction"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
@@ -214,8 +247,9 @@ div.csl-indent {
 <li class="chapter" data-level="8.5" data-path="drought-in-california.html"><a href="drought-in-california.html#wildfire-risk"><i class="fa fa-check"></i><b>8.5</b> Wildfire Risk</a></li>
 <li class="chapter" data-level="8.6" data-path="drought-in-california.html"><a href="drought-in-california.html#climate-change-and-drought"><i class="fa fa-check"></i><b>8.6</b> Climate Change and Drought</a></li>
 <li class="chapter" data-level="8.7" data-path="drought-in-california.html"><a href="drought-in-california.html#mitigation-strategies"><i class="fa fa-check"></i><b>8.7</b> Mitigation Strategies</a></li>
-<li class="chapter" data-level="8.8" data-path="drought-in-california.html"><a href="drought-in-california.html#conclusion"><i class="fa fa-check"></i><b>8.8</b> Conclusion</a></li>
+<li class="chapter" data-level="8.8" data-path="drought-in-california.html"><a href="drought-in-california.html#conclusion-1"><i class="fa fa-check"></i><b>8.8</b> Conclusion</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -242,38 +276,56 @@ div.csl-indent {
 </div>
 <div id="introduction-to-rstudio-and-bookdown" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction to RStudio and Bookdown<a href="index.html#introduction-to-rstudio-and-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>JUST MAKING SURE THESE CHANGES GET PROPERLY PUSHED</p>
-<p>This is a <em>tutorial</em> book written in <strong>Markdown</strong> via the RStudio package Bookdown.</p>
+<p>Welcome to this <strong>Bookdown tutorial</strong>—a guide created to introduce students, researchers, and professionals to flexible document creation within RStudio using the <code>bookdown</code> package. Bookdown is ideal for creating single-page assignments, reports, academic papers, and even full-length books that combine text, code, and visualizations.</p>
 <div id="why-rstudio-and-bookdown" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Why RStudio and Bookdown?<a href="index.html#why-rstudio-and-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As STEM majors we may be able to understand complex concepts but explaining these concepts or ideas to others can be tricky. In order to properly convey these concepts in easy to digest ways we typically lean on different options: LaTeX, Microsoft Word, Microsoft PowerPoint,</p>
-<p>Each <strong>bookdown</strong> chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter <em>must</em> start with a first-level heading: <code># A good chapter</code>, and can contain one (and only one) first-level heading.</p>
-<p>Use second-level and higher headings within chapters like: <code>## A short section</code> or <code>### An even shorter section</code>.</p>
-<p>The <code>index.Rmd</code> file is required, and is also your first book chapter. It will be the homepage when you render the book.</p>
-<p>You can also perform citations within the text. Such as I wrote a paper this semester about Drought in California for my Violent Weather classes which I wrote within RStudio and Bookdown. Here is an example of a citation directly from the bibliography I created: <span class="citation">(<a href="#ref-abatzoglou2016">Abatzoglou and Williams 2016</a>)</span></p>
+<p>Bookdown within RStudio supports dynamic, reproducible, and structured document creation. This is especially useful for students and professionals in mathematics where equations, figures, and analysis are integral to the work. While tools like LaTeX, Microsoft Word, or PowerPoint each have their strengths, Bookdown brings the unique ability to integrate text, code, data analysis, and figures in one streamlined, reproducible workflow.</p>
 </div>
-<div id="render-book" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Render book<a href="index.html#render-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You can render the HTML version of this example book without changing anything:</p>
+<div id="what-youll-learn-in-this-tutorial" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> What You’ll Learn in This Tutorial<a href="index.html#what-youll-learn-in-this-tutorial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This tutorial covers the essential aspects of using Bookdown:</p>
+<ul>
+<li><strong>Chapter 1</strong>: Setting Up Bookdown – Installing the package and configuring a Bookdown project in RStudio.</li>
+<li><strong>Chapter 2</strong>: Writing and Structuring Content – Using R Markdown syntax to create chapters, add code chunks, cross-references, and other essentials.</li>
+<li><strong>Chapter 3</strong>: Customizing Output – Exporting your book in HTML, PDF, or EPUB, along with tips on styling and configuration.</li>
+<li><strong>Chapter 4</strong>: Advanced Features and Practical Example – Integrating citations, managing references, and a full walkthrough using a real paper example.</li>
+</ul>
+</div>
+<div id="getting-started" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Getting Started<a href="index.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To get started with this tutorial, please follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li><p>Find the <strong>Build</strong> pane in the RStudio IDE, and</p></li>
-<li><p>Click on <strong>Build Book</strong>, then select your output format, or select “All formats” if you’d like to use multiple formats from the same book source files.</p></li>
+<li><p><strong>Install R</strong>:<br />
+Go to the <a href="https://cran.r-project.org/">R Project download page</a> and download the latest version of R for your operating system (Windows, macOS, or Linux). Follow the installation instructions provided.</p>
+<p><img src="images/tutorialscreenshots/installR.png" /><!-- --></p></li>
+<li><p><strong>Install RStudio</strong>:<br />
+Go to the <a href="https://posit.co/download/rstudio-desktop/">RStudio download page</a> and select the appropriate version for your operating system. Download and follow the installation instructions.</p>
+<p><img src="images/tutorialscreenshots/installRStudio.png" /><!-- --></p></li>
+<li><p><strong>Install Bookdown</strong>:<br />
+Once RStudio is installed, install the Bookdown package by typing the following command in the RStudio console:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span></code></pre></div>
+<p>Alternatively, you can install the Bookdown package via the RStudio <strong>Packages</strong> pane:</p>
+<ul>
+<li><p>Select <strong>Packages</strong> in the bottom right-hand corner of RStudio.</p>
+<p><img src="images/tutorialscreenshots/installPackage.png" /><!-- --></p></li>
+<li><p>Click <strong>Install</strong>, type <code>bookdown</code> in the <strong>Packages</strong> box, and click <strong>Install</strong>.</p>
+<p><img src="images/tutorialscreenshots/installBookdownPack.png" /><!-- --></p></li>
+</ul></li>
+<li><p><strong>Create a New Bookdown Project in RStudio</strong>:</p>
+<ul>
+<li>In RStudio, go to <strong>File &gt; New Project</strong>.</li>
+<li>Select <strong>New Directory</strong> and then <strong>Book Project using Bookdown</strong>.</li>
+<li>Name your project and choose a location to save it.</li>
+</ul></li>
+<li><p><strong>Render Your Newly Created Book</strong>:<br />
+In the <strong>Build</strong> pane:</p>
+<ul>
+<li>Select <strong>Build Book</strong> and choose your output format, or select <em>All formats</em> to render your files as HTML, PDF, and EPUB.</li>
+<li>You can also render the book directly from the R console with the following command:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>(<span class="st">&quot;index.Rmd&quot;</span>)</span></code></pre></div></li>
 </ol>
-<p>Or build the book from the R console:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
-<p>To render this example to PDF as a <code>bookdown::pdf_book</code>, you’ll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
-</div>
-<div id="preview-book" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Preview book<a href="index.html#preview-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in “Preview book”, or from the R console:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
 
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div id="ref-abatzoglou2016" class="csl-entry">
-Abatzoglou, J. T., and A. P. Williams. 2016. <span>“Impact of Anthropogenic Climate Change on Wildfire Across Western US Forests.”</span> <em>Proceedings of the National Academy of Sciences</em> 113 (42): 11770–75. <a href="https://doi.org/10.1073/pnas.1607171113">https://doi.org/10.1073/pnas.1607171113</a>.
 </div>
 </div>
             </section>
@@ -282,7 +334,7 @@ Abatzoglou, J. T., and A. P. Williams. 2016. <span>“Impact of Anthropogenic Cl
         </div>
       </div>
 
-<a href="hello-bookdown.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="writing-and-structuring-content.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

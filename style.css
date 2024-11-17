@@ -1,14 +1,28 @@
 p.caption {
-  color: #777;
+  color: red;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: blue;
   margin-top: 10px;
 }
+
 p code {
   white-space: inherit;
+  color: red;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: blue;
 }
+
 pre {
   word-break: normal;
   word-wrap: normal;
+  color: red;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: blue;
 }
+
 pre code {
   white-space: inherit;
+  color: red;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: blue;
 }

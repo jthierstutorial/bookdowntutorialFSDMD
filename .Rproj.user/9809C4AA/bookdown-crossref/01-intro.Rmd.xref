@@ -1,4 +1,13 @@
-h1:hello-bookdown Hello bookdown
-h2:a-section A section
-h3:an-unnumbered-section An unnumbered section
+h1:writing-and-structuring-content Writing and Structuring Content
+h2:creatingchapters Creating Chapters and Sections
+h2:adding-sections-and-subsections Adding Sections and Subsections
+h2:formatting-text-in-bookdown Formatting Text in Bookdown
+h2:adding-code-chunks Adding Code Chunks
+h3:customizing-code-chunk-options Customizing Code Chunk Options
+h2:cross-referencing-sections-figures-and-tables Cross-Referencing Sections, Figures, and Tables
+h3:cross-referencing-sections Cross-Referencing Sections
+h3:cross-referencing-figures Cross-Referencing Figures
+fig:speed-distance-plot A scatter plot of speed vs. distance
+h3:cross-referencing-tables Cross-Referencing Tables
+tab:cars-table Table of the first rows of the cars dataset
 
