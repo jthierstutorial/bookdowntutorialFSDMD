@@ -2,6 +2,8 @@ fig:wagecomparison
 fig:unnamed-chunk-9
 tab:cars-table
 eq:einstein
+thm:theoremlabel
+lem:lemmalabel
 tab:theorem-table
 fig:averagewage
 fig:wageyear
