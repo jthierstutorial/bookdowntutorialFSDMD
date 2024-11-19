@@ -14,6 +14,7 @@ fig:membertime
 fig:sectoremploy
 introduction
 why-rstudio-and-bookdown
+robust-documentation-and-support
 what-youll-learn-in-this-tutorial
 chapter2
 chapter3

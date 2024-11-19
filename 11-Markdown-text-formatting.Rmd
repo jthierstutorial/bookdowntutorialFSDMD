@@ -55,6 +55,10 @@ Headers are used to create section headings, and the number of `#` symbols repre
   - [x] Completed task
   - [ ] Incomplete task
   ```
+It also allows the box to be clickable.
+
+- [x] Completed task
+- [x] Incomplete task
 
 ---
 
@@ -64,7 +68,7 @@ Headers are used to create section headings, and the number of `#` symbols repre
   ```markdown
   > This is a blockquote.
   ```
-
+> This is a blockquote.
 ---
 
 ## 6. Code

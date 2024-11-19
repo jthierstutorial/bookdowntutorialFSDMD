@@ -27,6 +27,18 @@ Bookdown offers a range of benefits:
 - Simplifies the creation of reproducible and professional documents.
 - Ideal for mathematics, statistics, and data science professionals.
 
+## Robust Documentation and Support
+
+- Bookdown Documentation <https://bookdown.org/yihui/bookdown/>
+
+- R Markdown Cookbook <https://bookdown.org/yihui/rmarkdown-cookbook/>
+
+- Pandoc <https://pandoc.org/>
+
+- RStudio Bookdown Community <https://community.rstudio.com/tags/bookdown>
+
+- Gallery of Books you can Download <https://bookdown.org/home/archive/>
+
 ## What You’ll Learn in This Tutorial
 
 This tutorial will guide you through the essential aspects of using Bookdown:

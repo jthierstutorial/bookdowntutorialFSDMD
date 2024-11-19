@@ -11,7 +11,7 @@ editor: visual
 
 ## There is another way
 
-![](images/Screenshot 2024-11-19 at 3.10.09 PM.png)
+![](images/Screenshot%202024-11-19%20at%203.10.09%20PM.png)
 
 ## Introducing Bookdown
 
@@ -25,72 +25,66 @@ editor: visual
 
 ## But why Bookdown?
 
-MArkdowns better friend Pandoc allows robust markdown editing.
+Markdowns allows robust markdown editing.
 
-![](images/Screenshot%202024-11-18%20at%208.54.09%20PM.png){fig-align="center" width="453"}
+![](images/Screenshot%202024-11-19%20at%203.41.04%20PM.png){fig-align="center"}
 
 ## Seamlessly Embed Code
 
-![](images/Screenshot 2024-11-19 at 1.26.56 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%201.26.56%20PM.png){fig-align="center"}
 
 ## Including plots
 
-![](images/Screenshot 2024-11-19 at 1.30.55 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%201.30.55%20PM.png){fig-align="center"}
 
 ## Seamless LaTeX Integration
 
-![](images/Screenshot 2024-11-19 at 1.58.05 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%201.58.05%20PM.png){fig-align="center"}
 
 ## Customizable Aesthetics via CSS
 
-![](images/Screenshot 2024-11-19 at 2.09.18 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%202.09.18%20PM.png){fig-align="center" width="483"}
 
 ## CSS Edits
 
-![](images/Screenshot 2024-11-19 at 2.08.37 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%202.08.37%20PM.png){fig-align="center"}
 
 ## With LaTeX
 
-![](images/Screenshot 2024-11-19 at 2.14.12 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%202.14.12%20PM.png){fig-align="center" width="544"}
 
 ## LaTeX Change
 
-![](images/Screenshot 2024-11-19 at 2.13.25 PM.png)
+![](images/Screenshot%202024-11-19%20at%202.13.25%20PM.png)
 
 ## Output to multiple Formats
 
-![](images/Screenshot 2024-11-19 at 2.21.44 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%202.21.44%20PM.png){fig-align="center"}
 
 ## epub and Word
 
-![](images/Screenshot 2024-11-19 at 3.07.47 PM.png)
+![](images/Screenshot%202024-11-19%20at%203.07.47%20PM.png)
 
 ## HTML and PDF
 
-![](images/Screenshot 2024-11-19 at 2.36.54 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%202.36.54%20PM.png){fig-align="center"}
 
 ## Robust Documentation
 
-![](images/Screenshot 2024-11-19 at 2.39.11 PM.png){fig-align="center"}
+![](images/Screenshot%202024-11-19%20at%202.39.11%20PM.png){fig-align="center"}
 
 ## Lots of additional Resources
 
--   R Markdown Cookbook
+- Bookdown Documentation <https://bookdown.org/yihui/bookdown/>
 
--   <https://bookdown.org/yihui/rmarkdown-cookbook/>
+- R Markdown Cookbook <https://bookdown.org/yihui/rmarkdown-cookbook/>
 
--   Pandoc
+- Pandoc <https://pandoc.org/>
 
--   <https://pandoc.org/>
+- RStudio Bookdown Community <https://community.rstudio.com/tags/bookdown>
 
--   RStudio Bookdown Community
-
--   <https://community.rstudio.com/tags/bookdown>
-
--   Gallery of Books to Download
-
--   <https://bookdown.org/home/archive/>
+- Gallery of Books to Download <https://bookdown.org/home/archive/>
 
 ## Conclusion
 
-![](images/Screenshot 2024-11-19 at 3.04.06 PM.png){fig-align="center" width="514"}
+![](images/Screenshot%202024-11-19%20at%203.04.06%20PM.png){fig-align="center" width="275"}
