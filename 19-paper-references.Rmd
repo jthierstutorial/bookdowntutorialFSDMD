@@ -1,5 +1,15 @@
 # Example Document: Union Earnings Analysis {#examplepaper}
 
+
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+**Also a zine!**
+:::
+[Download a printable zine version here!](https://drive.google.com/file/d/1wXIRAbr46yWSbznjlVGr2UZJftnKJ8F5/view?usp=sharing)
+::::
+
+
+
 ### What This Analysis Is All About
 In this document, we're diving into data on wages, demographics, and state info to see how union membership stacks up against nonunion wages. We want to understand what makes a difference in pay and job security across different states and communities. Spoiler alert: unions have a big impact, and we're here to show you how!
 
