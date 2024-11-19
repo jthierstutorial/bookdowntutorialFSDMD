@@ -1,0 +1,283 @@
+# Customizing Output {#chapter7}
+
+In this chapter, we’ll explore how to customize the output of your Bookdown project. Bookdown supports several output formats, such as HTML, PDF, and EPUB, and allows you to customize each format to match your project’s needs. We’ll cover choosing output formats, modifying appearance, and configuring output settings.
+
+---
+
+## Choosing an Output Format
+
+Bookdown provides multiple output formats that allow you to publish your document in various ways:
+
+- **HTML**: Ideal for online documentation or sharing on the web.
+- **PDF**: Useful for print-ready documents, especially for academic or professional reports.
+- **EPUB**: E-book format, compatible with e-readers for mobile access.
+
+To specify output formats, edit the `_output.yml` file in your project directory. Here’s an example configuration:
+
+```markdown
+bookdown::gitbook:
+  css: "style.css"
+  split_by: "chapter"
+
+bookdown::pdf_book:
+  latex_engine: xelatex
+  citation_package: natbib
+
+bookdown::epub_book: default
+```
+
+This configuration tells Bookdown to create HTML (using GitBook style), PDF, and EPUB formats. Customize each format’s settings to control the output style.
+
+---
+
+## Available Output Options for Bookdown
+
+### 1. GitBook (`bookdown::gitbook`)
+This is one of the most popular output formats, producing an HTML book with interactive features such as search and navigation. Infact this is how the book has been outputted.
+
+Example:
+```markdown
+output:
+  bookdown::gitbook:
+    css: style.css  # Optional: Custom CSS for styling
+    config:
+      toc:
+        collapse: section  # Controls the collapsing of the table of contents
+```
+
+### 2. PDF Book (`bookdown::pdf_book`)
+Generates a PDF version of your book using LaTeX. This format is often used for printed versions.
+
+Example:
+```markdown
+output:
+  bookdown::pdf_book:
+    latex_engine: xelatex  # Specify the LaTeX engine to use (e.g., pdflatex, xelatex, lualatex)
+    includes:
+      in_header: preamble.tex  # Include additional LaTeX setup files
+    citation_package: natbib  # Citation package to use
+```
+
+### 3. EPUB Book (`bookdown::epub_book`)
+Creates an EPUB file, which is a format commonly used for eBooks.
+
+Example:
+```markdown
+output:
+  bookdown::epub_book:
+    toc: yes  # Include table of contents
+    css: style.css  # Optional: Custom CSS for EPUB styling
+```
+
+### 4. HTML Document (`rmarkdown::html_document`)
+Produces a single HTML document, rather than a book format.
+
+Example:
+```markdown
+output:
+  rmarkdown::html_document:
+    toc: true  # Include table of contents
+    toc_depth: 3  # Depth of the table of contents
+    number_sections: true  # Number sections in the output
+```
+
+### 5. Word Document (`bookdown::word_document2`)
+Generates a Word document (`.docx`) version of your book, useful for sharing with editors.
+
+Example:
+```markdown
+output:
+  bookdown::word_document2:
+    toc: yes  # Include table of contents
+    toc_depth: 2  # Depth of table of contents
+```
+
+### 6. Tufte Handout (`bookdown::tufte_html_book` / `bookdown::tufte_pdf_book`)
+Generates a book in Tufte style, known for its distinctive design, which is suitable for visually focused content.
+
+Example:
+```markdown
+output:
+  bookdown::tufte_html_book: default
+```
+For PDF:
+```markdown
+output:
+  bookdown::tufte_pdf_book: default
+```
+
+### 7. HTML with Bookdown-Specific Features (`bookdown::html_document2`)
+Similar to `rmarkdown::html_document` but includes additional cross-referencing features from Bookdown.
+
+Example:
+```markdown
+output:
+  bookdown::html_document2:
+    toc: true
+    number_sections: true
+```
+
+### 8. GitHub Document (`rmarkdown::github_document`)
+Produces a document suitable for rendering on GitHub.
+
+Example:
+```markdown
+output:
+  rmarkdown::github_document:
+    toc: true  # Include table of contents
+```
+
+---
+
+## Customizing HTML Output
+
+To customize the HTML format, Bookdown offers the `bookdown::gitbook` and `bookdown::html_document2` options:
+
+- **GitBook**: The default HTML style, which includes a side navigation bar and a search function. This format is ideal for online documentation.
+- **HTML Document**: A simpler format without the sidebar, suitable for single-page reports.
+
+You can adjust HTML settings in `_output.yml`:
+
+```markdown
+bookdown::gitbook:
+  css: "style.css"
+  config:
+    toc:
+      collapse: section
+    download: ["pdf", "epub"]
+```
+
+---
+
+## Customizing PDF Output
+
+To generate a high-quality PDF, you’ll need to install a LaTeX distribution like TinyTeX.
+
+In `_output.yml`, you can specify options to control PDF formatting:
+
+```markdown
+bookdown::pdf_book:
+  latex_engine: xelatex
+  citation_package: natbib
+```
+
+- **`latex_engine`**: Specifies the LaTeX engine (e.g., `xelatex`, `pdflatex`). Using `xelatex` improves font compatibility.
+- **`citation_package`**: Choose between `natbib` or `biblatex` for handling citations.
+
+### Document Size
+
+To customize the size of your PDF document, you can modify the `geometry` option in the LaTeX preamble. For example, to set the paper size to A4 and customize the margins:
+
+```markdown
+output:
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+```
+In the `preamble.tex` file, add:
+```markdown
+\usepackage[paperwidth=5.5in, paperheight=8.5in, margin=0.75in]{geometry}
+```
+This sets the document size to A4 and the margins to 1 inch.
+
+### Document Type
+
+You can change the document type by modifying the LaTeX class used in the `preamble.tex`. For example, use the `article` class instead of the default `book` class:
+
+```markdown
+\documentclass{article}
+```
+This is useful for a more compact layout, like that of a research paper or report.
+
+### LaTeX Engine
+
+You can specify the LaTeX engine used to compile your PDF. Bookdown supports different engines, such as `pdflatex`, `xelatex`, and `lualatex`.
+
+Example:
+```markdown
+output:
+  bookdown::pdf_book:
+    latex_engine: xelatex
+```
+Using `xelatex` or `lualatex` provides better font support, especially for special characters or non-Latin scripts.
+
+### Custom LaTeX Packages
+
+Include custom LaTeX packages in the `preamble.tex` file to extend the functionality of your PDF output.
+
+Example:
+```latex
+\usepackage{amsmath}
+```
+This includes the `amsmath` package for advanced mathematical formatting. You can also use `\newcommand` to define custom commands used throughout your document.
+
+### Page Layout Customization
+
+To customize the page layout, use packages like `fancyhdr` to modify headers and footers.
+
+Example:
+```latex
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE,RO]{Your Book Title}
+\fancyfoot[CE,CO]{\thepage}
+```
+This sets custom headers and footers, including the book title and page numbers.
+
+---
+
+## Customizing EPUB Output
+
+To create an EPUB e-book, use `bookdown::epub_book` in `_output.yml`. Bookdown handles most EPUB formatting automatically, but you can make some modifications:
+
+```markdown
+bookdown::epub_book:
+  stylesheet: "style.css"
+  cover_image: "images/cover.jpg"
+  toc: yes
+```
+This configuration adds a cover image, applies the CSS stylesheet, and includes a table of contents.
+
+---
+
+## Specifying Global Settings in `_bookdown.yml`
+
+The `_bookdown.yml` file allows you to set global configurations, such as the order of chapters, the naming convention for output files, and the label format for figures and tables. Here’s an example:
+
+```markdown
+book_filename: "my-book"
+rmd_files: ["index.Rmd", "01-introduction.Rmd", "02-writing-structuring-content.Rmd", "03-customizing-output.Rmd"]
+language:
+  label:
+    fig: "Figure "
+    tab: "Table "
+delete_merged_file: true
+```
+
+- **`book_filename`**: Sets the base filename for output files.
+- **`rmd_files`**: Specifies the order of chapters.
+- **`language.label`**: Customizes labels for figures and tables.
+- **`delete_merged_file`**: Deletes intermediary files after rendering, keeping the directory clean.
+
+---
+
+## Example Output
+
+To render all formats simultaneously, you can use the `render_book()` function in the R console:
+
+```r
+bookdown::render_book("index.Rmd", output_format = "all")
+```
+This command generates HTML, PDF, and EPUB files as specified in `_output.yml`.
+
+
+
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+**EXERCISE TIME!**
+:::
+Modify your Bookdown project's _output.yml to customize the output format. Try changing the appearance of the HTML and PDF outputs. Write a paragraph explaining how the customizations improved the document's look and usability.
+
+
+When you're ready go ahead and render your book into HTML, PDF, and EPUB formats. Publish it on GitHub Pages or share it with someone else. Write a paragraph reflecting on what you learned about the publishing process and any challenges you encountered.
+::::

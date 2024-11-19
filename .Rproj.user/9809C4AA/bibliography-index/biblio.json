@@ -24,73 +24,15 @@
             "type": "book"
         },
         {
-            "DOI": "10.1073/pnas.1607171113",
+            "URL": "http://yihui.org/knitr/",
             "author": [
                 {
-                    "family": "Abatzoglou",
-                    "given": "J. T."
-                },
-                {
-                    "family": "Williams",
-                    "given": "A. P."
+                    "family": "Xie",
+                    "given": "Yihui"
                 }
             ],
-            "container-title": "Proceedings of the National Academy of Sciences",
-            "id": "abatzoglou2016",
-            "issue": "42",
-            "issued": {
-                "date-parts": [
-                    [
-                        2016
-                    ]
-                ]
-            },
-            "page": "11770-11775",
-            "title": "Impact of anthropogenic climate change on wildfire across western US forests",
-            "type": "article-journal",
-            "volume": "113"
-        },
-        {
-            "DOI": "10.1007/s13201-022-01744-x",
-            "author": [
-                {
-                    "family": "Keavney",
-                    "given": "E."
-                }
-            ],
-            "container-title": "Applied Water Science",
-            "id": "keavney2022",
-            "issue": "9",
-            "issued": {
-                "date-parts": [
-                    [
-                        2022
-                    ]
-                ]
-            },
-            "title": "A comparison of strategies used and considered to mitigate droughts in california",
-            "type": "article-journal",
-            "volume": "12"
-        },
-        {
-            "DOI": "10.1002/2015gl063456",
-            "author": [
-                {
-                    "family": "Mao",
-                    "given": "Y."
-                },
-                {
-                    "family": "Nijssen",
-                    "given": "B."
-                },
-                {
-                    "family": "Lettenmaier",
-                    "given": "D. P."
-                }
-            ],
-            "container-title": "Geophysical Research Letters",
-            "id": "mao2015",
-            "issue": "8",
+            "edition": "2nd",
+            "id": "xie2015",
             "issued": {
                 "date-parts": [
                     [
@@ -98,128 +40,40 @@
                     ]
                 ]
             },
-            "page": "2805-2813",
-            "title": "Is climate change implicated in the 2013-2014 california drought? A hydrologic perspective",
-            "type": "article-journal",
-            "volume": "42"
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic documents with R and knitr",
+            "type": "book"
         },
         {
-            "DOI": "10.1353/pcg.2020.0002",
+            "URL": "https://github.com/rfordatascience/tidytuesday",
             "author": [
                 {
-                    "family": "Pompeii",
-                    "given": "B."
+                    "literal": "R for Data Science Online Learning Community"
                 }
             ],
-            "container-title": "Yearbook of the Association of Pacific Coast Geographers",
-            "id": "pompeii2020",
-            "issue": "82",
+            "id": "tidytuesday",
             "issued": {
                 "date-parts": [
                     [
-                        2020
+                        2024
                     ]
                 ]
             },
-            "page": "15-37",
-            "title": "The social production of the great california drought, 2012–2017",
-            "type": "article-journal",
-            "volume": "82"
+            "note": "Accessed: 2024-11-17",
+            "title": "TidyTuesday: A weekly data project aimed at improving data wrangling and visualization skills",
+            "title-short": "TidyTuesday",
+            "type": ""
         },
         {
-            "URL": "https://escholarship.org/uc/item/625288kx",
+            "URL": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-09-05/demographics.csv",
             "author": [
                 {
-                    "family": "Sumner",
-                    "given": "D. A."
-                },
-                {
-                    "family": "Hanak",
-                    "given": "E."
-                },
-                {
-                    "family": "Mount",
-                    "given": "J."
-                },
-                {
-                    "family": "Medellín-Azuara",
-                    "given": "J."
-                },
-                {
-                    "family": "Lund",
-                    "given": "J. R."
-                },
-                {
-                    "family": "Howitt",
-                    "given": "R. E."
-                },
-                {
-                    "family": "MacEwan",
-                    "given": "D."
+                    "literal": "TidyTuesday Project"
                 }
             ],
-            "container-title": "ARE Update",
-            "id": "sumner2015",
-            "issue": "5",
-            "issued": {
-                "date-parts": [
-                    [
-                        2015
-                    ]
-                ]
-            },
-            "page": "1-16",
-            "title": "ARE update: Special issue-the economics of the drought for california food and agriculture",
-            "title-short": "ARE update",
-            "type": "article-journal",
-            "volume": "18"
-        },
-        {
-            "DOI": "10.1029/2004eo030004",
-            "author": [
-                {
-                    "family": "Trenberth",
-                    "given": "K."
-                },
-                {
-                    "family": "Overpeck",
-                    "given": "J."
-                },
-                {
-                    "family": "Solomon",
-                    "given": "S."
-                }
-            ],
-            "container-title": "Eos, Transactions American Geophysical Union",
-            "id": "trenberth2004",
-            "issue": "3",
-            "issued": {
-                "date-parts": [
-                    [
-                        2004
-                    ]
-                ]
-            },
-            "page": "27",
-            "title": "Exploring drought and its implications for the future",
-            "type": "article-journal",
-            "volume": "85"
-        },
-        {
-            "DOI": "10.1126/science.adh3097",
-            "author": [
-                {
-                    "family": "Walker",
-                    "given": "D. W."
-                },
-                {
-                    "family": "Van",
-                    "given": "A. F."
-                }
-            ],
-            "container-title": "Science",
-            "id": "walker2023",
-            "issue": "6641",
+            "id": "demographics_dataset",
             "issued": {
                 "date-parts": [
                     [
@@ -227,59 +81,152 @@
                     ]
                 ]
             },
-            "page": "130-132",
-            "title": "Droughts are coming on faster",
-            "type": "article-journal",
-            "volume": "380"
+            "note": "Includes information on union membership, employment, and demographic segmentation from 1973 to 2022. Accessed: 2024-11-17.",
+            "title": "Demographics dataset",
+            "type": ""
         },
         {
-            "DOI": "10.1002/2016gl069386",
+            "URL": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-09-05/wages.csv",
             "author": [
                 {
-                    "family": "Wei",
-                    "given": "J."
-                },
-                {
-                    "family": "Jin",
-                    "given": "Q."
-                },
-                {
-                    "family": "Yang",
-                    "given": "Z.-L."
-                },
-                {
-                    "family": "Dirmeyer",
-                    "given": "P. A."
+                    "literal": "TidyTuesday Project"
                 }
             ],
-            "container-title": "Geophysical Research Letters",
-            "id": "wei2016",
-            "issue": "12",
+            "id": "wages_dataset",
             "issued": {
                 "date-parts": [
                     [
-                        2016
+                        2023
                     ]
                 ]
             },
-            "page": "6554-6562",
-            "title": "Role of ocean evaporation in california droughts and floods",
-            "type": "article-journal",
-            "volume": "43"
+            "note": "Provides data on union and nonunion wages, wage caps, and wage premiums. Accessed: 2024-11-17.",
+            "title": "Wages dataset",
+            "type": ""
         },
         {
-            "URL": "https://www.energy.ca.gov/sites/default/files/2019-11/Projections_CCCA4-CEC-2018-014_ADA.pdf",
+            "URL": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-09-05/states.csv",
             "author": [
                 {
-                    "family": "Westerling",
-                    "given": "A."
-                },
-                {
-                    "family": "Disclaimer",
-                    "given": "M."
+                    "literal": "TidyTuesday Project"
                 }
             ],
-            "id": "westerling2019",
+            "id": "states_dataset",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Offers a detailed state-level breakdown of union membership and employment metrics. Accessed: 2024-11-17.",
+            "title": "States dataset",
+            "type": ""
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=data.table",
+            "author": [
+                {
+                    "family": "Dowle",
+                    "given": "Matt"
+                },
+                {
+                    "family": "Srinivasan",
+                    "given": "Arun"
+                },
+                {
+                    "literal": "others"
+                }
+            ],
+            "id": "datatable_package",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Efficient data manipulation and aggregation, particularly for large datasets.",
+            "title": "Data.table: Extension of ‘data.frame‘ for fast indexing, filtering, and aggregation",
+            "title-short": "Data.table",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggplot2",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "literal": "others"
+                }
+            ],
+            "id": "ggplot2_package",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Used for creating versatile and highly customizable plots.",
+            "title": "ggplot2: Elegant graphics for data analysis",
+            "title-short": "ggplot2",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dplyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "literal": "others"
+                }
+            ],
+            "id": "dplyr_package",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Streamlined data wrangling tasks with intuitive syntax.",
+            "title": "Dplyr: A grammar of data manipulation",
+            "title-short": "Dplyr",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Economic Policy Institute"
+                }
+            ],
+            "id": "state_of_working_america",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "A comprehensive resource for understanding labor market trends in the U.S., including union membership and wage disparities.",
+            "publisher": "Economic Policy Institute",
+            "title": "The state of working america",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Borjas",
+                    "given": "George J."
+                }
+            ],
+            "edition": "8th",
+            "id": "borjas_labor_economics",
             "issued": {
                 "date-parts": [
                     [
@@ -287,88 +234,171 @@
                     ]
                 ]
             },
-            "publisher": "California’s Fourth Climate Change Assessment",
-            "title": "Wildfire simulations for california’s fourth climate change assessment: Projecting changes in extreme wildfire events with a warming climate",
-            "title-short": "Wildfire simulations for california’s fourth climate change assessment",
-            "type": "report"
+            "note": "Provides a detailed introduction to labor economics, including the impact of unions on wages and employment.",
+            "publisher": "McGraw-Hill Education",
+            "title": "Labor economics",
+            "type": "book"
         },
         {
-            "DOI": "10.1002/2015gl064924",
+            "URL": "https://www.r-project.org/",
             "author": [
                 {
-                    "family": "Williams",
-                    "given": "A. P."
-                },
-                {
-                    "family": "Seager",
-                    "given": "R."
-                },
-                {
-                    "family": "Abatzoglou",
-                    "given": "J. T."
-                },
-                {
-                    "family": "Cook",
-                    "given": "B. I."
-                },
-                {
-                    "family": "Smerdon",
-                    "given": "J. E."
-                },
-                {
-                    "family": "Cook",
-                    "given": "E. R."
+                    "literal": "R Core Team"
                 }
             ],
-            "container-title": "Geophysical Research Letters",
-            "id": "williams2015",
-            "issue": "16",
+            "id": "R-base",
             "issued": {
                 "date-parts": [
                     [
-                        2015
+                        2024
                     ]
                 ]
             },
-            "page": "6819-6828",
-            "title": "Contribution of anthropogenic warming to california drought during 2012–2014",
-            "type": "article-journal",
-            "volume": "42"
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A language and environment for statistical computing",
+            "title-short": "R",
+            "type": "book"
         },
         {
-            "DOI": "10.1016/j.rala.2021.10.003",
+            "URL": "https://posit.co/products/open-source/rstudio/",
             "author": [
                 {
-                    "family": "Woodmansee",
-                    "given": "G."
-                },
-                {
-                    "family": "Macon",
-                    "given": "D."
-                },
-                {
-                    "family": "Schohr",
-                    "given": "T."
-                },
-                {
-                    "family": "Roche",
-                    "given": "L. M."
+                    "literal": "RStudio Team"
                 }
             ],
-            "container-title": "Rangelands",
-            "id": "woodmansee2021",
-            "issue": "6",
+            "id": "Rstudio",
             "issued": {
                 "date-parts": [
                     [
-                        2021
+                        2024
                     ]
                 ]
             },
-            "page": "222-230",
-            "title": "On-ranch adaptation to california’s historic 2012-2016 drought",
-            "type": "article-journal",
-            "volume": "43"
+            "publisher": "RStudio, PBC",
+            "publisher-place": "Boston, MA",
+            "title": "RStudio: Integrated development environment for r",
+            "title-short": "RStudio",
+            "type": "book"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/bookdown/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "Bookdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "ISBN 9780367142568",
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Bookdown: Authoring books and technical documents with r markdown",
+            "title-short": "Bookdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/tinytex/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "TinyTeX",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "title": "TinyTeX: A lightweight, cross-platform, and user-friendly LaTeX distribution",
+            "title-short": "TinyTeX",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.tug.org/texlive/",
+            "author": [
+                {
+                    "literal": "TeX Users Group"
+                }
+            ],
+            "id": "TeXLive",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "title": "TeX live: A comprehensive LaTeX distribution",
+            "title-short": "TeX live",
+            "type": "book"
+        },
+        {
+            "URL": "https://miktex.org/",
+            "author": [
+                {
+                    "literal": "MikTeX Project"
+                }
+            ],
+            "id": "MikTeX",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "title": "MikTeX: A modern LaTeX distribution",
+            "title-short": "MikTeX",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.tug.org/mactex/",
+            "author": [
+                {
+                    "literal": "TeX Users Group"
+                }
+            ],
+            "id": "MacTeX",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "title": "MacTeX: TeX live distribution tailored for macOS",
+            "title-short": "MacTeX",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.tug.org/protext/",
+            "author": [
+                {
+                    "literal": "TeX Users Group"
+                }
+            ],
+            "id": "ProTeXt",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "title": "ProTeXt: A LaTeX distribution for windows users",
+            "title-short": "ProTeXt",
+            "type": "book"
         }
     ],
     "project_biblios": [

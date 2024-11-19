@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Example Document: Union Earnings Analysis | Bookdown: Flexible Document Creation in RStudio</title>
+  <meta name="description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Example Document: Union Earnings Analysis | Bookdown: Flexible Document Creation in RStudio" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/Bookcover.png" />
+  <meta property="og:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Example Document: Union Earnings Analysis | Bookdown: Flexible Document Creation in RStudio" />
+  
+  <meta name="twitter:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="twitter:image" content="/images/Bookcover.png" />
+
+<meta name="author" content="Joseph Thiers" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="markdownadvanced.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction Guide to Bookdown</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to Bookdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-rstudio-and-bookdown"><i class="fa fa-check"></i><b>1.1</b> Why RStudio and Bookdown?</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#what-youll-learn-in-this-tutorial"><i class="fa fa-check"></i><b>1.2</b> What You’ll Learn in This Tutorial</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter2.html"><a href="chapter2.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a></li>
+<li class="chapter" data-level="3" data-path="chapter3.html"><a href="chapter3.html"><i class="fa fa-check"></i><b>3</b> Writing Content</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chapter3.html"><a href="chapter3.html#creating-chapters-and-sections"><i class="fa fa-check"></i><b>3.1</b> Creating Chapters and Sections</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="chapter3.html"><a href="chapter3.html#organizing-chapters"><i class="fa fa-check"></i><b>3.1.1</b> Organizing Chapters</a></li>
+<li class="chapter" data-level="3.1.2" data-path="chapter3.html"><a href="chapter3.html#adding-sections-and-subsections"><i class="fa fa-check"></i><b>3.1.2</b> Adding Sections and Subsections</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="chapter3.html"><a href="chapter3.html#formatting-text-in-bookdown"><i class="fa fa-check"></i><b>3.2</b> Formatting Text in Bookdown</a></li>
+<li class="chapter" data-level="3.3" data-path="chapter3.html"><a href="chapter3.html#adding-code-chunks"><i class="fa fa-check"></i><b>3.3</b> Adding Code Chunks</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="chapter3.html"><a href="chapter3.html#r-code"><i class="fa fa-check"></i><b>3.3.1</b> 1. R Code</a></li>
+<li class="chapter" data-level="3.3.2" data-path="chapter3.html"><a href="chapter3.html#python-code"><i class="fa fa-check"></i><b>3.3.2</b> 2. Python Code</a></li>
+<li class="chapter" data-level="3.3.3" data-path="chapter3.html"><a href="chapter3.html#bashshell-script"><i class="fa fa-check"></i><b>3.3.3</b> 3. Bash/Shell Script</a></li>
+<li class="chapter" data-level="3.3.4" data-path="chapter3.html"><a href="chapter3.html#sql-code"><i class="fa fa-check"></i><b>3.3.4</b> 4. SQL Code</a></li>
+<li class="chapter" data-level="3.3.5" data-path="chapter3.html"><a href="chapter3.html#customizing-code-chunk-options"><i class="fa fa-check"></i><b>3.3.5</b> Customizing Code Chunk Options</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chapter3.html"><a href="chapter3.html#adding-images-to-your-bookdown-project"><i class="fa fa-check"></i><b>3.4</b> Adding Images to Your Bookdown Project</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="chapter3.html"><a href="chapter3.html#adding-images-with-rstudio-ggplot"><i class="fa fa-check"></i><b>3.4.1</b> Adding Images with RStudio GGPLOT</a></li>
+<li class="chapter" data-level="3.4.2" data-path="chapter3.html"><a href="chapter3.html#adding-images-using-markdown"><i class="fa fa-check"></i><b>3.4.2</b> Adding Images Using Markdown</a></li>
+<li class="chapter" data-level="3.4.3" data-path="chapter3.html"><a href="chapter3.html#chunk-options-for-images"><i class="fa fa-check"></i><b>3.4.3</b> Chunk Options for Images</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chapter4.html"><a href="chapter4.html"><i class="fa fa-check"></i><b>4</b> Cross Referencing and Citatians</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chapter4.html"><a href="chapter4.html#cross-referencing-sections"><i class="fa fa-check"></i><b>4.1</b> Cross-Referencing Sections</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter4.html"><a href="chapter4.html#see-section-refexamplepaper-for-more-information."><i class="fa fa-check"></i><b>4.2</b> See Section @ref(examplepaper) for more information.</a></li>
+<li class="chapter" data-level="4.3" data-path="chapter4.html"><a href="chapter4.html#cross-referencing-text"><i class="fa fa-check"></i><b>4.3</b> Cross-Referencing Text</a></li>
+<li class="chapter" data-level="4.4" data-path="chapter4.html"><a href="chapter4.html#cross-referencing-figures"><i class="fa fa-check"></i><b>4.4</b> Cross-Referencing Figures</a></li>
+<li class="chapter" data-level="4.5" data-path="chapter4.html"><a href="chapter4.html#cross-referencing-tables"><i class="fa fa-check"></i><b>4.5</b> Cross-Referencing Tables</a></li>
+<li class="chapter" data-level="4.6" data-path="chapter4.html"><a href="chapter4.html#cross-referencing-equations"><i class="fa fa-check"></i><b>4.6</b> Cross-Referencing Equations</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="chapter4.html"><a href="chapter4.html#example-creating-and-labeling-an-equation"><i class="fa fa-check"></i><b>4.6.1</b> Example: Creating and Labeling an Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="chapter4.html"><a href="chapter4.html#adding-citations-and-managing-references"><i class="fa fa-check"></i><b>4.7</b> Adding Citations and Managing References</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="chapter4.html"><a href="chapter4.html#step-1-create-a-.bib-file"><i class="fa fa-check"></i><b>4.7.1</b> Step 1: Create a <code>.bib</code> File</a></li>
+<li class="chapter" data-level="4.7.2" data-path="chapter4.html"><a href="chapter4.html#step-2-link-the-.bib-file-in-index.rmd"><i class="fa fa-check"></i><b>4.7.2</b> Step 2: Link the <code>.bib</code> File in <code>index.Rmd</code></a></li>
+<li class="chapter" data-level="4.7.3" data-path="chapter4.html"><a href="chapter4.html#step-3-cite-sources-in-your-text"><i class="fa fa-check"></i><b>4.7.3</b> Step 3: Cite Sources in Your Text</a></li>
+<li class="chapter" data-level="4.7.4" data-path="chapter4.html"><a href="chapter4.html#step-4-customize-citation-style-optional"><i class="fa fa-check"></i><b>4.7.4</b> Step 4: Customize Citation Style (Optional)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="chapter4.html"><a href="chapter4.html#using-cross-references-with-citations"><i class="fa fa-check"></i><b>4.8</b> Using Cross-References with Citations</a></li>
+<li class="chapter" data-level="4.9" data-path="chapter4.html"><a href="chapter4.html#using-cross-references-with-citations-helps-keep-your-document-organized-and-easy-to-navigate."><i class="fa fa-check"></i><b>4.9</b> Using cross-references with citations helps keep your document organized and easy to navigate.</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chapter5.html"><a href="chapter5.html"><i class="fa fa-check"></i><b>5</b> LaTeX in Bookdown</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="chapter5.html"><a href="chapter5.html#including-latex-packages-in-bookdown"><i class="fa fa-check"></i><b>5.1</b> Including LaTeX Packages in Bookdown</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="chapter5.html"><a href="chapter5.html#using-a-preamble.tex-file"><i class="fa fa-check"></i><b>5.1.1</b> Using a <code>preamble.tex</code> File</a></li>
+<li class="chapter" data-level="5.1.2" data-path="chapter5.html"><a href="chapter5.html#debugging-errors"><i class="fa fa-check"></i><b>5.1.2</b> Debugging Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="chapter5.html"><a href="chapter5.html#mathematical-equations"><i class="fa fa-check"></i><b>5.2</b> Mathematical Equations</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="chapter5.html"><a href="chapter5.html#inline-equations"><i class="fa fa-check"></i><b>5.2.1</b> Inline Equations</a></li>
+<li class="chapter" data-level="5.2.2" data-path="chapter5.html"><a href="chapter5.html#display-equations"><i class="fa fa-check"></i><b>5.2.2</b> Display Equations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="chapter5.html"><a href="chapter5.html#theorems-lemmas-and-proofs"><i class="fa fa-check"></i><b>5.3</b> Theorems, Lemmas, and Proofs</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="chapter5.html"><a href="chapter5.html#adding-a-theorem"><i class="fa fa-check"></i><b>5.3.1</b> Adding a Theorem</a></li>
+<li class="chapter" data-level="5.3.2" data-path="chapter5.html"><a href="chapter5.html#adding-a-lemma"><i class="fa fa-check"></i><b>5.3.2</b> Adding a Lemma</a></li>
+<li class="chapter" data-level="5.3.3" data-path="chapter5.html"><a href="chapter5.html#adding-a-proof"><i class="fa fa-check"></i><b>5.3.3</b> Adding a Proof</a></li>
+<li class="chapter" data-level="5.3.4" data-path="chapter5.html"><a href="chapter5.html#referencing-various-math-environments"><i class="fa fa-check"></i><b>5.3.4</b> Referencing Various Math Environments</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="chapter5.html"><a href="chapter5.html#tips-for-latex-in-bookdown"><i class="fa fa-check"></i><b>5.4</b> Tips for LaTeX in Bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="chapter6.html"><a href="chapter6.html"><i class="fa fa-check"></i><b>6</b> Advanced Features</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="chapter6.html"><a href="chapter6.html#using-latex-for-advanced-formatting"><i class="fa fa-check"></i><b>6.1</b> Using LaTeX for Advanced Formatting</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="chapter6.html"><a href="chapter6.html#example-adding-a-custom-box"><i class="fa fa-check"></i><b>6.1.1</b> Example: Adding a Custom Box</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="chapter6.html"><a href="chapter6.html#customizing-document-with-latex"><i class="fa fa-check"></i><b>6.2</b> Customizing Document with LaTeX</a></li>
+<li class="chapter" data-level="6.3" data-path="chapter6.html"><a href="chapter6.html#adding-custom-css-and-javascript"><i class="fa fa-check"></i><b>6.3</b> Adding Custom CSS and JavaScript</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="chapter6.html"><a href="chapter6.html#step-1-create-a-custom-css-file"><i class="fa fa-check"></i><b>6.3.1</b> Step 1: Create a Custom CSS File</a></li>
+<li class="chapter" data-level="6.3.2" data-path="chapter6.html"><a href="chapter6.html#step-2-include-the-css-file-in-the-yaml-header"><i class="fa fa-check"></i><b>6.3.2</b> Step 2: Include the CSS File in the YAML Header</a></li>
+<li class="chapter" data-level="6.3.3" data-path="chapter6.html"><a href="chapter6.html#step-3-adding-javascript-optional"><i class="fa fa-check"></i><b>6.3.3</b> Step 3: Adding JavaScript (Optional)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chapter7.html"><a href="chapter7.html"><i class="fa fa-check"></i><b>7</b> Customizing Output</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="chapter7.html"><a href="chapter7.html#choosing-an-output-format"><i class="fa fa-check"></i><b>7.1</b> Choosing an Output Format</a></li>
+<li class="chapter" data-level="7.2" data-path="chapter7.html"><a href="chapter7.html#available-output-options-for-bookdown"><i class="fa fa-check"></i><b>7.2</b> Available Output Options for Bookdown</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="chapter7.html"><a href="chapter7.html#gitbook-bookdowngitbook"><i class="fa fa-check"></i><b>7.2.1</b> 1. GitBook (<code>bookdown::gitbook</code>)</a></li>
+<li class="chapter" data-level="7.2.2" data-path="chapter7.html"><a href="chapter7.html#pdf-book-bookdownpdf_book"><i class="fa fa-check"></i><b>7.2.2</b> 2. PDF Book (<code>bookdown::pdf_book</code>)</a></li>
+<li class="chapter" data-level="7.2.3" data-path="chapter7.html"><a href="chapter7.html#epub-book-bookdownepub_book"><i class="fa fa-check"></i><b>7.2.3</b> 3. EPUB Book (<code>bookdown::epub_book</code>)</a></li>
+<li class="chapter" data-level="7.2.4" data-path="chapter7.html"><a href="chapter7.html#html-document-rmarkdownhtml_document"><i class="fa fa-check"></i><b>7.2.4</b> 4. HTML Document (<code>rmarkdown::html_document</code>)</a></li>
+<li class="chapter" data-level="7.2.5" data-path="chapter7.html"><a href="chapter7.html#word-document-bookdownword_document2"><i class="fa fa-check"></i><b>7.2.5</b> 5. Word Document (<code>bookdown::word_document2</code>)</a></li>
+<li class="chapter" data-level="7.2.6" data-path="chapter7.html"><a href="chapter7.html#tufte-handout-bookdowntufte_html_book-bookdowntufte_pdf_book"><i class="fa fa-check"></i><b>7.2.6</b> 6. Tufte Handout (<code>bookdown::tufte_html_book</code> / <code>bookdown::tufte_pdf_book</code>)</a></li>
+<li class="chapter" data-level="7.2.7" data-path="chapter7.html"><a href="chapter7.html#html-with-bookdown-specific-features-bookdownhtml_document2"><i class="fa fa-check"></i><b>7.2.7</b> 7. HTML with Bookdown-Specific Features (<code>bookdown::html_document2</code>)</a></li>
+<li class="chapter" data-level="7.2.8" data-path="chapter7.html"><a href="chapter7.html#github-document-rmarkdowngithub_document"><i class="fa fa-check"></i><b>7.2.8</b> 8. GitHub Document (<code>rmarkdown::github_document</code>)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="chapter7.html"><a href="chapter7.html#customizing-html-output"><i class="fa fa-check"></i><b>7.3</b> Customizing HTML Output</a></li>
+<li class="chapter" data-level="7.4" data-path="chapter7.html"><a href="chapter7.html#customizing-pdf-output"><i class="fa fa-check"></i><b>7.4</b> Customizing PDF Output</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="chapter7.html"><a href="chapter7.html#document-size"><i class="fa fa-check"></i><b>7.4.1</b> Document Size</a></li>
+<li class="chapter" data-level="7.4.2" data-path="chapter7.html"><a href="chapter7.html#document-type"><i class="fa fa-check"></i><b>7.4.2</b> Document Type</a></li>
+<li class="chapter" data-level="7.4.3" data-path="chapter7.html"><a href="chapter7.html#latex-engine"><i class="fa fa-check"></i><b>7.4.3</b> LaTeX Engine</a></li>
+<li class="chapter" data-level="7.4.4" data-path="chapter7.html"><a href="chapter7.html#custom-latex-packages"><i class="fa fa-check"></i><b>7.4.4</b> Custom LaTeX Packages</a></li>
+<li class="chapter" data-level="7.4.5" data-path="chapter7.html"><a href="chapter7.html#page-layout-customization"><i class="fa fa-check"></i><b>7.4.5</b> Page Layout Customization</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="chapter7.html"><a href="chapter7.html#customizing-epub-output"><i class="fa fa-check"></i><b>7.5</b> Customizing EPUB Output</a></li>
+<li class="chapter" data-level="7.6" data-path="chapter7.html"><a href="chapter7.html#specifying-global-settings-in-_bookdown.yml"><i class="fa fa-check"></i><b>7.6</b> Specifying Global Settings in <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="7.7" data-path="chapter7.html"><a href="chapter7.html#example-output"><i class="fa fa-check"></i><b>7.7</b> Example Output</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="latexdistributions.html"><a href="latexdistributions.html"><i class="fa fa-check"></i><b>8</b> LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="latexdistributions.html"><a href="latexdistributions.html#recommended-latex-distribution"><i class="fa fa-check"></i><b>8.1</b> Recommended LaTeX Distribution</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="latexdistributions.html"><a href="latexdistributions.html#tinytex-recommended"><i class="fa fa-check"></i><b>8.1.1</b> 1. <strong>TinyTeX</strong> (Recommended)</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="latexdistributions.html"><a href="latexdistributions.html#additional-latex-distributions"><i class="fa fa-check"></i><b>8.2</b> Additional LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="latexdistributions.html"><a href="latexdistributions.html#tex-live"><i class="fa fa-check"></i><b>8.2.1</b> 2. <strong>TeX Live</strong></a></li>
+<li class="chapter" data-level="8.2.2" data-path="latexdistributions.html"><a href="latexdistributions.html#miktex"><i class="fa fa-check"></i><b>8.2.2</b> 3. <strong>MikTeX</strong></a></li>
+<li class="chapter" data-level="8.2.3" data-path="latexdistributions.html"><a href="latexdistributions.html#mactex-for-macos"><i class="fa fa-check"></i><b>8.2.3</b> 4. <strong>MacTeX</strong> (for macOS)</a></li>
+<li class="chapter" data-level="8.2.4" data-path="latexdistributions.html"><a href="latexdistributions.html#protext-for-windows"><i class="fa fa-check"></i><b>8.2.4</b> 5. <strong>ProTeXt</strong> (for Windows)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="markdownadvanced.html"><a href="markdownadvanced.html"><i class="fa fa-check"></i><b>9</b> Advanced Text Formatting Options</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="markdownadvanced.html"><a href="markdownadvanced.html#headers"><i class="fa fa-check"></i><b>9.1</b> 1. Headers</a></li>
+<li class="chapter" data-level="9.2" data-path="markdownadvanced.html"><a href="markdownadvanced.html#emphasis"><i class="fa fa-check"></i><b>9.2</b> 2. Emphasis</a></li>
+<li class="chapter" data-level="9.3" data-path="markdownadvanced.html"><a href="markdownadvanced.html#strikethrough"><i class="fa fa-check"></i><b>9.3</b> 3. Strikethrough</a></li>
+<li class="chapter" data-level="9.4" data-path="markdownadvanced.html"><a href="markdownadvanced.html#lists"><i class="fa fa-check"></i><b>9.4</b> 4. Lists</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="markdownadvanced.html"><a href="markdownadvanced.html#bullet-lists"><i class="fa fa-check"></i><b>9.4.1</b> 4.1 Bullet Lists</a></li>
+<li class="chapter" data-level="9.4.2" data-path="markdownadvanced.html"><a href="markdownadvanced.html#numbered-lists"><i class="fa fa-check"></i><b>9.4.2</b> 4.2 Numbered Lists</a></li>
+<li class="chapter" data-level="9.4.3" data-path="markdownadvanced.html"><a href="markdownadvanced.html#task-lists"><i class="fa fa-check"></i><b>9.4.3</b> 4.3 Task Lists</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="markdownadvanced.html"><a href="markdownadvanced.html#blockquotes"><i class="fa fa-check"></i><b>9.5</b> 5. Blockquotes</a></li>
+<li class="chapter" data-level="9.6" data-path="markdownadvanced.html"><a href="markdownadvanced.html#code"><i class="fa fa-check"></i><b>9.6</b> 6. Code</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="markdownadvanced.html"><a href="markdownadvanced.html#inline-code"><i class="fa fa-check"></i><b>9.6.1</b> 6.1 Inline Code</a></li>
+<li class="chapter" data-level="9.6.2" data-path="markdownadvanced.html"><a href="markdownadvanced.html#code-blocks"><i class="fa fa-check"></i><b>9.6.2</b> 6.2 Code Blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="markdownadvanced.html"><a href="markdownadvanced.html#horizontal-rule"><i class="fa fa-check"></i><b>9.7</b> 7. Horizontal Rule</a></li>
+<li class="chapter" data-level="9.8" data-path="markdownadvanced.html"><a href="markdownadvanced.html#links"><i class="fa fa-check"></i><b>9.8</b> 8. Links</a></li>
+<li class="chapter" data-level="9.9" data-path="markdownadvanced.html"><a href="markdownadvanced.html#images"><i class="fa fa-check"></i><b>9.9</b> 9. Images</a></li>
+<li class="chapter" data-level="9.10" data-path="markdownadvanced.html"><a href="markdownadvanced.html#tables"><i class="fa fa-check"></i><b>9.10</b> 10. Tables</a></li>
+<li class="chapter" data-level="9.11" data-path="markdownadvanced.html"><a href="markdownadvanced.html#footnotes"><i class="fa fa-check"></i><b>9.11</b> 11. Footnotes</a></li>
+<li class="chapter" data-level="9.12" data-path="markdownadvanced.html"><a href="markdownadvanced.html#definition-lists-pandoc"><i class="fa fa-check"></i><b>9.12</b> 12. Definition Lists (Pandoc)</a></li>
+<li class="chapter" data-level="9.13" data-path="markdownadvanced.html"><a href="markdownadvanced.html#math"><i class="fa fa-check"></i><b>9.13</b> 13. Math</a>
+<ul>
+<li class="chapter" data-level="9.13.1" data-path="markdownadvanced.html"><a href="markdownadvanced.html#inline-math"><i class="fa fa-check"></i><b>9.13.1</b> 13.1 Inline Math</a></li>
+<li class="chapter" data-level="9.13.2" data-path="markdownadvanced.html"><a href="markdownadvanced.html#block-math"><i class="fa fa-check"></i><b>9.13.2</b> 13.2 Block Math</a></li>
+<li class="chapter" data-level="9.13.3" data-path="markdownadvanced.html"><a href="markdownadvanced.html#latex-environment"><i class="fa fa-check"></i><b>9.13.3</b> 13.3 LaTeX Environment</a></li>
+</ul></li>
+<li class="chapter" data-level="9.14" data-path="markdownadvanced.html"><a href="markdownadvanced.html#custom-blocks-pandoc"><i class="fa fa-check"></i><b>9.14</b> 14. Custom Blocks (Pandoc)</a></li>
+<li class="chapter" data-level="9.15" data-path="markdownadvanced.html"><a href="markdownadvanced.html#html-tags"><i class="fa fa-check"></i><b>9.15</b> 15. HTML Tags</a></li>
+<li class="chapter" data-level="9.16" data-path="markdownadvanced.html"><a href="markdownadvanced.html#metadata-blocks-pandoc"><i class="fa fa-check"></i><b>9.16</b> 16. Metadata Blocks (Pandoc)</a></li>
+<li class="chapter" data-level="9.17" data-path="markdownadvanced.html"><a href="markdownadvanced.html#line-breaks"><i class="fa fa-check"></i><b>9.17</b> 17. Line Breaks</a></li>
+<li class="chapter" data-level="9.18" data-path="markdownadvanced.html"><a href="markdownadvanced.html#escaping-characters"><i class="fa fa-check"></i><b>9.18</b> 18. Escaping Characters</a></li>
+<li class="chapter" data-level="9.19" data-path="markdownadvanced.html"><a href="markdownadvanced.html#highlight-pandoc"><i class="fa fa-check"></i><b>9.19</b> 19. Highlight (Pandoc)</a></li>
+<li class="chapter" data-level="9.20" data-path="markdownadvanced.html"><a href="markdownadvanced.html#superscript-and-subscript"><i class="fa fa-check"></i><b>9.20</b> 20. Superscript and Subscript</a>
+<ul>
+<li class="chapter" data-level="9.20.1" data-path="markdownadvanced.html"><a href="markdownadvanced.html#superscript"><i class="fa fa-check"></i><b>9.20.1</b> 20.1 Superscript</a></li>
+<li class="chapter" data-level="9.20.2" data-path="markdownadvanced.html"><a href="markdownadvanced.html#subscript"><i class="fa fa-check"></i><b>9.20.2</b> 20.2 Subscript</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="examplepaper.html"><a href="examplepaper.html"><i class="fa fa-check"></i><b>10</b> Example Document: Union Earnings Analysis</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="examplepaper.html"><a href="examplepaper.html#what-this-analysis-is-all-about"><i class="fa fa-check"></i><b>10.0.1</b> What This Analysis Is All About</a></li>
+<li class="chapter" data-level="10.0.2" data-path="examplepaper.html"><a href="examplepaper.html#where-the-data-came-from"><i class="fa fa-check"></i><b>10.0.2</b> Where the Data Came From</a></li>
+<li class="chapter" data-level="10.0.3" data-path="examplepaper.html"><a href="examplepaper.html#why-this-matters"><i class="fa fa-check"></i><b>10.0.3</b> Why This Matters</a></li>
+<li class="chapter" data-level="10.1" data-path="examplepaper.html"><a href="examplepaper.html#data-preparation"><i class="fa fa-check"></i><b>10.1</b> Data Preparation</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="examplepaper.html"><a href="examplepaper.html#getting-the-data-ready"><i class="fa fa-check"></i><b>10.1.1</b> Getting the Data Ready</a></li>
+<li class="chapter" data-level="10.1.2" data-path="examplepaper.html"><a href="examplepaper.html#quick-data-overview"><i class="fa fa-check"></i><b>10.1.2</b> Quick Data Overview</a></li>
+<li class="chapter" data-level="10.1.3" data-path="examplepaper.html"><a href="examplepaper.html#filtering-to-focus-on-the-present"><i class="fa fa-check"></i><b>10.1.3</b> Filtering to Focus on the Present</a></li>
+<li class="chapter" data-level="10.1.4" data-path="examplepaper.html"><a href="examplepaper.html#merging-the-data"><i class="fa fa-check"></i><b>10.1.4</b> Merging the Data</a></li>
+<li class="chapter" data-level="10.1.5" data-path="examplepaper.html"><a href="examplepaper.html#making-data-manipulation-easier"><i class="fa fa-check"></i><b>10.1.5</b> Making Data Manipulation Easier</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="examplepaper.html"><a href="examplepaper.html#analysis-and-aggregations"><i class="fa fa-check"></i><b>10.2</b> Analysis and Aggregations</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="examplepaper.html"><a href="examplepaper.html#calculating-key-metrics"><i class="fa fa-check"></i><b>10.2.1</b> Calculating Key Metrics</a></li>
+<li class="chapter" data-level="10.2.2" data-path="examplepaper.html"><a href="examplepaper.html#rescaling-data-for-better-visualization"><i class="fa fa-check"></i><b>10.2.2</b> Rescaling Data for Better Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="examplepaper.html"><a href="examplepaper.html#visualization-of-results"><i class="fa fa-check"></i><b>10.3</b> Visualization of Results</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="examplepaper.html"><a href="examplepaper.html#average-wage-trends-over-time"><i class="fa fa-check"></i><b>10.3.1</b> Average Wage Trends Over Time</a></li>
+<li class="chapter" data-level="10.3.2" data-path="examplepaper.html"><a href="examplepaper.html#union-wages-comparison-by-year"><i class="fa fa-check"></i><b>10.3.2</b> Union Wages Comparison by Year</a></li>
+<li class="chapter" data-level="10.3.3" data-path="examplepaper.html"><a href="examplepaper.html#employment-trends-by-state-including-union-membership"><i class="fa fa-check"></i><b>10.3.3</b> Employment Trends by State, Including Union Membership</a></li>
+<li class="chapter" data-level="10.3.4" data-path="examplepaper.html"><a href="examplepaper.html#union-vs-nonunion-wage-trends-over-time"><i class="fa fa-check"></i><b>10.3.4</b> Union vs Nonunion Wage Trends Over Time</a></li>
+<li class="chapter" data-level="10.3.5" data-path="examplepaper.html"><a href="examplepaper.html#union-wage-premium-over-time"><i class="fa fa-check"></i><b>10.3.5</b> Union Wage Premium Over Time</a></li>
+<li class="chapter" data-level="10.3.6" data-path="examplepaper.html"><a href="examplepaper.html#union-membership-trends-over-time"><i class="fa fa-check"></i><b>10.3.6</b> Union Membership Trends Over Time</a></li>
+<li class="chapter" data-level="10.3.7" data-path="examplepaper.html"><a href="examplepaper.html#employment-in-different-sectors-over-time"><i class="fa fa-check"></i><b>10.3.7</b> Employment in Different Sectors Over Time</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="examplepaper.html"><a href="examplepaper.html#discussion-and-summary"><i class="fa fa-check"></i><b>10.4</b> Discussion and Summary</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="examplepaper.html"><a href="examplepaper.html#wage-growth-and-union-influence"><i class="fa fa-check"></i><b>10.4.1</b> Wage Growth and Union Influence</a></li>
+<li class="chapter" data-level="10.4.2" data-path="examplepaper.html"><a href="examplepaper.html#decline-in-union-membership"><i class="fa fa-check"></i><b>10.4.2</b> Decline in Union Membership</a></li>
+<li class="chapter" data-level="10.4.3" data-path="examplepaper.html"><a href="examplepaper.html#shifts-in-employment-by-sector"><i class="fa fa-check"></i><b>10.4.3</b> Shifts in Employment by Sector</a></li>
+<li class="chapter" data-level="10.4.4" data-path="examplepaper.html"><a href="examplepaper.html#implications-for-the-future"><i class="fa fa-check"></i><b>10.4.4</b> Implications for the Future</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bookdown: Flexible Document Creation in RStudio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="examplepaper" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Example Document: Union Earnings Analysis<a href="examplepaper.html#examplepaper" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="what-this-analysis-is-all-about" class="section level3 hasAnchor" number="10.0.1">
+<h3><span class="header-section-number">10.0.1</span> What This Analysis Is All About<a href="examplepaper.html#what-this-analysis-is-all-about" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this document, we’re diving into data on wages, demographics, and state info to see how union membership stacks up against nonunion wages. We want to understand what makes a difference in pay and job security across different states and communities. Spoiler alert: unions have a big impact, and we’re here to show you how!</p>
+</div>
+<div id="where-the-data-came-from" class="section level3 hasAnchor" number="10.0.2">
+<h3><span class="header-section-number">10.0.2</span> Where the Data Came From<a href="examplepaper.html#where-the-data-came-from" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We used datasets from <span class="citation">R for Data Science Online Learning Community (<a href="#ref-tidytuesday">2024</a>)</span> that cover wage and union membership trends across the U.S. from 1973 to 2022. These datasets come from government surveys and are packed with info on union membership, wages, and employment stats. We use three main datasets <code>demographics.csv</code>, <code>wages.csv</code>, and <code>states.csv</code> which let us track how unionization has affected wages over time. The data tells a compelling story about how unions have shaped workers’ lives for decades, and we’re here to shine a light on that.</p>
+</div>
+<div id="why-this-matters" class="section level3 hasAnchor" number="10.0.3">
+<h3><span class="header-section-number">10.0.3</span> Why This Matters<a href="examplepaper.html#why-this-matters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We want to understand how unions impact wages and employment patterns. Are union members earning more? Are they better off than nonunion workers? Which communities benefit the most from union membership? Our goal is to highlight the real power of unions in making workers’ lives better. We hope to give you a better idea of how collective bargaining makes a difference, both for individuals and for entire communities.</p>
+</div>
+<div id="data-preparation" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Data Preparation<a href="examplepaper.html#data-preparation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="getting-the-data-ready" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> Getting the Data Ready<a href="examplepaper.html#getting-the-data-ready" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We loaded three datasets—demographics, wages, and states using some simple code in R. These datasets have key info: <code>demographics.csv</code> tells us about employment by different demographic groups, <code>wages.csv</code> gives us union vs. nonunion wages, and <code>states.csv</code> tells us about state-level union activity and employment. Here’s how we got started:</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="examplepaper.html#cb89-1" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Documents/School/RaceIncomeCalifornia&quot;</span>)</span>
+<span id="cb89-2"><a href="examplepaper.html#cb89-2" tabindex="-1"></a>demographics <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&#39;demographics.csv&#39;</span>)</span>
+<span id="cb89-3"><a href="examplepaper.html#cb89-3" tabindex="-1"></a>wages <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&#39;wages.csv&#39;</span>)</span>
+<span id="cb89-4"><a href="examplepaper.html#cb89-4" tabindex="-1"></a>states <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&#39;states.csv&#39;</span>)</span></code></pre></div>
+</div>
+<div id="quick-data-overview" class="section level3 hasAnchor" number="10.1.2">
+<h3><span class="header-section-number">10.1.2</span> Quick Data Overview<a href="examplepaper.html#quick-data-overview" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We took a close look at what’s inside each dataset. The <code>demographics.csv</code> shows union membership and employment data broken down by things like gender, race, and age. The <code>wages.csv</code> lets us compare wages for union and nonunion workers, while <code>states.csv</code> gives a bigger picture at the state level. Understanding what’s in each dataset helps us figure out how to connect it all together to tell a story about unions and wages.</p>
+</div>
+<div id="filtering-to-focus-on-the-present" class="section level3 hasAnchor" number="10.1.3">
+<h3><span class="header-section-number">10.1.3</span> Filtering to Focus on the Present<a href="examplepaper.html#filtering-to-focus-on-the-present" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>I decided to focus on data from 2000 onwards. Why? Because we want to see what’s happening now, or at least in the recent past. Older data might not be as relevant to the present-day challenges and victories of workers, so we filtered it down to what’s most useful.</p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="examplepaper.html#cb90-1" tabindex="-1"></a>filtered_wages <span class="ot">&lt;-</span> wages[wages<span class="sc">$</span>year <span class="sc">&gt;=</span> <span class="dv">2000</span>, ]</span>
+<span id="cb90-2"><a href="examplepaper.html#cb90-2" tabindex="-1"></a>filtered_states <span class="ot">&lt;-</span> states[states<span class="sc">$</span>year <span class="sc">&gt;=</span> <span class="dv">2000</span>, ]</span>
+<span id="cb90-3"><a href="examplepaper.html#cb90-3" tabindex="-1"></a>filtered_demographics <span class="ot">&lt;-</span> demographics[demographics<span class="sc">$</span>year <span class="sc">&gt;=</span> <span class="dv">2000</span>, ]</span></code></pre></div>
+</div>
+<div id="merging-the-data" class="section level3 hasAnchor" number="10.1.4">
+<h3><span class="header-section-number">10.1.4</span> Merging the Data<a href="examplepaper.html#merging-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We merged the wages and states datasets to make it easier to look at everything together. This helps us connect wages (union and nonunion) with state-level data, like union membership rates. By combining this data, we can get a fuller picture of how unions are making a difference for workers in each state.</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="examplepaper.html#cb91-1" tabindex="-1"></a>merged_data <span class="ot">&lt;-</span> <span class="fu">merge</span>(states, wages, <span class="at">by =</span> <span class="st">&quot;year&quot;</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+</div>
+<div id="making-data-manipulation-easier" class="section level3 hasAnchor" number="10.1.5">
+<h3><span class="header-section-number">10.1.5</span> Making Data Manipulation Easier<a href="examplepaper.html#making-data-manipulation-easier" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>I converted the filtered datasets into a faster, more efficient format using data.table. This makes it easier to manipulate big datasets without a lot of waiting around, which is especially helpful when plotting graphs.</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="examplepaper.html#cb92-1" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;data.table&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb92-2"><a href="examplepaper.html#cb92-2" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;data.table&quot;</span>)</span>
+<span id="cb92-3"><a href="examplepaper.html#cb92-3" tabindex="-1"></a>}</span>
+<span id="cb92-4"><a href="examplepaper.html#cb92-4" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb92-5"><a href="examplepaper.html#cb92-5" tabindex="-1"></a></span>
+<span id="cb92-6"><a href="examplepaper.html#cb92-6" tabindex="-1"></a><span class="fu">setDT</span>(filtered_wages)</span>
+<span id="cb92-7"><a href="examplepaper.html#cb92-7" tabindex="-1"></a><span class="fu">setDT</span>(filtered_states)</span>
+<span id="cb92-8"><a href="examplepaper.html#cb92-8" tabindex="-1"></a><span class="fu">setDT</span>(filtered_demographics)</span>
+<span id="cb92-9"><a href="examplepaper.html#cb92-9" tabindex="-1"></a></span>
+<span id="cb92-10"><a href="examplepaper.html#cb92-10" tabindex="-1"></a><span class="fu">setDT</span>(filtered_wages)</span>
+<span id="cb92-11"><a href="examplepaper.html#cb92-11" tabindex="-1"></a><span class="fu">setDT</span>(filtered_states)</span>
+<span id="cb92-12"><a href="examplepaper.html#cb92-12" tabindex="-1"></a><span class="fu">setDT</span>(filtered_demographics)</span></code></pre></div>
+</div>
+</div>
+<div id="analysis-and-aggregations" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Analysis and Aggregations<a href="examplepaper.html#analysis-and-aggregations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="calculating-key-metrics" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Calculating Key Metrics<a href="examplepaper.html#calculating-key-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this chapter, I calculated some key metrics to understand wage trends and union impact. I wanted to get a clear sense of how union and nonunion wages compare and how union membership has changed over time.</p>
+<ul>
+<li><strong>Mean Wages</strong>: First, we calculated the average wages for union and nonunion workers over the years. This helped us see the difference in pay between the two groups.</li>
+</ul>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="examplepaper.html#cb93-1" tabindex="-1"></a>wage_trends <span class="ot">&lt;-</span> filtered_wages[, </span>
+<span id="cb93-2"><a href="examplepaper.html#cb93-2" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">mean_union_wage =</span> <span class="fu">mean</span>(union_wage, </span>
+<span id="cb93-3"><a href="examplepaper.html#cb93-3" tabindex="-1"></a>                                  <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb93-4"><a href="examplepaper.html#cb93-4" tabindex="-1"></a>      <span class="at">mean_nonunion_wage =</span> <span class="fu">mean</span>(nonunion_wage, </span>
+<span id="cb93-5"><a href="examplepaper.html#cb93-5" tabindex="-1"></a>                                <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), by <span class="ot">=</span> <span class="fu">list</span>(year)]</span></code></pre></div>
+<p>This code calculates the average union and nonunion wages for each year from 2000 onwards, allowing us to visualize and compare wage trends between unionized and nonunionized workers. These calculations provide an overview of how wages for both categories have evolved over the years.</p>
+<ul>
+<li><strong>Union Wage Premium</strong>: I also calculated the “union wage premium,” which is basically the extra amount union workers make compared to nonunion workers.</li>
+</ul>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="examplepaper.html#cb94-1" tabindex="-1"></a>union_wage_premium <span class="ot">&lt;-</span> filtered_wages[, </span>
+<span id="cb94-2"><a href="examplepaper.html#cb94-2" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">raw_premium =</span> <span class="fu">mean</span>(union_wage_premium_raw, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb94-3"><a href="examplepaper.html#cb94-3" tabindex="-1"></a>      <span class="at">adjusted_premium =</span> <span class="fu">mean</span>(union_wage_premium_adjusted, </span>
+<span id="cb94-4"><a href="examplepaper.html#cb94-4" tabindex="-1"></a>                              <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), by <span class="ot">=</span> year]</span></code></pre></div>
+<p>The union wage premium calculation helps us quantify the economic benefits of union membership. The adjusted premium, in particular, sheds light on whether the observed wage differential is purely due to union membership or influenced by other worker characteristics.</p>
+<ul>
+<li><strong>Union Membership Trends</strong>: I looked at how union membership has changed over time. Understanding how union density (the percentage of workers in a union) has shifted helps us connect the dots between membership levels and wage benefits.</li>
+</ul>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="examplepaper.html#cb95-1" tabindex="-1"></a>membership_trends <span class="ot">&lt;-</span> filtered_demographics[, </span>
+<span id="cb95-2"><a href="examplepaper.html#cb95-2" tabindex="-1"></a>        <span class="fu">list</span>(<span class="at">average_p_members =</span> <span class="fu">mean</span>(p_members, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), by <span class="ot">=</span> year]</span></code></pre></div>
+<p>By calculating the average percentage of union members for each year, we can identify any notable increases or decreases in union membership. These trends help inform our understanding of how unions have gained or lost influence over the past few decades.</p>
+</div>
+<div id="rescaling-data-for-better-visualization" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Rescaling Data for Better Visualization<a href="examplepaper.html#rescaling-data-for-better-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In addition to the core aggregations described above, further calculations were performed to deepen our understanding of the dataset and prepare for visualizations.</p>
+<ul>
+<li><strong>Average Wage per Year</strong>: I also calculated an overall average wage (for both union and nonunion workers) for each year to provide a broader view of wage growth over time.</li>
+</ul>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="examplepaper.html#cb96-1" tabindex="-1"></a>average_wage_by_year <span class="ot">&lt;-</span> filtered_wages[,</span>
+<span id="cb96-2"><a href="examplepaper.html#cb96-2" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">average_wage =</span> (<span class="fu">mean</span>(union_wage, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
+<span id="cb96-3"><a href="examplepaper.html#cb96-3" tabindex="-1"></a>      <span class="fu">mean</span>(nonunion_wage, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">/</span> <span class="dv">2</span>), </span>
+<span id="cb96-4"><a href="examplepaper.html#cb96-4" tabindex="-1"></a>        by <span class="ot">=</span> <span class="fu">list</span>(year)]</span></code></pre></div>
+<p>This calculation helps in understanding whether wages have increased consistently over the years and if union membership has had an impact on overall wage trends. By averaging the wages of union and nonunion workers, we provide a generalized view of wage progression in the broader labor market.</p>
+<ul>
+<li><strong>Members Rescaling</strong>: I rescaled the number of union members so we could better visualize membership levels alongside other employment metrics. This helps us create clearer, more impactful graphs.</li>
+</ul>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="examplepaper.html#cb97-1" tabindex="-1"></a>merged_data<span class="sc">$</span>members_scaled <span class="ot">&lt;-</span> merged_data<span class="sc">$</span>members <span class="sc">*</span> <span class="dv">100</span></span></code></pre></div>
+<p>The rescaling of union membership data helps align the values with other metrics, making visualizations more intuitive and interpretable. It ensures that union membership figures can be easily compared alongside other variables such as employment or wages in different graphical plots.</p>
+<p>With these metrics calculated, we’re ready to dive into visualizing the power of unions and how they impact workers’ lives.</p>
+</div>
+</div>
+<div id="visualization-of-results" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Visualization of Results<a href="examplepaper.html#visualization-of-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="average-wage-trends-over-time" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Average Wage Trends Over Time<a href="examplepaper.html#average-wage-trends-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>I used ggplot to create a graph that shows the average wages from 2000 to 2023. It’s easy to see that wages have generally gone up—but union wages are leading the way.</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="examplepaper.html#cb98-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb98-2"><a href="examplepaper.html#cb98-2" tabindex="-1"></a><span class="fu">ggplot</span>(average_wage_by_year, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> average_wage)) <span class="sc">+</span></span>
+<span id="cb98-3"><a href="examplepaper.html#cb98-3" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb98-4"><a href="examplepaper.html#cb98-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Average Wage&quot;</span>) <span class="sc">+</span></span>
+<span id="cb98-5"><a href="examplepaper.html#cb98-5" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb98-6"><a href="examplepaper.html#cb98-6" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Set1&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:averagewage"></span>
+<img src="_main_files/figure-html/averagewage-1.png" alt="Average Wage" width="672" />
+<p class="caption">
+Figure 10.1: Average Wage
+</p>
+</div>
+<p>The <a href="examplepaper.html#fig:averagewage">10.1</a> visualization displays the trend of average wages over the two-decade span starting from the year 2000 up to 2023. This plot shows a steady increase in wages, highlighting an upward trajectory that suggests a positive economic trend. The x-axis represents the years, while the y-axis denotes the average wage figures. The line graph is particularly useful for tracking changes over time, making it easier to visualize the rate of growth or any periods of stagnation.</p>
+</div>
+<div id="union-wages-comparison-by-year" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Union Wages Comparison by Year<a href="examplepaper.html#union-wages-comparison-by-year" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Next, we used a boxplot to compare union wages over different years. This gives us a look at how wages have varied for union workers.</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="examplepaper.html#cb99-1" tabindex="-1"></a><span class="fu">ggplot</span>(filtered_wages, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(year), <span class="at">y =</span> union_wage)) <span class="sc">+</span></span>
+<span id="cb99-2"><a href="examplepaper.html#cb99-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb99-3"><a href="examplepaper.html#cb99-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Union Wage&quot;</span>) <span class="sc">+</span></span>
+<span id="cb99-4"><a href="examplepaper.html#cb99-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:wageyear"></span>
+<img src="_main_files/figure-html/wageyear-1.png" alt="Union Wages by Year" width="672" />
+<p class="caption">
+Figure 10.2: Union Wages by Year
+</p>
+</div>
+<p>This boxplot <a href="examplepaper.html#fig:wageyear">10.2</a> illustrates union wages over different years, capturing the range of wages as well as median values. By comparing the median line in each box, we can see if union wages have experienced upward or downward trends. The presence of outliers in some years indicates that there were wage values that significantly deviated from the rest of the dataset, providing insights into wage inequality within union jobs. Additionally, the increasing height of the boxes over time may suggest growing wage variability among union workers.</p>
+</div>
+<div id="employment-trends-by-state-including-union-membership" class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> Employment Trends by State, Including Union Membership<a href="examplepaper.html#employment-trends-by-state-including-union-membership" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>I wanted to show how employment and union membership vary across different states. For this, we used a combination of bar charts and line graphs. The idea here is to illustrate not just the number of employed people in each state, but also how many of them are union members. This is important because higher union membership often means better wages and working conditions for more people.</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="examplepaper.html#cb100-1" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb100-2"><a href="examplepaper.html#cb100-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data =</span> states, <span class="fu">aes</span>(<span class="at">x =</span> state, <span class="at">y =</span> employment), </span>
+<span id="cb100-3"><a href="examplepaper.html#cb100-3" tabindex="-1"></a>           <span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb100-4"><a href="examplepaper.html#cb100-4" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> merged_data, </span>
+<span id="cb100-5"><a href="examplepaper.html#cb100-5" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">x =</span> state, <span class="at">y =</span> members_scaled, </span>
+<span id="cb100-6"><a href="examplepaper.html#cb100-6" tabindex="-1"></a>                <span class="at">group =</span> state), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb100-7"><a href="examplepaper.html#cb100-7" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;State&quot;</span>, </span>
+<span id="cb100-8"><a href="examplepaper.html#cb100-8" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Employment/union members&quot;</span>, <span class="at">y.sec =</span> <span class="st">&quot;Members (scaled)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb100-9"><a href="examplepaper.html#cb100-9" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb100-10"><a href="examplepaper.html#cb100-10" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb100-11"><a href="examplepaper.html#cb100-11" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb100-12"><a href="examplepaper.html#cb100-12" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span> . <span class="sc">/</span> <span class="dv">100</span>, <span class="at">name =</span> <span class="st">&quot;Members&quot;</span>))</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:employmenttrend"></span>
+<img src="_main_files/figure-html/employmenttrend-1.png" alt="Employement Trends by State" width="672" />
+<p class="caption">
+Figure 10.3: Employement Trends by State
+</p>
+</div>
+<p>In this graph <a href="examplepaper.html#fig:employmenttrend">10.3</a>, the blue bars show how many people are working in each state, while the red line shows how many of them are in unions. The states with the highest union membership—like California, New York, and Pennsylvania—are leading the way in worker rights and fair treatment. It’s pretty simple: more unions = better lives for workers.</p>
+</div>
+<div id="union-vs-nonunion-wage-trends-over-time" class="section level3 hasAnchor" number="10.3.4">
+<h3><span class="header-section-number">10.3.4</span> Union vs Nonunion Wage Trends Over Time<a href="examplepaper.html#union-vs-nonunion-wage-trends-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We wanted to make it crystal clear how much better union wages are compared to nonunion wages. This graph shows just that—union vs. nonunion wages over time.</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="examplepaper.html#cb101-1" tabindex="-1"></a><span class="fu">ggplot</span>(wages, <span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
+<span id="cb101-2"><a href="examplepaper.html#cb101-2" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">y =</span> union_wage, <span class="at">color =</span> <span class="st">&quot;Union Wage&quot;</span>), </span>
+<span id="cb101-3"><a href="examplepaper.html#cb101-3" tabindex="-1"></a>              <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">&quot;loess&quot;</span>) <span class="sc">+</span></span>
+<span id="cb101-4"><a href="examplepaper.html#cb101-4" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">y =</span> nonunion_wage, <span class="at">color =</span> <span class="st">&quot;Nonunion Wage&quot;</span>), </span>
+<span id="cb101-5"><a href="examplepaper.html#cb101-5" tabindex="-1"></a>              <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">&quot;loess&quot;</span>) <span class="sc">+</span></span>
+<span id="cb101-6"><a href="examplepaper.html#cb101-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Wage&quot;</span>,</span>
+<span id="cb101-7"><a href="examplepaper.html#cb101-7" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Type of Wage&quot;</span>) <span class="sc">+</span></span>
+<span id="cb101-8"><a href="examplepaper.html#cb101-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span></span>
+<span id="cb101-9"><a href="examplepaper.html#cb101-9" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
+<span id="cb101-10"><a href="examplepaper.html#cb101-10" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;Union Wage&quot;</span> <span class="ot">=</span> <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;Nonunion Wage&quot;</span> <span class="ot">=</span> <span class="st">&quot;green&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb101-11"><a href="examplepaper.html#cb101-11" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;Wage Type&quot;</span>))</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;
+## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<div class="figure"><span style="display:block;" id="fig:unionvnot"></span>
+<img src="_main_files/figure-html/unionvnot-1.png" alt="Union Vs. Union Wage Over Time" width="672" />
+<p class="caption">
+Figure 10.4: Union Vs. Union Wage Over Time
+</p>
+</div>
+<p>Union wages (in blue) are consistently higher than nonunion wages (in green). It’s proof that collective bargaining works. When workers join together, they get better pay—it’s as simple as that.</p>
+</div>
+<div id="union-wage-premium-over-time" class="section level3 hasAnchor" number="10.3.5">
+<h3><span class="header-section-number">10.3.5</span> Union Wage Premium Over Time<a href="examplepaper.html#union-wage-premium-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>I also took a look at the “union wage premium,” which is just a fancy way of saying how much extra money union workers make compared to nonunion workers. This graph shows that premium over time.</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="examplepaper.html#cb103-1" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb103-2"><a href="examplepaper.html#cb103-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> wages, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> union_wage_premium_raw), </span>
+<span id="cb103-3"><a href="examplepaper.html#cb103-3" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">&quot;orange&quot;</span>) <span class="sc">+</span></span>
+<span id="cb103-4"><a href="examplepaper.html#cb103-4" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">data =</span> wages, </span>
+<span id="cb103-5"><a href="examplepaper.html#cb103-5" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> year, </span>
+<span id="cb103-6"><a href="examplepaper.html#cb103-6" tabindex="-1"></a>      <span class="at">y =</span> union_wage_premium_adjusted), <span class="at">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="at">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="sc">+</span></span>
+<span id="cb103-7"><a href="examplepaper.html#cb103-7" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Wage Premium&quot;</span>) <span class="sc">+</span></span>
+<span id="cb103-8"><a href="examplepaper.html#cb103-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb103-9"><a href="examplepaper.html#cb103-9" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Dark2&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<div class="figure"><span style="display:block;" id="fig:unionpremiumtime"></span>
+<img src="_main_files/figure-html/unionpremiumtime-1.png" alt="Union Wage Premium Over Time" width="672" />
+<p class="caption">
+Figure 10.5: Union Wage Premium Over Time
+</p>
+</div>
+<p>The orange points show the raw premium, while the purple line is the adjusted premium. What this graph tells us is that unions are getting workers paid more, even when you take other factors into account. That’s real value for workers. But we see that over time this is trending down.</p>
+</div>
+<div id="union-membership-trends-over-time" class="section level3 hasAnchor" number="10.3.6">
+<h3><span class="header-section-number">10.3.6</span> Union Membership Trends Over Time<a href="examplepaper.html#union-membership-trends-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We also looked at how union membership has changed over time with this area chart. It’s important because union membership has been on the decline, and we need to change that.</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="examplepaper.html#cb105-1" tabindex="-1"></a><span class="fu">ggplot</span>(demographics, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> p_members)) <span class="sc">+</span></span>
+<span id="cb105-2"><a href="examplepaper.html#cb105-2" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb105-3"><a href="examplepaper.html#cb105-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Percentage of Union Members&quot;</span>) <span class="sc">+</span></span>
+<span id="cb105-4"><a href="examplepaper.html#cb105-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb105-5"><a href="examplepaper.html#cb105-5" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Blues&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:membertime"></span>
+<img src="_main_files/figure-html/membertime-1.png" alt="Uniont Membership Trends" width="672" />
+<p class="caption">
+Figure 10.6: Uniont Membership Trends
+</p>
+</div>
+<p>The drop in union membership is clear. Fewer union members mean less bargaining power, and that’s why wages haven’t risen as fast as they should. We need to support union growth to bring back fair wages and worker protections.</p>
+</div>
+<div id="employment-in-different-sectors-over-time" class="section level3 hasAnchor" number="10.3.7">
+<h3><span class="header-section-number">10.3.7</span> Employment in Different Sectors Over Time<a href="examplepaper.html#employment-in-different-sectors-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Lastly, we looked at employment trends across different sectors. This stacked bar graph shows how employment has changed from manufacturing to more service-focused jobs over time.</p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="examplepaper.html#cb106-1" tabindex="-1"></a><span class="fu">ggplot</span>(states, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> employment, <span class="at">fill =</span> sector)) <span class="sc">+</span></span>
+<span id="cb106-2"><a href="examplepaper.html#cb106-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;stack&quot;</span>) <span class="sc">+</span></span>
+<span id="cb106-3"><a href="examplepaper.html#cb106-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Employment&quot;</span>) <span class="sc">+</span></span>
+<span id="cb106-4"><a href="examplepaper.html#cb106-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb106-5"><a href="examplepaper.html#cb106-5" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Spectral&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:sectoremploy"></span>
+<img src="_main_files/figure-html/sectoremploy-1.png" alt="Setor Employement" width="672" />
+<p class="caption">
+Figure 10.7: Setor Employement
+</p>
+</div>
+<p>The private sector—especially services—has grown a lot, while manufacturing has shrunk. We need unions in all these sectors to keep fighting for fair pay and worker rights, no matter what kind of work people are doing.</p>
+</div>
+</div>
+<div id="discussion-and-summary" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Discussion and Summary<a href="examplepaper.html#discussion-and-summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="wage-growth-and-union-influence" class="section level3 hasAnchor" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Wage Growth and Union Influence<a href="examplepaper.html#wage-growth-and-union-influence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Une thing is crystal clear: union workers make more money. The graphs and numbers show that if you’re in a union, you’re getting paid better compared to folks who aren’t. We’re talking about both the raw numbers (the difference in pay) and the adjusted numbers (where we consider factors like age, job type, etc.). And guess what? Even when you adjust for those things, union workers still come out on top.</p>
+<p>When we looked at the trends over time, union wages have consistently been higher. Sure, there’s been some narrowing of the gap lately, but unions are still the best bet for fair wages. If unions start losing power, everyone’s pay could start sliding back. We need to keep unions strong if we want to keep fighting for better wages for all workers.</p>
+</div>
+<div id="decline-in-union-membership" class="section level3 hasAnchor" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> Decline in Union Membership<a href="examplepaper.html#decline-in-union-membership" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One of the more worrying things we saw is how union membership has been dropping for the past couple of decades. There are a bunch of reasons for this. The economy has shifted—manufacturing, where unions were strong, has shrunk, and we’ve moved towards more service jobs, which are harder to organize. Plus, with globalization, a lot of jobs went overseas or became automated, and that took away a lot of union power.</p>
+<p>And let’s not forget the gig economy. More and more people are working gig jobs or part-time, which makes it tough for them to organize and join unions. Fewer unions mean less power for workers to negotiate fair pay and benefits, and that’s not good for anyone. If we want to turn this around, we need to make it easier for workers in all kinds of jobs to join unions and fight for their rights.</p>
+</div>
+<div id="shifts-in-employment-by-sector" class="section level3 hasAnchor" number="10.4.3">
+<h3><span class="header-section-number">10.4.3</span> Shifts in Employment by Sector<a href="examplepaper.html#shifts-in-employment-by-sector" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Another big trend we saw is that employment has shifted from industries like manufacturing and construction into the service sector. The service industry has been booming, but it hasn’t been easy for unions to gain a foothold there. That means a lot of workers in service jobs are missing out on the protections and pay boosts that unions can provide.</p>
+<p>The public sector is one of the few places where unions are still doing okay, but even there, unions are under pressure from budget cuts and changes to policies that aim to cut spending. If we want to improve job quality for everyone, unions need to find ways to grow in these new industries. The service sector needs unions more than ever to help protect workers’ rights and improve their pay.</p>
+</div>
+<div id="implications-for-the-future" class="section level3 hasAnchor" number="10.4.4">
+<h3><span class="header-section-number">10.4.4</span> Implications for the Future<a href="examplepaper.html#implications-for-the-future" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>So, what does all this mean for the future? Well, we’ve got some challenges, but also opportunities. Unions are still crucial for securing better wages, but the decline in membership is a problem we need to solve. The answer might be new organizing strategies—unions need to adapt to reach workers in tech, service, and gig industries. If unions can innovate, they can still be a powerful force for worker rights.</p>
+<p>If union membership keeps shrinking, we’re going to see more income inequality. That means the gap between the rich and the poor will get wider, and that’s bad news for everyone. Unions help level the playing field, so we need to support them, whether through better labor laws or by organizing in new industries.</p>
+<p>The shift to more service-based jobs could be an opportunity if unions can step in and start organizing those workers. The future of the labor market is going to depend a lot on how well unions, workers, and policymakers can adapt to these changes. We need to work together to make sure everyone gets fair wages and decent working conditions, no matter where they work.</p>
+<p>Unions have always been about making things fair for workers, and that mission hasn’t changed. We need to keep building union power to make sure everyone gets a fair shake in this rapidly changing economy.</p>
+
+</div>
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-tidytuesday" class="csl-entry">
+R for Data Science Online Learning Community. 2024. <span>“TidyTuesday: A Weekly Data Project Aimed at Improving Data Wrangling and Visualization Skills.”</span> <a href="https://github.com/rfordatascience/tidytuesday">https://github.com/rfordatascience/tidytuesday</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="markdownadvanced.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/19-paper-references.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"output_dir": "docs"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

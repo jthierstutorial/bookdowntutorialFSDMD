@@ -1,0 +1,91 @@
+---
+title: "Bookdown: Flexible Document Creation in RStudio"
+subtitle: "By: Joseph Thiers"
+format: beamer
+editor: visual
+---
+
+## Ever have trouble with your LaTeX document?
+
+![](images/Screenshot%202024-11-18%20at%208.36.18%20PM.png){fig-align="center" width="431"}
+
+## Introducing Bookdown
+
+-   Generate printer-ready books and ebooks from R Markdown documents.
+-   A markup language easier to learn than LaTeX, and to write elements such as section headers, lists, quotes, figures, tables, and citations.
+-   Multiple choices of output formats: PDF, LaTeX, HTML, EPUB, and Word.
+-   Support a wide range of languages: R, C/C++, Python, Fortran, Julia, Shell scripts, and SQL, etc.
+-   LaTeX equations, theorems, and proofs work for all output formats.
+-   Can be published to GitHub, bookdown.org, and any web servers.
+-   Integrated with the RStudio IDE.
+-   One-click publishing to https://bookdown.org.
+
+## But why Bookdown?
+
+MArkdowns better friend Pandoc allows robust markdown editing.
+
+![](images/Screenshot%202024-11-18%20at%208.54.09%20PM.png){fig-align="center" width="453"}
+
+## Seamlessly Embed Code
+
+![](images/Screenshot 2024-11-19 at 1.26.56 PM.png){fig-align="center"}
+
+## Including plots
+
+![](images/Screenshot 2024-11-19 at 1.30.55 PM.png){fig-align="center"}
+
+## Seamless LaTeX Integration
+
+![](images/Screenshot 2024-11-19 at 1.58.05 PM.png){fig-align="center"}
+
+## Customizable Aesthetics via CSS
+
+![](images/Screenshot 2024-11-19 at 2.09.18 PM.png){fig-align="center"}
+
+## CSS Edits
+
+![](images/Screenshot 2024-11-19 at 2.08.37 PM.png){fig-align="center"}
+
+## With LaTeX
+
+![](images/Screenshot 2024-11-19 at 2.14.12 PM.png){fig-align="center"}
+
+## LaTeX Change
+
+![](images/Screenshot 2024-11-19 at 2.13.25 PM.png)
+
+## Output to multiple Formats
+
+![](images/Screenshot 2024-11-19 at 2.21.44 PM.png){fig-align="center"}
+
+## epub and Word
+
+![](images/Screenshot 2024-11-19 at 2.21.08 PM.png){fig-align="center"}
+
+## HTML and PDF
+
+![](images/Screenshot 2024-11-19 at 2.36.54 PM.png){fig-align="center"}
+
+## Robust Documentation
+
+![](images/Screenshot 2024-11-19 at 2.39.11 PM.png){fig-align="center"}
+
+## Lots of additional Resources
+
+-   R Markdown Cookbook
+
+-   <https://bookdown.org/yihui/rmarkdown-cookbook/>
+
+-   Pandoc
+
+-   <https://pandoc.org/>
+
+-   RStudio Bookdown Community
+
+-   <https://community.rstudio.com/tags/bookdown>
+
+-   Gallery of Books to Download
+
+-   <https://bookdown.org/home/archive/>
+
+## Conclusion

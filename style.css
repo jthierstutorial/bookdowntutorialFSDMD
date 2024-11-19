@@ -1,28 +1,32 @@
 p.caption {
-  color: red;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  background-color: blue;
+  color: #777;
   margin-top: 10px;
 }
-
 p code {
   white-space: inherit;
-  color: red;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  background-color: blue;
 }
-
 pre {
   word-break: normal;
   word-wrap: normal;
-  color: red;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  background-color: blue;
 }
-
 pre code {
   white-space: inherit;
-  color: red;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  background-color: blue;
+}
+.blackbox {
+  padding: 1em;
+  background: black;
+  color: white;
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+.center {
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Times New Roman", Times, serif;
+    color: darkblue;
+}
+hr {
+    border: 1px solid black;
+    width: 100%;Z
 }

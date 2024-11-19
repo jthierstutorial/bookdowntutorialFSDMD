@@ -1,0 +1,138 @@
+# Advanced Features {#chapter6}
+
+In this chapter, we’ll explore some advanced features of Bookdown.
+
+---
+
+## Using LaTeX for Advanced Formatting
+
+Bookdown supports advanced formatting using **LaTeX**. This allows you to create custom environments, add annotations, and format mathematical content beautifully.
+
+### Example: Adding a Custom Box
+
+You can define a custom LaTeX environment for a "black note box" in the `preamble.tex` file:
+
+```latex
+\setlength{\fboxsep}{.8em}
+
+\newenvironment{blackbox}{
+  \definecolor{shadecolor}{rgb}{0, 0, 0}  % black
+  \color{white}
+  \begin{shaded}}
+ {\end{shaded}}
+```
+
+Then use the custom box in your content:
+
+```markdown
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+**EXAMPLE!**
+:::
+Giving you this as an output.
+::::
+```
+
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+**EXAMPLE!**
+:::
+Giving you this as an output.
+::::
+
+
+---
+
+## Customizing Document with LaTeX
+
+You can even customize the entire look and output of your document by editing the content in your preamble. For example, say you wish to create an a6 size booklet and so need to modify the font sizes as I did in the for the Example Document at the end of this tutorial. In thise the preamble would look as follows:
+
+```markdown
+\usepackage{booktabs}
+\usepackage{anyfontsize}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[paperwidth=4.13in, paperheight=5.83in]{geometry}
+\usepackage[font=small, labelfont=bf]{caption}
+\geometry{left=.5in}
+\geometry{right=.5in}
+\geometry{bottom=.5in}
+\geometry{top=.75in}
+\renewcommand{\normalsize}{\fontsize{6pt}{8pt}\selectfont}
+\titleformat{\section}{\fontsize{8pt}{10pt}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\fontsize{6pt}{8pt}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\fontsize{7pt}{9pt}\bfseries}{\thesubsubsection}{1em}{}
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\fontsize{6pt}{8pt}}
+\renewcommand{\cftsubsecfont}{\fontsize{7pt}{9pt}}
+\renewcommand{\cftsubsubsecfont}{\fontsize{6pt}{8pt}}
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\fontsize{2pt}{4pt},
+  breaklines=false,
+  frame=single,
+}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\fontsize{14pt}{18pt}\bfseries} 
+  {\chaptername~\thechapter}       
+  {1em}                            
+  {}
+\titleformat{\section}
+  {\fontsize{10pt}{12pt}\bfseries} 
+  {\thesection}                    
+  {1em}                            
+  {}
+\titleformat{\subsection}
+  {\fontsize{10pt}{12pt}\bfseries} 
+  {\thesubsection}                 
+  {1em}                            
+  {}
+\setlength{\fboxsep}{.8em}
+```
+
+## Adding Custom CSS and JavaScript
+
+Enhance the appearance and functionality of your Bookdown project by adding custom CSS and JavaScript.
+
+### Step 1: Create a Custom CSS File
+
+Create a `styles.css` file with your custom styles:
+
+```css
+body {
+  font-family: "Arial", sans-serif;
+}
+h1 {
+  color: #4CAF50;
+}
+```
+
+### Step 2: Include the CSS File in the YAML Header
+
+Add the following to your `index.Rmd`:
+
+```markdown
+output:
+  bookdown::gitbook:
+    css: styles.css
+```
+
+### Step 3: Adding JavaScript (Optional)
+
+For dynamic behavior, include JavaScript files similarly:
+
+```markdown
+output:
+  bookdown::gitbook:
+    includes:
+      in_header: "scripts.js"
+```
+
+
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+**EXERCISE TIME!**
+:::
+Use custom LaTeX to add a unique visual element to your content (e.g., a shaded box or note). Play around with the settings and see what you like best.
+::::

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 LaTeX Distributions for Bookdown | Bookdown: Flexible Document Creation in RStudio</title>
+  <meta name="description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 LaTeX Distributions for Bookdown | Bookdown: Flexible Document Creation in RStudio" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/Bookcover.png" />
+  <meta property="og:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 LaTeX Distributions for Bookdown | Bookdown: Flexible Document Creation in RStudio" />
+  
+  <meta name="twitter:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="twitter:image" content="/images/Bookcover.png" />
+
+<meta name="author" content="Joseph Thiers" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sharing-your-book.html"/>
+<link rel="next" href="drought-in-california.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction Tutorial to Bookdown</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to RStudio and Bookdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-rstudio-and-bookdown"><i class="fa fa-check"></i><b>1.1</b> Why RStudio and Bookdown?</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#what-youll-learn-in-this-tutorial"><i class="fa fa-check"></i><b>1.2</b> What You’ll Learn in This Tutorial</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a></li>
+<li class="chapter" data-level="3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html"><i class="fa fa-check"></i><b>3</b> Writing and Structuring Content</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#creatingchapters"><i class="fa fa-check"></i><b>3.1</b> Creating Chapters and Sections</a></li>
+<li class="chapter" data-level="3.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-sections-and-subsections"><i class="fa fa-check"></i><b>3.2</b> Adding Sections and Subsections</a></li>
+<li class="chapter" data-level="3.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#formatting-text-in-bookdown"><i class="fa fa-check"></i><b>3.3</b> Formatting Text in Bookdown</a></li>
+<li class="chapter" data-level="3.4" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-code-chunks"><i class="fa fa-check"></i><b>3.4</b> Adding Code Chunks</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#customizing-code-chunk-options"><i class="fa fa-check"></i><b>3.4.1</b> Customizing Code Chunk Options</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections-figures-and-tables"><i class="fa fa-check"></i><b>3.5</b> Cross-Referencing Sections, Figures, and Tables</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections"><i class="fa fa-check"></i><b>3.5.1</b> Cross-Referencing Sections</a></li>
+<li class="chapter" data-level="3.5.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-figures"><i class="fa fa-check"></i><b>3.5.2</b> Cross-Referencing Figures</a></li>
+<li class="chapter" data-level="3.5.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-tables"><i class="fa fa-check"></i><b>3.5.3</b> Cross-Referencing Tables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>4</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>4.1</b> Chapters and Sub-Chapters</a></li>
+<li class="chapter" data-level="4.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>4.2</b> Captioned Figures and Tables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="cross.html"><a href="cross.html#cross-referencing-figures-1"><i class="fa fa-check"></i><b>4.2.1</b> Cross-Referencing Figures</a></li>
+<li class="chapter" data-level="4.2.2" data-path="cross.html"><a href="cross.html#cross-referencing-tables-1"><i class="fa fa-check"></i><b>4.2.2</b> Cross-Referencing Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="cross.html"><a href="cross.html#summary"><i class="fa fa-check"></i><b>4.3</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html"><i class="fa fa-check"></i><b>5</b> LaTeX in Bookdown</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#including-latex-packages-in-bookdown"><i class="fa fa-check"></i><b>5.1</b> Including LaTeX Packages in Bookdown</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#using-a-preamble.tex-file"><i class="fa fa-check"></i><b>5.1.1</b> Using a <code>preamble.tex</code> File</a></li>
+<li class="chapter" data-level="5.1.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#debugging-errors"><i class="fa fa-check"></i><b>5.1.2</b> Debugging Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#mathematical-equations"><i class="fa fa-check"></i><b>5.2</b> Mathematical Equations</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#inline-equations"><i class="fa fa-check"></i><b>5.2.1</b> Inline Equations</a></li>
+<li class="chapter" data-level="5.2.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#display-equations"><i class="fa fa-check"></i><b>5.2.2</b> Display Equations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#theorems-lemmas-and-proofs"><i class="fa fa-check"></i><b>5.3</b> Theorems, Lemmas, and Proofs</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-theorem"><i class="fa fa-check"></i><b>5.3.1</b> Adding a Theorem</a></li>
+<li class="chapter" data-level="5.3.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-lemma"><i class="fa fa-check"></i><b>5.3.2</b> Adding a Lemma</a></li>
+<li class="chapter" data-level="5.3.3" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-proof"><i class="fa fa-check"></i><b>5.3.3</b> Adding a Proof</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#cross-referencing"><i class="fa fa-check"></i><b>5.4</b> Cross-Referencing</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#referencing-sections"><i class="fa fa-check"></i><b>5.4.1</b> Referencing Sections</a></li>
+<li class="chapter" data-level="5.4.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#referencing-equations-figures-and-tables"><i class="fa fa-check"></i><b>5.4.2</b> Referencing Equations, Figures, and Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#tips-for-latex-in-bookdown"><i class="fa fa-check"></i><b>5.5</b> Tips for LaTeX in Bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html"><i class="fa fa-check"></i><b>6</b> Advanced Features and Practical Example</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#adding-citations-and-managing-references"><i class="fa fa-check"></i><b>6.1</b> Adding Citations and Managing References</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-create-a-.bib-file"><i class="fa fa-check"></i><b>6.1.1</b> Step 1: Create a <code>.bib</code> File</a></li>
+<li class="chapter" data-level="6.1.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-link-the-.bib-file-in-index.rmd"><i class="fa fa-check"></i><b>6.1.2</b> Step 2: Link the <code>.bib</code> File in <code>index.Rmd</code></a></li>
+<li class="chapter" data-level="6.1.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-cite-sources-in-your-text"><i class="fa fa-check"></i><b>6.1.3</b> Step 3: Cite Sources in Your Text</a></li>
+<li class="chapter" data-level="6.1.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-customize-citation-style-optional"><i class="fa fa-check"></i><b>6.1.4</b> Step 4: Customize Citation Style (Optional)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#using-cross-references-with-citations"><i class="fa fa-check"></i><b>6.2</b> Using Cross-References with Citations</a></li>
+<li class="chapter" data-level="6.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#practical-example-incorporating-an-existing-paper"><i class="fa fa-check"></i><b>6.3</b> Practical Example: Incorporating an Existing Paper</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-import-the-document-content"><i class="fa fa-check"></i><b>6.3.1</b> Step 1: Import the Document Content</a></li>
+<li class="chapter" data-level="6.3.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-add-figures-and-tables"><i class="fa fa-check"></i><b>6.3.2</b> Step 2: Add Figures and Tables</a></li>
+<li class="chapter" data-level="6.3.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-integrate-citations"><i class="fa fa-check"></i><b>6.3.3</b> Step 3: Integrate Citations</a></li>
+<li class="chapter" data-level="6.3.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-create-a-table-of-contents-and-links"><i class="fa fa-check"></i><b>6.3.4</b> Step 4: Create a Table of Contents and Links</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#example-output-and-render-settings"><i class="fa fa-check"></i><b>6.4</b> Example Output and Render Settings</a></li>
+<li class="chapter" data-level="6.5" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#conclusion"><i class="fa fa-check"></i><b>6.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="customizing-output.html"><a href="customizing-output.html"><i class="fa fa-check"></i><b>7</b> Customizing Output</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="customizing-output.html"><a href="customizing-output.html#choosing-an-output-format"><i class="fa fa-check"></i><b>7.1</b> Choosing an Output Format</a></li>
+<li class="chapter" data-level="7.2" data-path="customizing-output.html"><a href="customizing-output.html#customizing-html-output"><i class="fa fa-check"></i><b>7.2</b> Customizing HTML Output</a></li>
+<li class="chapter" data-level="7.3" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-html-appearance"><i class="fa fa-check"></i><b>7.3</b> Customizing the HTML Appearance</a></li>
+<li class="chapter" data-level="7.4" data-path="customizing-output.html"><a href="customizing-output.html#customizing-pdf-output"><i class="fa fa-check"></i><b>7.4</b> Customizing PDF Output</a></li>
+<li class="chapter" data-level="7.5" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-pdf-appearance"><i class="fa fa-check"></i><b>7.5</b> Customizing the PDF Appearance</a></li>
+<li class="chapter" data-level="7.6" data-path="customizing-output.html"><a href="customizing-output.html#customizing-epub-output"><i class="fa fa-check"></i><b>7.6</b> Customizing EPUB Output</a></li>
+<li class="chapter" data-level="7.7" data-path="customizing-output.html"><a href="customizing-output.html#specifying-global-settings-in-_bookdown.yml"><i class="fa fa-check"></i><b>7.7</b> Specifying Global Settings in <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="7.8" data-path="customizing-output.html"><a href="customizing-output.html#example-output"><i class="fa fa-check"></i><b>7.8</b> Example Output</a></li>
+<li class="chapter" data-level="7.9" data-path="customizing-output.html"><a href="customizing-output.html#blocks"><i class="fa fa-check"></i><b>7.9</b> Blocks</a></li>
+<li class="chapter" data-level="7.10" data-path="customizing-output.html"><a href="customizing-output.html#equations"><i class="fa fa-check"></i><b>7.10</b> Equations</a></li>
+<li class="chapter" data-level="7.11" data-path="customizing-output.html"><a href="customizing-output.html#theorems-and-proofs"><i class="fa fa-check"></i><b>7.11</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="7.12" data-path="customizing-output.html"><a href="customizing-output.html#callout-blocks"><i class="fa fa-check"></i><b>7.12</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>8</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>8.1</b> Publishing</a></li>
+<li class="chapter" data-level="8.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>8.2</b> 404 pages</a></li>
+<li class="chapter" data-level="8.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>8.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html"><i class="fa fa-check"></i><b>9</b> LaTeX Distributions for Bookdown</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#recommended-latex-distributions"><i class="fa fa-check"></i><b>9.1</b> Recommended LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#tinytex-recommended"><i class="fa fa-check"></i><b>9.1.1</b> 1. <strong>TinyTeX</strong> (Recommended)</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#additional-latex-distributions"><i class="fa fa-check"></i><b>9.2</b> Additional LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#tex-live"><i class="fa fa-check"></i><b>9.2.1</b> 2. <strong>TeX Live</strong></a></li>
+<li class="chapter" data-level="9.2.2" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#miktex"><i class="fa fa-check"></i><b>9.2.2</b> 3. <strong>MikTeX</strong></a></li>
+<li class="chapter" data-level="9.2.3" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#mactex-for-macos"><i class="fa fa-check"></i><b>9.2.3</b> 4. <strong>MacTeX</strong> (for macOS)</a></li>
+<li class="chapter" data-level="9.2.4" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#protext-for-windows"><i class="fa fa-check"></i><b>9.2.4</b> 5. <strong>ProTeXt</strong> (for Windows)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="drought-in-california.html"><a href="drought-in-california.html"><i class="fa fa-check"></i><b>10</b> Drought in California</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="drought-in-california.html"><a href="drought-in-california.html#introduction"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="drought-in-california.html"><a href="drought-in-california.html#types-of-droughts"><i class="fa fa-check"></i><b>10.2</b> Types of Droughts</a></li>
+<li class="chapter" data-level="10.3" data-path="drought-in-california.html"><a href="drought-in-california.html#causes-of-drought-in-california"><i class="fa fa-check"></i><b>10.3</b> Causes of Drought in California</a></li>
+<li class="chapter" data-level="10.4" data-path="drought-in-california.html"><a href="drought-in-california.html#socioeconomic-impacts"><i class="fa fa-check"></i><b>10.4</b> Socioeconomic Impacts</a></li>
+<li class="chapter" data-level="10.5" data-path="drought-in-california.html"><a href="drought-in-california.html#wildfire-risk"><i class="fa fa-check"></i><b>10.5</b> Wildfire Risk</a></li>
+<li class="chapter" data-level="10.6" data-path="drought-in-california.html"><a href="drought-in-california.html#climate-change-and-drought"><i class="fa fa-check"></i><b>10.6</b> Climate Change and Drought</a></li>
+<li class="chapter" data-level="10.7" data-path="drought-in-california.html"><a href="drought-in-california.html#mitigation-strategies"><i class="fa fa-check"></i><b>10.7</b> Mitigation Strategies</a></li>
+<li class="chapter" data-level="10.8" data-path="drought-in-california.html"><a href="drought-in-california.html#conclusion-1"><i class="fa fa-check"></i><b>10.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="11" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html"><i class="fa fa-check"></i><b>11</b> LaTeX in Bookdown</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#including-latex-packages-in-bookdown-1"><i class="fa fa-check"></i><b>11.1</b> Including LaTeX Packages in Bookdown</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#using-a-preamble.tex-file-1"><i class="fa fa-check"></i><b>11.1.1</b> Using a <code>preamble.tex</code> File</a></li>
+<li class="chapter" data-level="11.1.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#example-using-amsmath"><i class="fa fa-check"></i><b>11.1.2</b> Example: Using AMSMath</a></li>
+<li class="chapter" data-level="11.1.3" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#adding-multiple-packages"><i class="fa fa-check"></i><b>11.1.3</b> Adding Multiple Packages</a></li>
+<li class="chapter" data-level="11.1.4" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#tips-for-using-latex-packages"><i class="fa fa-check"></i><b>11.1.4</b> Tips for Using LaTeX Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#mathematical-equations-1"><i class="fa fa-check"></i><b>11.2</b> Mathematical Equations</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#inline-equations-1"><i class="fa fa-check"></i><b>11.2.1</b> Inline Equations</a></li>
+<li class="chapter" data-level="11.2.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#display-equations-1"><i class="fa fa-check"></i><b>11.2.2</b> Display Equations</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#theorems-lemmas-and-proofs-1"><i class="fa fa-check"></i><b>11.3</b> Theorems, Lemmas, and Proofs</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#adding-a-theorem-1"><i class="fa fa-check"></i><b>11.3.1</b> Adding a Theorem</a></li>
+<li class="chapter" data-level="11.3.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#adding-a-lemma-1"><i class="fa fa-check"></i><b>11.3.2</b> Adding a Lemma</a></li>
+<li class="chapter" data-level="11.3.3" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#adding-a-proof-1"><i class="fa fa-check"></i><b>11.3.3</b> Adding a Proof</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#cross-referencing-1"><i class="fa fa-check"></i><b>11.4</b> Cross-Referencing</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#referencing-sections-1"><i class="fa fa-check"></i><b>11.4.1</b> Referencing Sections</a></li>
+<li class="chapter" data-level="11.4.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#referencing-equations-figures-and-tables-1"><i class="fa fa-check"></i><b>11.4.2</b> Referencing Equations, Figures, and Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#tips-for-latex-in-bookdown-1"><i class="fa fa-check"></i><b>11.5</b> Tips for LaTeX in Bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="latex-distributions.html"><a href="latex-distributions.html"><i class="fa fa-check"></i><b>12</b> LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="latex-distributions.html"><a href="latex-distributions.html#recommended-latex-distribution"><i class="fa fa-check"></i><b>12.1</b> Recommended LaTeX Distribution</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="latex-distributions.html"><a href="latex-distributions.html#tinytex-recommended-1"><i class="fa fa-check"></i><b>12.1.1</b> 1. <strong>TinyTeX</strong> (Recommended)</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="latex-distributions.html"><a href="latex-distributions.html#additional-latex-distributions-1"><i class="fa fa-check"></i><b>12.2</b> Additional LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="latex-distributions.html"><a href="latex-distributions.html#tex-live-1"><i class="fa fa-check"></i><b>12.2.1</b> 2. <strong>TeX Live</strong></a></li>
+<li class="chapter" data-level="12.2.2" data-path="latex-distributions.html"><a href="latex-distributions.html#miktex-1"><i class="fa fa-check"></i><b>12.2.2</b> 3. <strong>MikTeX</strong></a></li>
+<li class="chapter" data-level="12.2.3" data-path="latex-distributions.html"><a href="latex-distributions.html#mactex-for-macos-1"><i class="fa fa-check"></i><b>12.2.3</b> 4. <strong>MacTeX</strong> (for macOS)</a></li>
+<li class="chapter" data-level="12.2.4" data-path="latex-distributions.html"><a href="latex-distributions.html#protext-for-windows-1"><i class="fa fa-check"></i><b>12.2.4</b> 5. <strong>ProTeXt</strong> (for Windows)</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bookdown: Flexible Document Creation in RStudio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="latex-distributions-for-bookdown" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> LaTeX Distributions for Bookdown<a href="latex-distributions-for-bookdown.html#latex-distributions-for-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>To render PDF outputs with Bookdown, you need to install a LaTeX distribution. Below is a list of popular options, categorized by operating system and user preferences:</p>
+<div id="recommended-latex-distributions" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Recommended LaTeX Distributions<a href="latex-distributions-for-bookdown.html#recommended-latex-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="tinytex-recommended" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> 1. <strong>TinyTeX</strong> (Recommended)<a href="latex-distributions-for-bookdown.html#tinytex-recommended" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Description</strong>: A lightweight, cross-platform LaTeX distribution designed to work seamlessly with R and Bookdown.</p></li>
+<li><p><strong>Installation</strong>: Run the following commands in R:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="latex-distributions-for-bookdown.html#cb60-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tinytex&quot;</span>)</span>
+<span id="cb60-2"><a href="latex-distributions-for-bookdown.html#cb60-2" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div></li>
+<li><p><strong>Advantages</strong>:</p>
+<ul>
+<li>Minimal installation size.</li>
+<li>Automatically installs missing packages when rendering.</li>
+</ul></li>
+<li><p><strong>Website</strong>: <a href="https://yihui.org/tinytex/">TinyTeX Documentation</a></p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="additional-latex-distributions" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Additional LaTeX Distributions<a href="latex-distributions-for-bookdown.html#additional-latex-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="tex-live" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> 2. <strong>TeX Live</strong><a href="latex-distributions-for-bookdown.html#tex-live" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Description</strong>: A comprehensive LaTeX distribution suitable for Linux and cross-platform users.</li>
+<li><strong>Installation</strong>:
+<ul>
+<li><p><strong>Linux</strong>:</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb61-1"><a href="latex-distributions-for-bookdown.html#cb61-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get install texlive-full</span></code></pre></div></li>
+<li><p><strong>macOS and Windows</strong>: Download from <a href="https://www.tug.org/texlive/">TeX Live</a>.</p></li>
+</ul></li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Full-featured with a vast collection of LaTeX packages.</li>
+<li>Stable and widely used.</li>
+</ul></li>
+<li><strong>Website</strong>: <a href="https://www.tug.org/texlive/">TeX Live Documentation</a></li>
+</ul>
+<hr />
+</div>
+<div id="miktex" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> 3. <strong>MikTeX</strong><a href="latex-distributions-for-bookdown.html#miktex" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Description</strong>: A user-friendly LaTeX distribution popular among Windows users.</li>
+<li><strong>Installation</strong>: Download and install from <a href="https://miktex.org/">MikTeX</a>.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>On-demand installation of missing packages.</li>
+<li>Easy-to-use package manager.</li>
+</ul></li>
+<li><strong>Website</strong>: <a href="https://miktex.org/">MikTeX Documentation</a></li>
+</ul>
+<hr />
+</div>
+<div id="mactex-for-macos" class="section level3 hasAnchor" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> 4. <strong>MacTeX</strong> (for macOS)<a href="latex-distributions-for-bookdown.html#mactex-for-macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Description</strong>: A macOS-specific version of TeX Live with additional tools for macOS users.</li>
+<li><strong>Installation</strong>: Download and install from <a href="https://www.tug.org/mactex/">MacTeX</a>.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Tailored for macOS with GUI tools like TeXShop.</li>
+<li>Includes a full TeX Live distribution.</li>
+</ul></li>
+<li><strong>Website</strong>: <a href="https://www.tug.org/mactex/">MacTeX Documentation</a></li>
+</ul>
+<hr />
+</div>
+<div id="protext-for-windows" class="section level3 hasAnchor" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> 5. <strong>ProTeXt</strong> (for Windows)<a href="latex-distributions-for-bookdown.html#protext-for-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Description</strong>: A Windows-specific distribution that combines MikTeX with a user-friendly installer.</li>
+<li><strong>Installation</strong>: Download and install from <a href="https://www.tug.org/protext/">ProTeXt</a>.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Streamlined setup for beginners.</li>
+<li>Integrates LaTeX editors like TeXworks.</li>
+</ul></li>
+<li><strong>Website</strong>: <a href="https://www.tug.org/protext/">ProTeXt Documentation</a></li>
+</ul>
+<hr />
+<p>Choose the distribution that best fits your operating system and needs. For most users, TinyTeX is the easiest to install and manage, especially if you’re using R and Bookdown.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sharing-your-book.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="drought-in-california.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-advanced-features.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"output_dir": "docs"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

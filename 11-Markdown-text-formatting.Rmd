@@ -1,0 +1,244 @@
+# Advanced Text Formatting Options {#markdownadvanced}
+
+Markdown and it's enchanged version Pandoc included with Bookdown allow for a wide variety of text formatting, making it easy to structure documents and highlight important content. Below, you'll find a comprehensive guide to formatting options you can use in Markdown and Pandoc.
+
+---
+
+## 1. Headers
+
+Headers are used to create section headings, and the number of `#` symbols represents the level of the header.
+
+- `# Header 1`
+- `## Header 2`
+- `### Header 3`
+- `#### Header 4`
+- `##### Header 5`
+- `###### Header 6`
+
+---
+
+## 2. Emphasis
+
+- **Bold**: `**bold text**` or `__bold text__`
+- *Italics*: `*italic text*` or `_italic text_`
+- ***Bold and Italic***: `***bold and italic***` or `___bold and italic___`
+
+---
+
+## 3. Strikethrough
+
+- ~~Strikethrough~~: `~~strikethrough text~~`
+
+---
+
+## 4. Lists
+
+### 4.1 Bullet Lists
+- `-` or `*` creates a bullet list.
+  ```markdown
+  - First item
+  - Second item
+    - Subitem
+  ```
+
+### 4.2 Numbered Lists
+- `1.` creates a numbered list.
+  ```markdown
+  1. First item
+  2. Second item
+     1. Subitem
+  ```
+
+### 4.3 Task Lists
+- `[ ]` creates a task list.
+  ```markdown
+  - [x] Completed task
+  - [ ] Incomplete task
+  ```
+
+---
+
+## 5. Blockquotes
+
+- Blockquote: Use `>` for blockquotes.
+  ```markdown
+  > This is a blockquote.
+  ```
+
+---
+
+## 6. Code
+
+### 6.1 Inline Code
+- Wrap code with backticks: `` `code` ``
+
+### 6.2 Code Blocks
+- Use triple backticks (```) for code blocks.
+  ```markdown
+  \```python
+  print("Hello, World!")
+  \```
+  ```
+
+---
+
+## 7. Horizontal Rule
+
+- Use three or more `-`, `*`, or `_` to create a horizontal line.
+  ```markdown
+  ---
+  ```
+
+---
+
+## 8. Links
+
+- Inline link: `[link text](URL)`
+- Reference link:
+  ```markdown
+  [link text][reference]
+  
+  [reference]: http://example.com
+  ```
+
+---
+
+## 9. Images
+
+- Inline image: `![alt text](image-url)`
+- Reference image:
+  ```markdown
+  ![alt text][image-ref]
+  
+  [image-ref]: http://example.com/image.png
+  ```
+
+---
+
+## 10. Tables
+
+Tables can be created using pipes (`|`) and hyphens (`-`).
+
+```markdown
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |
+| Cell 3   | Cell 4   |
+```
+
+---
+
+## 11. Footnotes
+
+- Footnote syntax: `Here is a footnote reference[^1].`
+- Define the footnote elsewhere: `[^1]: This is the footnote content.`
+
+---
+
+## 12. Definition Lists (Pandoc)
+
+Pandoc extends Markdown by supporting definition lists.
+
+```markdown
+Term 1
+: Definition 1
+
+Term 2
+: Definition 2
+```
+
+---
+
+## 13. Math
+
+### 13.1 Inline Math
+- Use single dollar signs: `$E = mc^2$`
+
+### 13.2 Block Math
+- Use double dollar signs:
+  ```markdown
+  $$ 
+  E = mc^2 
+  $$
+  ```
+
+### 13.3 LaTeX Environment
+```markdown
+\[
+E = mc^2
+\]
+```
+
+---
+
+## 14. Custom Blocks (Pandoc)
+
+Pandoc supports custom blocks for HTML and LaTeX conversion.
+
+```markdown
+::: {.custom-class}
+Custom content here.
+:::
+```
+
+---
+
+## 15. HTML Tags
+
+You can directly use HTML tags for additional formatting.
+
+```html
+<span style="color: red;">Red text</span>
+```
+
+---
+
+## 16. Metadata Blocks (Pandoc)
+
+You can add metadata at the beginning of the document.
+
+```markdown
+---
+title: "Document Title"
+author: "Author Name"
+date: "2024-11-17"
+---
+```
+
+---
+
+## 17. Line Breaks
+
+- Add two spaces at the end of a line to create a line break.
+- Alternatively, use `<br>` for a line break in HTML.
+
+---
+
+## 18. Escaping Characters
+
+- Use a backslash (`\`) before a character to escape it.
+  ```markdown
+  \*Not italic\*
+  ```
+
+---
+
+## 19. Highlight (Pandoc)
+
+To highlight text, use `==highlighted text==`. This is only available in ==Pandoc.==
+
+```markdown
+This is ==highlighted== text.
+```
+
+---
+
+## 20. Superscript and Subscript
+
+### 20.1 Superscript
+- `X^2^` becomes X².
+
+### 20.2 Subscript
+- `H~2~O` becomes H₂O.
+
+

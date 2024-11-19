@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Customizing Output | Bookdown: Flexible Document Creation in RStudio</title>
+  <title>Chapter 6 Customizing Output | Bookdown: Flexible Document Creation in RStudio</title>
   <meta name="description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Customizing Output | Bookdown: Flexible Document Creation in RStudio" />
+  <meta property="og:title" content="Chapter 6 Customizing Output | Bookdown: Flexible Document Creation in RStudio" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/Bookcover.png" />
   <meta property="og:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Customizing Output | Bookdown: Flexible Document Creation in RStudio" />
+  <meta name="twitter:title" content="Chapter 6 Customizing Output | Bookdown: Flexible Document Creation in RStudio" />
   
   <meta name="twitter:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
 The HTML output format for this example is bookdown::gitbook,
@@ -35,8 +35,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="cross.html"/>
-<link rel="next" href="advanced-features-and-practical-example.html"/>
+<link rel="prev" href="latex-in-bookdown.html"/>
+<link rel="next" href="advanced-features.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -165,89 +165,213 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Introduction Tutorial to Bookdown</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to RStudio and Bookdown</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to Bookdown</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-rstudio-and-bookdown"><i class="fa fa-check"></i><b>1.1</b> Why RStudio and Bookdown?</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#what-youll-learn-in-this-tutorial"><i class="fa fa-check"></i><b>1.2</b> What You’ll Learn in This Tutorial</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#getting-started"><i class="fa fa-check"></i><b>1.3</b> Getting Started</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html"><i class="fa fa-check"></i><b>2</b> Writing and Structuring Content</a>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a></li>
+<li class="chapter" data-level="3" data-path="writing-content.html"><a href="writing-content.html"><i class="fa fa-check"></i><b>3</b> Writing Content</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#creatingchapters"><i class="fa fa-check"></i><b>2.1</b> Creating Chapters and Sections</a></li>
-<li class="chapter" data-level="2.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-sections-and-subsections"><i class="fa fa-check"></i><b>2.2</b> Adding Sections and Subsections</a></li>
-<li class="chapter" data-level="2.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#formatting-text-in-bookdown"><i class="fa fa-check"></i><b>2.3</b> Formatting Text in Bookdown</a></li>
-<li class="chapter" data-level="2.4" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-code-chunks"><i class="fa fa-check"></i><b>2.4</b> Adding Code Chunks</a>
+<li class="chapter" data-level="3.1" data-path="writing-content.html"><a href="writing-content.html#creating-chapters-and-sections"><i class="fa fa-check"></i><b>3.1</b> Creating Chapters and Sections</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#customizing-code-chunk-options"><i class="fa fa-check"></i><b>2.4.1</b> Customizing Code Chunk Options</a></li>
+<li class="chapter" data-level="3.1.1" data-path="writing-content.html"><a href="writing-content.html#organizing-chapters"><i class="fa fa-check"></i><b>3.1.1</b> Organizing Chapters</a></li>
+<li class="chapter" data-level="3.1.2" data-path="writing-content.html"><a href="writing-content.html#adding-sections-and-subsections"><i class="fa fa-check"></i><b>3.1.2</b> Adding Sections and Subsections</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections-figures-and-tables"><i class="fa fa-check"></i><b>2.5</b> Cross-Referencing Sections, Figures, and Tables</a>
+<li class="chapter" data-level="3.2" data-path="writing-content.html"><a href="writing-content.html#formatting-text-in-bookdown"><i class="fa fa-check"></i><b>3.2</b> Formatting Text in Bookdown</a></li>
+<li class="chapter" data-level="3.3" data-path="writing-content.html"><a href="writing-content.html#adding-code-chunks"><i class="fa fa-check"></i><b>3.3</b> Adding Code Chunks</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections"><i class="fa fa-check"></i><b>2.5.1</b> Cross-Referencing Sections</a></li>
-<li class="chapter" data-level="2.5.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-figures"><i class="fa fa-check"></i><b>2.5.2</b> Cross-Referencing Figures</a></li>
-<li class="chapter" data-level="2.5.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-tables"><i class="fa fa-check"></i><b>2.5.3</b> Cross-Referencing Tables</a></li>
+<li class="chapter" data-level="3.3.1" data-path="writing-content.html"><a href="writing-content.html#r-code"><i class="fa fa-check"></i><b>3.3.1</b> 1. R Code</a></li>
+<li class="chapter" data-level="3.3.2" data-path="writing-content.html"><a href="writing-content.html#python-code"><i class="fa fa-check"></i><b>3.3.2</b> 2. Python Code</a></li>
+<li class="chapter" data-level="3.3.3" data-path="writing-content.html"><a href="writing-content.html#bashshell-script"><i class="fa fa-check"></i><b>3.3.3</b> 3. Bash/Shell Script</a></li>
+<li class="chapter" data-level="3.3.4" data-path="writing-content.html"><a href="writing-content.html#sql-code"><i class="fa fa-check"></i><b>3.3.4</b> 4. SQL Code</a></li>
+<li class="chapter" data-level="3.3.5" data-path="writing-content.html"><a href="writing-content.html#customizing-code-chunk-options"><i class="fa fa-check"></i><b>3.3.5</b> Customizing Code Chunk Options</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="writing-content.html"><a href="writing-content.html#adding-images-to-your-bookdown-project"><i class="fa fa-check"></i><b>3.4</b> Adding Images to Your Bookdown Project</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="writing-content.html"><a href="writing-content.html#adding-images-with-rstudio-ggplot"><i class="fa fa-check"></i><b>3.4.1</b> Adding Images with RStudio GGPLOT</a></li>
+<li class="chapter" data-level="3.4.2" data-path="writing-content.html"><a href="writing-content.html#adding-images-using-markdown"><i class="fa fa-check"></i><b>3.4.2</b> Adding Images Using Markdown</a></li>
+<li class="chapter" data-level="3.4.3" data-path="writing-content.html"><a href="writing-content.html#adding-images-using-code-chunks"><i class="fa fa-check"></i><b>3.4.3</b> Adding Images Using Code Chunks</a></li>
+<li class="chapter" data-level="3.4.4" data-path="writing-content.html"><a href="writing-content.html#chunk-options-for-images"><i class="fa fa-check"></i><b>3.4.4</b> Chunk Options for Images</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<li class="chapter" data-level="4" data-path="cross-referencing.html"><a href="cross-referencing.html"><i class="fa fa-check"></i><b>4</b> Cross-Referencing</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
-<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
+<li class="chapter" data-level="4.1" data-path="cross-referencing.html"><a href="cross-referencing.html#cross-referencing-sections"><i class="fa fa-check"></i><b>4.1</b> Cross-Referencing Sections</a></li>
+<li class="chapter" data-level="4.2" data-path="cross-referencing.html"><a href="cross-referencing.html#see-section-refexamplepaper-for-more-information."><i class="fa fa-check"></i><b>4.2</b> See Section @ref(examplepaper) for more information.</a></li>
+<li class="chapter" data-level="4.3" data-path="cross-referencing.html"><a href="cross-referencing.html#cross-referencing-text"><i class="fa fa-check"></i><b>4.3</b> Cross-Referencing Text</a></li>
+<li class="chapter" data-level="4.4" data-path="cross-referencing.html"><a href="cross-referencing.html#cross-referencing-figures"><i class="fa fa-check"></i><b>4.4</b> Cross-Referencing Figures</a></li>
+<li class="chapter" data-level="4.5" data-path="cross-referencing.html"><a href="cross-referencing.html#cross-referencing-tables"><i class="fa fa-check"></i><b>4.5</b> Cross-Referencing Tables</a></li>
+<li class="chapter" data-level="4.6" data-path="cross-referencing.html"><a href="cross-referencing.html#cross-referencing-equations"><i class="fa fa-check"></i><b>4.6</b> Cross-Referencing Equations</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="cross-referencing.html"><a href="cross-referencing.html#example-creating-and-labeling-an-equation"><i class="fa fa-check"></i><b>4.6.1</b> Example: Creating and Labeling an Equation</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="customizing-output.html"><a href="customizing-output.html"><i class="fa fa-check"></i><b>4</b> Customizing Output</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="customizing-output.html"><a href="customizing-output.html#choosing-an-output-format"><i class="fa fa-check"></i><b>4.1</b> Choosing an Output Format</a></li>
-<li class="chapter" data-level="4.2" data-path="customizing-output.html"><a href="customizing-output.html#customizing-html-output"><i class="fa fa-check"></i><b>4.2</b> Customizing HTML Output</a></li>
-<li class="chapter" data-level="4.3" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-html-appearance"><i class="fa fa-check"></i><b>4.3</b> Customizing the HTML Appearance</a></li>
-<li class="chapter" data-level="4.4" data-path="customizing-output.html"><a href="customizing-output.html#customizing-pdf-output"><i class="fa fa-check"></i><b>4.4</b> Customizing PDF Output</a></li>
-<li class="chapter" data-level="4.5" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-pdf-appearance"><i class="fa fa-check"></i><b>4.5</b> Customizing the PDF Appearance</a></li>
-<li class="chapter" data-level="4.6" data-path="customizing-output.html"><a href="customizing-output.html#customizing-epub-output"><i class="fa fa-check"></i><b>4.6</b> Customizing EPUB Output</a></li>
-<li class="chapter" data-level="4.7" data-path="customizing-output.html"><a href="customizing-output.html#specifying-global-settings-in-_bookdown.yml"><i class="fa fa-check"></i><b>4.7</b> Specifying Global Settings in <code>_bookdown.yml</code></a></li>
-<li class="chapter" data-level="4.8" data-path="customizing-output.html"><a href="customizing-output.html#example-output"><i class="fa fa-check"></i><b>4.8</b> Example Output</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html"><i class="fa fa-check"></i><b>5</b> Advanced Features and Practical Example</a>
+<li class="chapter" data-level="5" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html"><i class="fa fa-check"></i><b>5</b> LaTeX in Bookdown</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#adding-citations-and-managing-references"><i class="fa fa-check"></i><b>5.1</b> Adding Citations and Managing References</a>
+<li class="chapter" data-level="5.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#including-latex-packages-in-bookdown"><i class="fa fa-check"></i><b>5.1</b> Including LaTeX Packages in Bookdown</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-create-a-.bib-file"><i class="fa fa-check"></i><b>5.1.1</b> Step 1: Create a <code>.bib</code> File</a></li>
-<li class="chapter" data-level="5.1.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-link-the-.bib-file-in-index.rmd"><i class="fa fa-check"></i><b>5.1.2</b> Step 2: Link the <code>.bib</code> File in <code>index.Rmd</code></a></li>
-<li class="chapter" data-level="5.1.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-cite-sources-in-your-text"><i class="fa fa-check"></i><b>5.1.3</b> Step 3: Cite Sources in Your Text</a></li>
-<li class="chapter" data-level="5.1.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-customize-citation-style-optional"><i class="fa fa-check"></i><b>5.1.4</b> Step 4: Customize Citation Style (Optional)</a></li>
+<li class="chapter" data-level="5.1.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#using-a-preamble.tex-file"><i class="fa fa-check"></i><b>5.1.1</b> Using a <code>preamble.tex</code> File</a></li>
+<li class="chapter" data-level="5.1.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#debugging-errors"><i class="fa fa-check"></i><b>5.1.2</b> Debugging Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#using-cross-references-with-citations"><i class="fa fa-check"></i><b>5.2</b> Using Cross-References with Citations</a></li>
-<li class="chapter" data-level="5.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#practical-example-incorporating-an-existing-paper"><i class="fa fa-check"></i><b>5.3</b> Practical Example: Incorporating an Existing Paper</a>
+<li class="chapter" data-level="5.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#mathematical-equations"><i class="fa fa-check"></i><b>5.2</b> Mathematical Equations</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-import-the-document-content"><i class="fa fa-check"></i><b>5.3.1</b> Step 1: Import the Document Content</a></li>
-<li class="chapter" data-level="5.3.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-add-figures-and-tables"><i class="fa fa-check"></i><b>5.3.2</b> Step 2: Add Figures and Tables</a></li>
-<li class="chapter" data-level="5.3.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-integrate-citations"><i class="fa fa-check"></i><b>5.3.3</b> Step 3: Integrate Citations</a></li>
-<li class="chapter" data-level="5.3.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-create-a-table-of-contents-and-links"><i class="fa fa-check"></i><b>5.3.4</b> Step 4: Create a Table of Contents and Links</a></li>
+<li class="chapter" data-level="5.2.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#inline-equations"><i class="fa fa-check"></i><b>5.2.1</b> Inline Equations</a></li>
+<li class="chapter" data-level="5.2.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#display-equations"><i class="fa fa-check"></i><b>5.2.2</b> Display Equations</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#example-output-and-render-settings"><i class="fa fa-check"></i><b>5.4</b> Example Output and Render Settings</a></li>
-<li class="chapter" data-level="5.5" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#conclusion"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<li class="chapter" data-level="5.3" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#theorems-lemmas-and-proofs"><i class="fa fa-check"></i><b>5.3</b> Theorems, Lemmas, and Proofs</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
-<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
-<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
+<li class="chapter" data-level="5.3.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-theorem"><i class="fa fa-check"></i><b>5.3.1</b> Adding a Theorem</a></li>
+<li class="chapter" data-level="5.3.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-lemma"><i class="fa fa-check"></i><b>5.3.2</b> Adding a Lemma</a></li>
+<li class="chapter" data-level="5.3.3" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-proof"><i class="fa fa-check"></i><b>5.3.3</b> Adding a Proof</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<li class="chapter" data-level="5.4" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#cross-referencing-1"><i class="fa fa-check"></i><b>5.4</b> Cross-Referencing</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
-<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
-<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+<li class="chapter" data-level="5.4.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#referencing-sections"><i class="fa fa-check"></i><b>5.4.1</b> Referencing Sections</a></li>
+<li class="chapter" data-level="5.4.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#referencing-equations-figures-and-tables"><i class="fa fa-check"></i><b>5.4.2</b> Referencing Equations, Figures, and Tables</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="drought-in-california.html"><a href="drought-in-california.html"><i class="fa fa-check"></i><b>8</b> Drought in California</a>
+<li class="chapter" data-level="5.5" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#tips-for-latex-in-bookdown"><i class="fa fa-check"></i><b>5.5</b> Tips for LaTeX in Bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="customizing-output.html"><a href="customizing-output.html"><i class="fa fa-check"></i><b>6</b> Customizing Output</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="drought-in-california.html"><a href="drought-in-california.html#introduction"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2" data-path="drought-in-california.html"><a href="drought-in-california.html#types-of-droughts"><i class="fa fa-check"></i><b>8.2</b> Types of Droughts</a></li>
-<li class="chapter" data-level="8.3" data-path="drought-in-california.html"><a href="drought-in-california.html#causes-of-drought-in-california"><i class="fa fa-check"></i><b>8.3</b> Causes of Drought in California</a></li>
-<li class="chapter" data-level="8.4" data-path="drought-in-california.html"><a href="drought-in-california.html#socioeconomic-impacts"><i class="fa fa-check"></i><b>8.4</b> Socioeconomic Impacts</a></li>
-<li class="chapter" data-level="8.5" data-path="drought-in-california.html"><a href="drought-in-california.html#wildfire-risk"><i class="fa fa-check"></i><b>8.5</b> Wildfire Risk</a></li>
-<li class="chapter" data-level="8.6" data-path="drought-in-california.html"><a href="drought-in-california.html#climate-change-and-drought"><i class="fa fa-check"></i><b>8.6</b> Climate Change and Drought</a></li>
-<li class="chapter" data-level="8.7" data-path="drought-in-california.html"><a href="drought-in-california.html#mitigation-strategies"><i class="fa fa-check"></i><b>8.7</b> Mitigation Strategies</a></li>
-<li class="chapter" data-level="8.8" data-path="drought-in-california.html"><a href="drought-in-california.html#conclusion-1"><i class="fa fa-check"></i><b>8.8</b> Conclusion</a></li>
+<li class="chapter" data-level="6.1" data-path="customizing-output.html"><a href="customizing-output.html#choosing-an-output-format"><i class="fa fa-check"></i><b>6.1</b> Choosing an Output Format</a></li>
+<li class="chapter" data-level="6.2" data-path="customizing-output.html"><a href="customizing-output.html#available-output-options-for-bookdown"><i class="fa fa-check"></i><b>6.2</b> Available Output Options for Bookdown</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="customizing-output.html"><a href="customizing-output.html#gitbook-bookdowngitbook"><i class="fa fa-check"></i><b>6.2.1</b> 1. GitBook (<code>bookdown::gitbook</code>)</a></li>
+<li class="chapter" data-level="6.2.2" data-path="customizing-output.html"><a href="customizing-output.html#pdf-book-bookdownpdf_book"><i class="fa fa-check"></i><b>6.2.2</b> 2. PDF Book (<code>bookdown::pdf_book</code>)</a></li>
+<li class="chapter" data-level="6.2.3" data-path="customizing-output.html"><a href="customizing-output.html#epub-book-bookdownepub_book"><i class="fa fa-check"></i><b>6.2.3</b> 3. EPUB Book (<code>bookdown::epub_book</code>)</a></li>
+<li class="chapter" data-level="6.2.4" data-path="customizing-output.html"><a href="customizing-output.html#html-document-rmarkdownhtml_document"><i class="fa fa-check"></i><b>6.2.4</b> 4. HTML Document (<code>rmarkdown::html_document</code>)</a></li>
+<li class="chapter" data-level="6.2.5" data-path="customizing-output.html"><a href="customizing-output.html#word-document-bookdownword_document2"><i class="fa fa-check"></i><b>6.2.5</b> 5. Word Document (<code>bookdown::word_document2</code>)</a></li>
+<li class="chapter" data-level="6.2.6" data-path="customizing-output.html"><a href="customizing-output.html#tufte-handout-bookdowntufte_html_book-bookdowntufte_pdf_book"><i class="fa fa-check"></i><b>6.2.6</b> 6. Tufte Handout (<code>bookdown::tufte_html_book</code> / <code>bookdown::tufte_pdf_book</code>)</a></li>
+<li class="chapter" data-level="6.2.7" data-path="customizing-output.html"><a href="customizing-output.html#html-with-bookdown-specific-features-bookdownhtml_document2"><i class="fa fa-check"></i><b>6.2.7</b> 7. HTML with Bookdown-Specific Features (<code>bookdown::html_document2</code>)</a></li>
+<li class="chapter" data-level="6.2.8" data-path="customizing-output.html"><a href="customizing-output.html#github-document-rmarkdowngithub_document"><i class="fa fa-check"></i><b>6.2.8</b> 8. GitHub Document (<code>rmarkdown::github_document</code>)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="customizing-output.html"><a href="customizing-output.html#customizing-html-output"><i class="fa fa-check"></i><b>6.3</b> Customizing HTML Output</a></li>
+<li class="chapter" data-level="6.4" data-path="customizing-output.html"><a href="customizing-output.html#customizing-pdf-output"><i class="fa fa-check"></i><b>6.4</b> Customizing PDF Output</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="customizing-output.html"><a href="customizing-output.html#document-size"><i class="fa fa-check"></i><b>6.4.1</b> Document Size</a></li>
+<li class="chapter" data-level="6.4.2" data-path="customizing-output.html"><a href="customizing-output.html#document-type"><i class="fa fa-check"></i><b>6.4.2</b> Document Type</a></li>
+<li class="chapter" data-level="6.4.3" data-path="customizing-output.html"><a href="customizing-output.html#latex-engine"><i class="fa fa-check"></i><b>6.4.3</b> LaTeX Engine</a></li>
+<li class="chapter" data-level="6.4.4" data-path="customizing-output.html"><a href="customizing-output.html#custom-latex-packages"><i class="fa fa-check"></i><b>6.4.4</b> Custom LaTeX Packages</a></li>
+<li class="chapter" data-level="6.4.5" data-path="customizing-output.html"><a href="customizing-output.html#page-layout-customization"><i class="fa fa-check"></i><b>6.4.5</b> Page Layout Customization</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="customizing-output.html"><a href="customizing-output.html#customizing-epub-output"><i class="fa fa-check"></i><b>6.5</b> Customizing EPUB Output</a></li>
+<li class="chapter" data-level="6.6" data-path="customizing-output.html"><a href="customizing-output.html#specifying-global-settings-in-_bookdown.yml"><i class="fa fa-check"></i><b>6.6</b> Specifying Global Settings in <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="6.7" data-path="customizing-output.html"><a href="customizing-output.html#example-output"><i class="fa fa-check"></i><b>6.7</b> Example Output</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="advanced-features.html"><a href="advanced-features.html"><i class="fa fa-check"></i><b>7</b> Advanced Features</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="advanced-features.html"><a href="advanced-features.html#adding-citations-and-managing-references"><i class="fa fa-check"></i><b>7.1</b> Adding Citations and Managing References</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="advanced-features.html"><a href="advanced-features.html#step-1-create-a-.bib-file"><i class="fa fa-check"></i><b>7.1.1</b> Step 1: Create a <code>.bib</code> File</a></li>
+<li class="chapter" data-level="7.1.2" data-path="advanced-features.html"><a href="advanced-features.html#step-2-link-the-.bib-file-in-index.rmd"><i class="fa fa-check"></i><b>7.1.2</b> Step 2: Link the <code>.bib</code> File in <code>index.Rmd</code></a></li>
+<li class="chapter" data-level="7.1.3" data-path="advanced-features.html"><a href="advanced-features.html#step-3-cite-sources-in-your-text"><i class="fa fa-check"></i><b>7.1.3</b> Step 3: Cite Sources in Your Text</a></li>
+<li class="chapter" data-level="7.1.4" data-path="advanced-features.html"><a href="advanced-features.html#step-4-customize-citation-style-optional"><i class="fa fa-check"></i><b>7.1.4</b> Step 4: Customize Citation Style (Optional)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="advanced-features.html"><a href="advanced-features.html#using-cross-references-with-citations"><i class="fa fa-check"></i><b>7.2</b> Using Cross-References with Citations</a></li>
+<li class="chapter" data-level="7.3" data-path="advanced-features.html"><a href="advanced-features.html#using-cross-references-with-citations-helps-keep-your-document-organized-and-easy-to-navigate."><i class="fa fa-check"></i><b>7.3</b> Using cross-references with citations helps keep your document organized and easy to navigate.</a></li>
+<li class="chapter" data-level="7.4" data-path="advanced-features.html"><a href="advanced-features.html#practical-example-of-incorporating-text-citations-from-your-bibliography"><i class="fa fa-check"></i><b>7.4</b> Practical Example of Incorporating text citations from your bibliography</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="advanced-features.html"><a href="advanced-features.html#step-1-import-the-document-content"><i class="fa fa-check"></i><b>7.4.1</b> Step 1: Import the Document Content</a></li>
+<li class="chapter" data-level="7.4.2" data-path="advanced-features.html"><a href="advanced-features.html#step-2-add-figures-and-tables"><i class="fa fa-check"></i><b>7.4.2</b> Step 2: Add Figures and Tables</a></li>
+<li class="chapter" data-level="7.4.3" data-path="advanced-features.html"><a href="advanced-features.html#step-3-integrate-citations"><i class="fa fa-check"></i><b>7.4.3</b> Step 3: Integrate Citations</a></li>
+<li class="chapter" data-level="7.4.4" data-path="advanced-features.html"><a href="advanced-features.html#step-4-create-a-table-of-contents-and-links"><i class="fa fa-check"></i><b>7.4.4</b> Step 4: Create a Table of Contents and Links</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="advanced-features.html"><a href="advanced-features.html#example-output-and-render-settings"><i class="fa fa-check"></i><b>7.5</b> Example Output and Render Settings</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="latex-distributions.html"><a href="latex-distributions.html"><i class="fa fa-check"></i><b>8</b> LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="latex-distributions.html"><a href="latex-distributions.html#recommended-latex-distribution"><i class="fa fa-check"></i><b>8.1</b> Recommended LaTeX Distribution</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="latex-distributions.html"><a href="latex-distributions.html#tinytex-recommended"><i class="fa fa-check"></i><b>8.1.1</b> 1. <strong>TinyTeX</strong> (Recommended)</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="latex-distributions.html"><a href="latex-distributions.html#additional-latex-distributions"><i class="fa fa-check"></i><b>8.2</b> Additional LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="latex-distributions.html"><a href="latex-distributions.html#tex-live"><i class="fa fa-check"></i><b>8.2.1</b> 2. <strong>TeX Live</strong></a></li>
+<li class="chapter" data-level="8.2.2" data-path="latex-distributions.html"><a href="latex-distributions.html#miktex"><i class="fa fa-check"></i><b>8.2.2</b> 3. <strong>MikTeX</strong></a></li>
+<li class="chapter" data-level="8.2.3" data-path="latex-distributions.html"><a href="latex-distributions.html#mactex-for-macos"><i class="fa fa-check"></i><b>8.2.3</b> 4. <strong>MacTeX</strong> (for macOS)</a></li>
+<li class="chapter" data-level="8.2.4" data-path="latex-distributions.html"><a href="latex-distributions.html#protext-for-windows"><i class="fa fa-check"></i><b>8.2.4</b> 5. <strong>ProTeXt</strong> (for Windows)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="markdown-advanced.html"><a href="markdown-advanced.html"><i class="fa fa-check"></i><b>9</b> Advanced Text Formatting Options</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="markdown-advanced.html"><a href="markdown-advanced.html#headers"><i class="fa fa-check"></i><b>9.1</b> 1. Headers</a></li>
+<li class="chapter" data-level="9.2" data-path="markdown-advanced.html"><a href="markdown-advanced.html#emphasis"><i class="fa fa-check"></i><b>9.2</b> 2. Emphasis</a></li>
+<li class="chapter" data-level="9.3" data-path="markdown-advanced.html"><a href="markdown-advanced.html#strikethrough"><i class="fa fa-check"></i><b>9.3</b> 3. Strikethrough</a></li>
+<li class="chapter" data-level="9.4" data-path="markdown-advanced.html"><a href="markdown-advanced.html#lists"><i class="fa fa-check"></i><b>9.4</b> 4. Lists</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="markdown-advanced.html"><a href="markdown-advanced.html#bullet-lists"><i class="fa fa-check"></i><b>9.4.1</b> 4.1 Bullet Lists</a></li>
+<li class="chapter" data-level="9.4.2" data-path="markdown-advanced.html"><a href="markdown-advanced.html#numbered-lists"><i class="fa fa-check"></i><b>9.4.2</b> 4.2 Numbered Lists</a></li>
+<li class="chapter" data-level="9.4.3" data-path="markdown-advanced.html"><a href="markdown-advanced.html#task-lists"><i class="fa fa-check"></i><b>9.4.3</b> 4.3 Task Lists</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="markdown-advanced.html"><a href="markdown-advanced.html#blockquotes"><i class="fa fa-check"></i><b>9.5</b> 5. Blockquotes</a></li>
+<li class="chapter" data-level="9.6" data-path="markdown-advanced.html"><a href="markdown-advanced.html#code"><i class="fa fa-check"></i><b>9.6</b> 6. Code</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="markdown-advanced.html"><a href="markdown-advanced.html#inline-code"><i class="fa fa-check"></i><b>9.6.1</b> 6.1 Inline Code</a></li>
+<li class="chapter" data-level="9.6.2" data-path="markdown-advanced.html"><a href="markdown-advanced.html#code-blocks"><i class="fa fa-check"></i><b>9.6.2</b> 6.2 Code Blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="markdown-advanced.html"><a href="markdown-advanced.html#horizontal-rule"><i class="fa fa-check"></i><b>9.7</b> 7. Horizontal Rule</a></li>
+<li class="chapter" data-level="9.8" data-path="markdown-advanced.html"><a href="markdown-advanced.html#links"><i class="fa fa-check"></i><b>9.8</b> 8. Links</a></li>
+<li class="chapter" data-level="9.9" data-path="markdown-advanced.html"><a href="markdown-advanced.html#images"><i class="fa fa-check"></i><b>9.9</b> 9. Images</a></li>
+<li class="chapter" data-level="9.10" data-path="markdown-advanced.html"><a href="markdown-advanced.html#tables"><i class="fa fa-check"></i><b>9.10</b> 10. Tables</a></li>
+<li class="chapter" data-level="9.11" data-path="markdown-advanced.html"><a href="markdown-advanced.html#footnotes"><i class="fa fa-check"></i><b>9.11</b> 11. Footnotes</a></li>
+<li class="chapter" data-level="9.12" data-path="markdown-advanced.html"><a href="markdown-advanced.html#definition-lists-pandoc"><i class="fa fa-check"></i><b>9.12</b> 12. Definition Lists (Pandoc)</a></li>
+<li class="chapter" data-level="9.13" data-path="markdown-advanced.html"><a href="markdown-advanced.html#math"><i class="fa fa-check"></i><b>9.13</b> 13. Math</a>
+<ul>
+<li class="chapter" data-level="9.13.1" data-path="markdown-advanced.html"><a href="markdown-advanced.html#inline-math"><i class="fa fa-check"></i><b>9.13.1</b> 13.1 Inline Math</a></li>
+<li class="chapter" data-level="9.13.2" data-path="markdown-advanced.html"><a href="markdown-advanced.html#block-math"><i class="fa fa-check"></i><b>9.13.2</b> 13.2 Block Math</a></li>
+<li class="chapter" data-level="9.13.3" data-path="markdown-advanced.html"><a href="markdown-advanced.html#latex-environment"><i class="fa fa-check"></i><b>9.13.3</b> 13.3 LaTeX Environment</a></li>
+</ul></li>
+<li class="chapter" data-level="9.14" data-path="markdown-advanced.html"><a href="markdown-advanced.html#custom-blocks-pandoc"><i class="fa fa-check"></i><b>9.14</b> 14. Custom Blocks (Pandoc)</a></li>
+<li class="chapter" data-level="9.15" data-path="markdown-advanced.html"><a href="markdown-advanced.html#html-tags"><i class="fa fa-check"></i><b>9.15</b> 15. HTML Tags</a></li>
+<li class="chapter" data-level="9.16" data-path="markdown-advanced.html"><a href="markdown-advanced.html#metadata-blocks-pandoc"><i class="fa fa-check"></i><b>9.16</b> 16. Metadata Blocks (Pandoc)</a></li>
+<li class="chapter" data-level="9.17" data-path="markdown-advanced.html"><a href="markdown-advanced.html#line-breaks"><i class="fa fa-check"></i><b>9.17</b> 17. Line Breaks</a></li>
+<li class="chapter" data-level="9.18" data-path="markdown-advanced.html"><a href="markdown-advanced.html#escaping-characters"><i class="fa fa-check"></i><b>9.18</b> 18. Escaping Characters</a></li>
+<li class="chapter" data-level="9.19" data-path="markdown-advanced.html"><a href="markdown-advanced.html#highlight-pandoc"><i class="fa fa-check"></i><b>9.19</b> 19. Highlight (Pandoc)</a></li>
+<li class="chapter" data-level="9.20" data-path="markdown-advanced.html"><a href="markdown-advanced.html#superscript-and-subscript"><i class="fa fa-check"></i><b>9.20</b> 20. Superscript and Subscript</a>
+<ul>
+<li class="chapter" data-level="9.20.1" data-path="markdown-advanced.html"><a href="markdown-advanced.html#superscript"><i class="fa fa-check"></i><b>9.20.1</b> 20.1 Superscript</a></li>
+<li class="chapter" data-level="9.20.2" data-path="markdown-advanced.html"><a href="markdown-advanced.html#subscript"><i class="fa fa-check"></i><b>9.20.2</b> 20.2 Subscript</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html"><i class="fa fa-check"></i><b>10</b> Example Document: Union Earnings Analysis (#examplepaper)</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#what-this-analysis-is-all-about"><i class="fa fa-check"></i><b>10.0.1</b> What This Analysis Is All About</a></li>
+<li class="chapter" data-level="10.0.2" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#where-the-data-came-from"><i class="fa fa-check"></i><b>10.0.2</b> Where the Data Came From</a></li>
+<li class="chapter" data-level="10.0.3" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#why-this-matters"><i class="fa fa-check"></i><b>10.0.3</b> Why This Matters</a></li>
+<li class="chapter" data-level="10.1" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#data-preparation"><i class="fa fa-check"></i><b>10.1</b> Data Preparation</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#getting-the-data-ready"><i class="fa fa-check"></i><b>10.1.1</b> Getting the Data Ready</a></li>
+<li class="chapter" data-level="10.1.2" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#quick-data-overview"><i class="fa fa-check"></i><b>10.1.2</b> Quick Data Overview</a></li>
+<li class="chapter" data-level="10.1.3" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#filtering-to-focus-on-the-present"><i class="fa fa-check"></i><b>10.1.3</b> Filtering to Focus on the Present</a></li>
+<li class="chapter" data-level="10.1.4" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#merging-the-data"><i class="fa fa-check"></i><b>10.1.4</b> Merging the Data</a></li>
+<li class="chapter" data-level="10.1.5" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#making-data-manipulation-easier"><i class="fa fa-check"></i><b>10.1.5</b> Making Data Manipulation Easier</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#analysis-and-aggregations"><i class="fa fa-check"></i><b>10.2</b> Analysis and Aggregations</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#calculating-key-metrics"><i class="fa fa-check"></i><b>10.2.1</b> Calculating Key Metrics</a></li>
+<li class="chapter" data-level="10.2.2" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#rescaling-data-for-better-visualization"><i class="fa fa-check"></i><b>10.2.2</b> Rescaling Data for Better Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#visualization-of-results"><i class="fa fa-check"></i><b>10.3</b> Visualization of Results</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#average-wage-trends-over-time"><i class="fa fa-check"></i><b>10.3.1</b> Average Wage Trends Over Time</a></li>
+<li class="chapter" data-level="10.3.2" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#union-wages-comparison-by-year"><i class="fa fa-check"></i><b>10.3.2</b> Union Wages Comparison by Year</a></li>
+<li class="chapter" data-level="10.3.3" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#employment-trends-by-state-including-union-membership"><i class="fa fa-check"></i><b>10.3.3</b> Employment Trends by State, Including Union Membership</a></li>
+<li class="chapter" data-level="10.3.4" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#union-vs-nonunion-wage-trends-over-time"><i class="fa fa-check"></i><b>10.3.4</b> Union vs Nonunion Wage Trends Over Time</a></li>
+<li class="chapter" data-level="10.3.5" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#union-wage-premium-over-time"><i class="fa fa-check"></i><b>10.3.5</b> Union Wage Premium Over Time</a></li>
+<li class="chapter" data-level="10.3.6" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#union-membership-trends-over-time"><i class="fa fa-check"></i><b>10.3.6</b> Union Membership Trends Over Time</a></li>
+<li class="chapter" data-level="10.3.7" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#employment-in-different-sectors-over-time"><i class="fa fa-check"></i><b>10.3.7</b> Employment in Different Sectors Over Time</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#discussion-and-summary"><i class="fa fa-check"></i><b>10.4</b> Discussion and Summary</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#wage-growth-and-union-influence"><i class="fa fa-check"></i><b>10.4.1</b> Wage Growth and Union Influence</a></li>
+<li class="chapter" data-level="10.4.2" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#decline-in-union-membership"><i class="fa fa-check"></i><b>10.4.2</b> Decline in Union Membership</a></li>
+<li class="chapter" data-level="10.4.3" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#shifts-in-employment-by-sector"><i class="fa fa-check"></i><b>10.4.3</b> Shifts in Employment by Sector</a></li>
+<li class="chapter" data-level="10.4.4" data-path="example-document-union-earnings-analysis-examplepaper.html"><a href="example-document-union-earnings-analysis-examplepaper.html#implications-for-the-future"><i class="fa fa-check"></i><b>10.4.4</b> Implications for the Future</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -270,11 +394,12 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="customizing-output" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Customizing Output<a href="customizing-output.html#customizing-output" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="customizing-output" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Customizing Output<a href="customizing-output.html#customizing-output" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In this chapter, we’ll explore how to customize the output of your Bookdown project. Bookdown supports several output formats, such as HTML, PDF, and EPUB, and allows you to customize each format to match your project’s needs. We’ll cover choosing output formats, modifying appearance, and configuring output settings.</p>
-<div id="choosing-an-output-format" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Choosing an Output Format<a href="customizing-output.html#choosing-an-output-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<div id="choosing-an-output-format" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Choosing an Output Format<a href="customizing-output.html#choosing-an-output-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Bookdown provides multiple output formats that allow you to publish your document in various ways:</p>
 <ul>
 <li><strong>HTML</strong>: Ideal for online documentation or sharing on the web.</li>
@@ -282,106 +407,206 @@ div.csl-indent {
 <li><strong>EPUB</strong>: E-book format, compatible with e-readers for mobile access.</li>
 </ul>
 <p>To specify output formats, edit the <code>_output.yml</code> file in your project directory. Here’s an example configuration:</p>
-<pre><code>```yaml
-bookdown::gitbook:
-  css: &quot;style.css&quot;
-  split_by: &quot;chapter&quot;
-
-bookdown::pdf_book:
-  latex_engine: xelatex
-  citation_package: natbib
-
-bookdown::epub_book: default
-```</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb42-1"><a href="customizing-output.html#cb42-1" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:gitbook</span><span class="kw">:</span></span>
+<span id="cb42-2"><a href="customizing-output.html#cb42-2" tabindex="-1"></a><span class="at">  </span><span class="fu">css</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;style.css&quot;</span></span>
+<span id="cb42-3"><a href="customizing-output.html#cb42-3" tabindex="-1"></a><span class="at">  </span><span class="fu">split_by</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;chapter&quot;</span></span>
+<span id="cb42-4"><a href="customizing-output.html#cb42-4" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="customizing-output.html#cb42-5" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:pdf_book</span><span class="kw">:</span></span>
+<span id="cb42-6"><a href="customizing-output.html#cb42-6" tabindex="-1"></a><span class="at">  </span><span class="fu">latex_engine</span><span class="kw">:</span><span class="at"> xelatex</span></span>
+<span id="cb42-7"><a href="customizing-output.html#cb42-7" tabindex="-1"></a><span class="at">  </span><span class="fu">citation_package</span><span class="kw">:</span><span class="at"> natbib</span></span>
+<span id="cb42-8"><a href="customizing-output.html#cb42-8" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="customizing-output.html#cb42-9" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:epub_book</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div>
 <p>This configuration tells Bookdown to create HTML (using GitBook style), PDF, and EPUB formats. Customize each format’s settings to control the output style.</p>
+<hr />
 </div>
-<div id="customizing-html-output" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Customizing HTML Output<a href="customizing-output.html#customizing-html-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To customize the HTML format, Bookdown offers the bookdown::gitbook and bookdown::html_document2 options:</p>
+<div id="available-output-options-for-bookdown" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Available Output Options for Bookdown<a href="customizing-output.html#available-output-options-for-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="gitbook-bookdowngitbook" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> 1. GitBook (<code>bookdown::gitbook</code>)<a href="customizing-output.html#gitbook-bookdowngitbook" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is one of the most popular output formats, producing an HTML book with interactive features such as search and navigation. Infact this is how the book has been outputted.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb43-1"><a href="customizing-output.html#cb43-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb43-2"><a href="customizing-output.html#cb43-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:gitbook</span><span class="kw">:</span></span>
+<span id="cb43-3"><a href="customizing-output.html#cb43-3" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> style.css</span><span class="co">  # Optional: Custom CSS for styling</span></span>
+<span id="cb43-4"><a href="customizing-output.html#cb43-4" tabindex="-1"></a><span class="at">    </span><span class="fu">config</span><span class="kw">:</span></span>
+<span id="cb43-5"><a href="customizing-output.html#cb43-5" tabindex="-1"></a><span class="at">      </span><span class="fu">toc</span><span class="kw">:</span></span>
+<span id="cb43-6"><a href="customizing-output.html#cb43-6" tabindex="-1"></a><span class="at">        </span><span class="fu">collapse</span><span class="kw">:</span><span class="at"> section</span><span class="co">  # Controls the collapsing of the table of contents</span></span></code></pre></div>
+</div>
+<div id="pdf-book-bookdownpdf_book" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> 2. PDF Book (<code>bookdown::pdf_book</code>)<a href="customizing-output.html#pdf-book-bookdownpdf_book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generates a PDF version of your book using LaTeX. This format is often used for printed versions.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb44-1"><a href="customizing-output.html#cb44-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb44-2"><a href="customizing-output.html#cb44-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:pdf_book</span><span class="kw">:</span></span>
+<span id="cb44-3"><a href="customizing-output.html#cb44-3" tabindex="-1"></a><span class="at">    </span><span class="fu">latex_engine</span><span class="kw">:</span><span class="at"> xelatex</span><span class="co">  # Specify the LaTeX engine to use (e.g., pdflatex, xelatex, lualatex)</span></span>
+<span id="cb44-4"><a href="customizing-output.html#cb44-4" tabindex="-1"></a><span class="at">    </span><span class="fu">includes</span><span class="kw">:</span></span>
+<span id="cb44-5"><a href="customizing-output.html#cb44-5" tabindex="-1"></a><span class="at">      </span><span class="fu">in_header</span><span class="kw">:</span><span class="at"> preamble.tex</span><span class="co">  # Include additional LaTeX setup files</span></span>
+<span id="cb44-6"><a href="customizing-output.html#cb44-6" tabindex="-1"></a><span class="at">    </span><span class="fu">citation_package</span><span class="kw">:</span><span class="at"> natbib</span><span class="co">  # Citation package to use</span></span></code></pre></div>
+</div>
+<div id="epub-book-bookdownepub_book" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> 3. EPUB Book (<code>bookdown::epub_book</code>)<a href="customizing-output.html#epub-book-bookdownepub_book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Creates an EPUB file, which is a format commonly used for eBooks.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb45-1"><a href="customizing-output.html#cb45-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb45-2"><a href="customizing-output.html#cb45-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:epub_book</span><span class="kw">:</span></span>
+<span id="cb45-3"><a href="customizing-output.html#cb45-3" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span><span class="co">  # Include table of contents</span></span>
+<span id="cb45-4"><a href="customizing-output.html#cb45-4" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> style.css</span><span class="co">  # Optional: Custom CSS for EPUB styling</span></span></code></pre></div>
+</div>
+<div id="html-document-rmarkdownhtml_document" class="section level3 hasAnchor" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> 4. HTML Document (<code>rmarkdown::html_document</code>)<a href="customizing-output.html#html-document-rmarkdownhtml_document" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Produces a single HTML document, rather than a book format.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb46-1"><a href="customizing-output.html#cb46-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb46-2"><a href="customizing-output.html#cb46-2" tabindex="-1"></a><span class="at">  rmarkdown:</span><span class="fu">:html_document</span><span class="kw">:</span></span>
+<span id="cb46-3"><a href="customizing-output.html#cb46-3" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # Include table of contents</span></span>
+<span id="cb46-4"><a href="customizing-output.html#cb46-4" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span><span class="co">  # Depth of the table of contents</span></span>
+<span id="cb46-5"><a href="customizing-output.html#cb46-5" tabindex="-1"></a><span class="at">    </span><span class="fu">number_sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # Number sections in the output</span></span></code></pre></div>
+</div>
+<div id="word-document-bookdownword_document2" class="section level3 hasAnchor" number="6.2.5">
+<h3><span class="header-section-number">6.2.5</span> 5. Word Document (<code>bookdown::word_document2</code>)<a href="customizing-output.html#word-document-bookdownword_document2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generates a Word document (<code>.docx</code>) version of your book, useful for sharing with editors.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb47-1"><a href="customizing-output.html#cb47-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb47-2"><a href="customizing-output.html#cb47-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:word_document2</span><span class="kw">:</span></span>
+<span id="cb47-3"><a href="customizing-output.html#cb47-3" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span><span class="co">  # Include table of contents</span></span>
+<span id="cb47-4"><a href="customizing-output.html#cb47-4" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span><span class="co">  # Depth of table of contents</span></span></code></pre></div>
+</div>
+<div id="tufte-handout-bookdowntufte_html_book-bookdowntufte_pdf_book" class="section level3 hasAnchor" number="6.2.6">
+<h3><span class="header-section-number">6.2.6</span> 6. Tufte Handout (<code>bookdown::tufte_html_book</code> / <code>bookdown::tufte_pdf_book</code>)<a href="customizing-output.html#tufte-handout-bookdowntufte_html_book-bookdowntufte_pdf_book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generates a book in Tufte style, known for its distinctive design, which is suitable for visually focused content.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb48-1"><a href="customizing-output.html#cb48-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb48-2"><a href="customizing-output.html#cb48-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:tufte_html_book</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div>
+<p>For PDF:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb49-1"><a href="customizing-output.html#cb49-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb49-2"><a href="customizing-output.html#cb49-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:tufte_pdf_book</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div>
+</div>
+<div id="html-with-bookdown-specific-features-bookdownhtml_document2" class="section level3 hasAnchor" number="6.2.7">
+<h3><span class="header-section-number">6.2.7</span> 7. HTML with Bookdown-Specific Features (<code>bookdown::html_document2</code>)<a href="customizing-output.html#html-with-bookdown-specific-features-bookdownhtml_document2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Similar to <code>rmarkdown::html_document</code> but includes additional cross-referencing features from Bookdown.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb50-1"><a href="customizing-output.html#cb50-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb50-2"><a href="customizing-output.html#cb50-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:html_document2</span><span class="kw">:</span></span>
+<span id="cb50-3"><a href="customizing-output.html#cb50-3" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb50-4"><a href="customizing-output.html#cb50-4" tabindex="-1"></a><span class="at">    </span><span class="fu">number_sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+</div>
+<div id="github-document-rmarkdowngithub_document" class="section level3 hasAnchor" number="6.2.8">
+<h3><span class="header-section-number">6.2.8</span> 8. GitHub Document (<code>rmarkdown::github_document</code>)<a href="customizing-output.html#github-document-rmarkdowngithub_document" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Produces a document suitable for rendering on GitHub.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb51-1"><a href="customizing-output.html#cb51-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb51-2"><a href="customizing-output.html#cb51-2" tabindex="-1"></a><span class="at">  rmarkdown:</span><span class="fu">:github_document</span><span class="kw">:</span></span>
+<span id="cb51-3"><a href="customizing-output.html#cb51-3" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # Include table of contents</span></span></code></pre></div>
+<hr />
+</div>
+</div>
+<div id="customizing-html-output" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Customizing HTML Output<a href="customizing-output.html#customizing-html-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To customize the HTML format, Bookdown offers the <code>bookdown::gitbook</code> and <code>bookdown::html_document2</code> options:</p>
 <ul>
-<li><p>GitBook: The default HTML style, which includes a side navigation bar and a search function. This format is ideal for online documentation.</p></li>
-<li><p>HTML Document: A simpler format without the sidebar, suitable for single-page reports.</p></li>
+<li><strong>GitBook</strong>: The default HTML style, which includes a side navigation bar and a search function. This format is ideal for online documentation.</li>
+<li><strong>HTML Document</strong>: A simpler format without the sidebar, suitable for single-page reports.</li>
 </ul>
-<p>You can adjust HTML settings in _output.yml:</p>
-<pre><code>bookdown::gitbook:
-  css: &quot;style.css&quot;
-  config:
-    toc:
-      collapse: section
-    download: [&quot;pdf&quot;, &quot;epub&quot;]</code></pre>
+<p>You can adjust HTML settings in <code>_output.yml</code>:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb52-1"><a href="customizing-output.html#cb52-1" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:gitbook</span><span class="kw">:</span></span>
+<span id="cb52-2"><a href="customizing-output.html#cb52-2" tabindex="-1"></a><span class="at">  </span><span class="fu">css</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;style.css&quot;</span></span>
+<span id="cb52-3"><a href="customizing-output.html#cb52-3" tabindex="-1"></a><span class="at">  </span><span class="fu">config</span><span class="kw">:</span></span>
+<span id="cb52-4"><a href="customizing-output.html#cb52-4" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span></span>
+<span id="cb52-5"><a href="customizing-output.html#cb52-5" tabindex="-1"></a><span class="at">      </span><span class="fu">collapse</span><span class="kw">:</span><span class="at"> section</span></span>
+<span id="cb52-6"><a href="customizing-output.html#cb52-6" tabindex="-1"></a><span class="at">    </span><span class="fu">download</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;pdf&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;epub&quot;</span><span class="kw">]</span></span></code></pre></div>
+<hr />
 </div>
-<div id="customizing-the-html-appearance" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Customizing the HTML Appearance<a href="customizing-output.html#customizing-the-html-appearance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you want to style your HTML output further, create a style.css file and link it in _output.yml. Here’s an example of CSS customization:</p>
-<pre><code>/* style.css */
-body {
-  font-family: Arial, sans-serif;
-}
-
-h1, h2, h3 {
-  color: #2A7AE2;
-}
-
-code {
-  background-color: #f5f5f5;
-  padding: 3px;
-}</code></pre>
-<p>This CSS will apply a custom font, change the color of headers, and style code blocks.</p>
-</div>
-<div id="customizing-pdf-output" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Customizing PDF Output<a href="customizing-output.html#customizing-pdf-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To generate a high-quality PDF, you’ll need to install a LaTeX distribution like TinyTeX. If not already installed, you can do so in R:</p>
-<pre><code>install.packages(&quot;tinytex&quot;)
-tinytex::install_tinytex()</code></pre>
+<div id="customizing-pdf-output" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Customizing PDF Output<a href="customizing-output.html#customizing-pdf-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To generate a high-quality PDF, you’ll need to install a LaTeX distribution like TinyTeX.</p>
 <p>In <code>_output.yml</code>, you can specify options to control PDF formatting:</p>
-<pre><code>bookdown::pdf_book:
-  latex_engine: xelatex
-  citation_package: natbib</code></pre>
-<p><code>latex_engine</code>: Specifies the LaTeX engine (e.g., <code>xelatex</code>, <code>pdflatex</code>). Using <code>xelatex</code> improves font compatibility.
-<code>citation_package</code>: Choose between <code>natbib</code> or <code>biblatex</code> for handling citations.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb53-1"><a href="customizing-output.html#cb53-1" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:pdf_book</span><span class="kw">:</span></span>
+<span id="cb53-2"><a href="customizing-output.html#cb53-2" tabindex="-1"></a><span class="at">  </span><span class="fu">latex_engine</span><span class="kw">:</span><span class="at"> xelatex</span></span>
+<span id="cb53-3"><a href="customizing-output.html#cb53-3" tabindex="-1"></a><span class="at">  </span><span class="fu">citation_package</span><span class="kw">:</span><span class="at"> natbib</span></span></code></pre></div>
+<ul>
+<li><strong><code>latex_engine</code></strong>: Specifies the LaTeX engine (e.g., <code>xelatex</code>, <code>pdflatex</code>). Using <code>xelatex</code> improves font compatibility.</li>
+<li><strong><code>citation_package</code></strong>: Choose between <code>natbib</code> or <code>biblatex</code> for handling citations.</li>
+</ul>
+<div id="document-size" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Document Size<a href="customizing-output.html#document-size" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To customize the size of your PDF document, you can modify the <code>geometry</code> option in the LaTeX preamble. For example, to set the paper size to A4 and customize the margins:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb54-1"><a href="customizing-output.html#cb54-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb54-2"><a href="customizing-output.html#cb54-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:pdf_book</span><span class="kw">:</span></span>
+<span id="cb54-3"><a href="customizing-output.html#cb54-3" tabindex="-1"></a><span class="at">    </span><span class="fu">includes</span><span class="kw">:</span></span>
+<span id="cb54-4"><a href="customizing-output.html#cb54-4" tabindex="-1"></a><span class="at">      </span><span class="fu">in_header</span><span class="kw">:</span><span class="at"> preamble.tex</span></span></code></pre></div>
+<p>In the <code>preamble.tex</code> file, add:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb55-1"><a href="customizing-output.html#cb55-1" tabindex="-1"></a><span class="bu">\usepackage</span>[paperwidth=5.5in, paperheight=8.5in, margin=0.75in]{<span class="ex">geometry</span>}</span></code></pre></div>
+<p>This sets the document size to A4 and the margins to 1 inch.</p>
 </div>
-<div id="customizing-the-pdf-appearance" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Customizing the PDF Appearance<a href="customizing-output.html#customizing-the-pdf-appearance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>PDF customization often involves LaTeX commands. You can define appearance settings by adding a <code>preamble.tex</code> file and linking it in <code>_output.yml</code>:</p>
-<pre><code>bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex</code></pre>
-<p>For example, to adjust line spacing and font size in <code>preamble.tex</code>:</p>
-<pre><code>\usepackage{setspace}
-\onehalfspacing
-\usepackage{geometry}
-\geometry{margin=1in}</code></pre>
-<p>This customization adjusts the line spacing to 1.5 and sets the page margins to 1 inch.</p>
+<div id="document-type" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Document Type<a href="customizing-output.html#document-type" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can change the document type by modifying the LaTeX class used in the <code>preamble.tex</code>. For example, use the <code>article</code> class instead of the default <code>book</code> class:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb56-1"><a href="customizing-output.html#cb56-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span></code></pre></div>
+<p>This is useful for a more compact layout, like that of a research paper or report.</p>
 </div>
-<div id="customizing-epub-output" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> Customizing EPUB Output<a href="customizing-output.html#customizing-epub-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="latex-engine" class="section level3 hasAnchor" number="6.4.3">
+<h3><span class="header-section-number">6.4.3</span> LaTeX Engine<a href="customizing-output.html#latex-engine" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can specify the LaTeX engine used to compile your PDF. Bookdown supports different engines, such as <code>pdflatex</code>, <code>xelatex</code>, and <code>lualatex</code>.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb57-1"><a href="customizing-output.html#cb57-1" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb57-2"><a href="customizing-output.html#cb57-2" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:pdf_book</span><span class="kw">:</span></span>
+<span id="cb57-3"><a href="customizing-output.html#cb57-3" tabindex="-1"></a><span class="at">    </span><span class="fu">latex_engine</span><span class="kw">:</span><span class="at"> xelatex</span></span></code></pre></div>
+<p>Using <code>xelatex</code> or <code>lualatex</code> provides better font support, especially for special characters or non-Latin scripts.</p>
+</div>
+<div id="custom-latex-packages" class="section level3 hasAnchor" number="6.4.4">
+<h3><span class="header-section-number">6.4.4</span> Custom LaTeX Packages<a href="customizing-output.html#custom-latex-packages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Include custom LaTeX packages in the <code>preamble.tex</code> file to extend the functionality of your PDF output.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb58-1"><a href="customizing-output.html#cb58-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span></code></pre></div>
+<p>This includes the <code>amsmath</code> package for advanced mathematical formatting. You can also use <code>\newcommand</code> to define custom commands used throughout your document.</p>
+</div>
+<div id="page-layout-customization" class="section level3 hasAnchor" number="6.4.5">
+<h3><span class="header-section-number">6.4.5</span> Page Layout Customization<a href="customizing-output.html#page-layout-customization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To customize the page layout, use packages like <code>fancyhdr</code> to modify headers and footers.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb59-1"><a href="customizing-output.html#cb59-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">fancyhdr</span>}</span>
+<span id="cb59-2"><a href="customizing-output.html#cb59-2" tabindex="-1"></a><span class="fu">\pagestyle</span>{fancy}</span>
+<span id="cb59-3"><a href="customizing-output.html#cb59-3" tabindex="-1"></a><span class="fu">\fancyhead</span>[LE,RO]{Your Book Title}</span>
+<span id="cb59-4"><a href="customizing-output.html#cb59-4" tabindex="-1"></a><span class="fu">\fancyfoot</span>[CE,CO]{<span class="fu">\thepage</span>}</span></code></pre></div>
+<p>This sets custom headers and footers, including the book title and page numbers.</p>
+<hr />
+</div>
+</div>
+<div id="customizing-epub-output" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Customizing EPUB Output<a href="customizing-output.html#customizing-epub-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To create an EPUB e-book, use <code>bookdown::epub_book</code> in <code>_output.yml</code>. Bookdown handles most EPUB formatting automatically, but you can make some modifications:</p>
-<pre><code>bookdown::epub_book:
-  stylesheet: &quot;style.css&quot;
-  cover_image: &quot;images/cover.jpg&quot;
-  toc: yes</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb60-1"><a href="customizing-output.html#cb60-1" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:epub_book</span><span class="kw">:</span></span>
+<span id="cb60-2"><a href="customizing-output.html#cb60-2" tabindex="-1"></a><span class="at">  </span><span class="fu">stylesheet</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;style.css&quot;</span></span>
+<span id="cb60-3"><a href="customizing-output.html#cb60-3" tabindex="-1"></a><span class="at">  </span><span class="fu">cover_image</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;images/cover.jpg&quot;</span></span>
+<span id="cb60-4"><a href="customizing-output.html#cb60-4" tabindex="-1"></a><span class="at">  </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span></code></pre></div>
 <p>This configuration adds a cover image, applies the CSS stylesheet, and includes a table of contents.</p>
+<hr />
 </div>
-<div id="specifying-global-settings-in-_bookdown.yml" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Specifying Global Settings in <code>_bookdown.yml</code><a href="customizing-output.html#specifying-global-settings-in-_bookdown.yml" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="specifying-global-settings-in-_bookdown.yml" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Specifying Global Settings in <code>_bookdown.yml</code><a href="customizing-output.html#specifying-global-settings-in-_bookdown.yml" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <code>_bookdown.yml</code> file allows you to set global configurations, such as the order of chapters, the naming convention for output files, and the label format for figures and tables. Here’s an example:</p>
-<pre><code>book_filename: &quot;my-book&quot;
-rmd_files: [&quot;index.Rmd&quot;, &quot;01-introduction.Rmd&quot;, &quot;02-writing-structuring-content.Rmd&quot;, &quot;03-customizing-output.Rmd&quot;]
-language:
-  label:
-    fig: &quot;Figure &quot;
-    tab: &quot;Table &quot;
-delete_merged_file: true</code></pre>
-<p><code>book_filename</code>: Sets the base filename for output files.
-<code>rmd_files</code>: Specifies the order of chapters.
-<code>language.label</code>: Customizes labels for figures and tables.
-<code>delete_merged_file</code>: Deletes intermediary files after rendering, keeping the directory clean.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb61-1"><a href="customizing-output.html#cb61-1" tabindex="-1"></a><span class="fu">book_filename</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;my-book&quot;</span></span>
+<span id="cb61-2"><a href="customizing-output.html#cb61-2" tabindex="-1"></a><span class="fu">rmd_files</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;index.Rmd&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;01-introduction.Rmd&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;02-writing-structuring-content.Rmd&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;03-customizing-output.Rmd&quot;</span><span class="kw">]</span></span>
+<span id="cb61-3"><a href="customizing-output.html#cb61-3" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span></span>
+<span id="cb61-4"><a href="customizing-output.html#cb61-4" tabindex="-1"></a><span class="at">  </span><span class="fu">label</span><span class="kw">:</span></span>
+<span id="cb61-5"><a href="customizing-output.html#cb61-5" tabindex="-1"></a><span class="at">    </span><span class="fu">fig</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Figure &quot;</span></span>
+<span id="cb61-6"><a href="customizing-output.html#cb61-6" tabindex="-1"></a><span class="at">    </span><span class="fu">tab</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Table &quot;</span></span>
+<span id="cb61-7"><a href="customizing-output.html#cb61-7" tabindex="-1"></a><span class="fu">delete_merged_file</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+<ul>
+<li><strong><code>book_filename</code></strong>: Sets the base filename for output files.</li>
+<li><strong><code>rmd_files</code></strong>: Specifies the order of chapters.</li>
+<li><strong><code>language.label</code></strong>: Customizes labels for figures and tables.</li>
+<li><strong><code>delete_merged_file</code></strong>: Deletes intermediary files after rendering, keeping the directory clean.</li>
+</ul>
+<hr />
 </div>
-<div id="example-output" class="section level2 hasAnchor" number="4.8">
-<h2><span class="header-section-number">4.8</span> Example Output<a href="customizing-output.html#example-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-output" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Example Output<a href="customizing-output.html#example-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To render all formats simultaneously, you can use the <code>render_book()</code> function in the R console:</p>
-<pre><code>bookdown::render_book(&quot;index.Rmd&quot;, output_format = &quot;all&quot;)</code></pre>
-<p>This command generates HTML, PDF, and EPUB files as specified in _output.yml.</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="customizing-output.html#cb62-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>(<span class="st">&quot;index.Rmd&quot;</span>, <span class="at">output_format =</span> <span class="st">&quot;all&quot;</span>)</span></code></pre></div>
+<p>This command generates HTML, PDF, and EPUB files as specified in <code>_output.yml</code>.</p>
+<p><strong>EXERCISE TIME!</strong>
+Modify your Bookdown project’s _output.yml to customize the output format. Try changing the appearance of the HTML and PDF outputs. Write a paragraph explaining how the customizations improved the document’s look and usability.</p>
 
 </div>
 </div>
@@ -390,8 +615,8 @@ delete_merged_file: true</code></pre>
           </div>
         </div>
       </div>
-<a href="cross.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="advanced-features-and-practical-example.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="latex-in-bookdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="advanced-features.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -422,7 +647,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-parts.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-Customizing-output.Rmd",
 "text": "Edit"
 },
 "history": {

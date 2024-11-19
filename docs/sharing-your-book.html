@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Sharing your book | Bookdown: Flexible Document Creation in RStudio</title>
+  <title>Chapter 8 Sharing your book | Bookdown: Flexible Document Creation in RStudio</title>
   <meta name="description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Sharing your book | Bookdown: Flexible Document Creation in RStudio" />
+  <meta property="og:title" content="Chapter 8 Sharing your book | Bookdown: Flexible Document Creation in RStudio" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/Bookcover.png" />
   <meta property="og:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Sharing your book | Bookdown: Flexible Document Creation in RStudio" />
+  <meta name="twitter:title" content="Chapter 8 Sharing your book | Bookdown: Flexible Document Creation in RStudio" />
   
   <meta name="twitter:description" content="<p>This tutorial demonstrates how to use the bookdown package to write structured and reproducible documents.
 The HTML output format for this example is bookdown::gitbook,
@@ -35,8 +35,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="blocks.html"/>
-<link rel="next" href="drought-in-california.html"/>
+<link rel="prev" href="customizing-output.html"/>
+<link rel="next" href="latex-distributions-for-bookdown.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -165,91 +165,174 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Introduction Tutorial to Bookdown</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to RStudio and Bookdown</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#why-rstudio-and-bookdown"><i class="fa fa-check"></i><b>1.1</b> Why RStudio and Bookdown?</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#what-youll-learn-in-this-tutorial"><i class="fa fa-check"></i><b>1.2</b> What You’ll Learn in This Tutorial</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#getting-started"><i class="fa fa-check"></i><b>1.3</b> Getting Started</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html"><i class="fa fa-check"></i><b>2</b> Writing and Structuring Content</a>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a></li>
+<li class="chapter" data-level="3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html"><i class="fa fa-check"></i><b>3</b> Writing and Structuring Content</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#creatingchapters"><i class="fa fa-check"></i><b>2.1</b> Creating Chapters and Sections</a></li>
-<li class="chapter" data-level="2.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-sections-and-subsections"><i class="fa fa-check"></i><b>2.2</b> Adding Sections and Subsections</a></li>
-<li class="chapter" data-level="2.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#formatting-text-in-bookdown"><i class="fa fa-check"></i><b>2.3</b> Formatting Text in Bookdown</a></li>
-<li class="chapter" data-level="2.4" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-code-chunks"><i class="fa fa-check"></i><b>2.4</b> Adding Code Chunks</a>
+<li class="chapter" data-level="3.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#creatingchapters"><i class="fa fa-check"></i><b>3.1</b> Creating Chapters and Sections</a></li>
+<li class="chapter" data-level="3.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-sections-and-subsections"><i class="fa fa-check"></i><b>3.2</b> Adding Sections and Subsections</a></li>
+<li class="chapter" data-level="3.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#formatting-text-in-bookdown"><i class="fa fa-check"></i><b>3.3</b> Formatting Text in Bookdown</a></li>
+<li class="chapter" data-level="3.4" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#adding-code-chunks"><i class="fa fa-check"></i><b>3.4</b> Adding Code Chunks</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#customizing-code-chunk-options"><i class="fa fa-check"></i><b>2.4.1</b> Customizing Code Chunk Options</a></li>
+<li class="chapter" data-level="3.4.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#customizing-code-chunk-options"><i class="fa fa-check"></i><b>3.4.1</b> Customizing Code Chunk Options</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections-figures-and-tables"><i class="fa fa-check"></i><b>2.5</b> Cross-Referencing Sections, Figures, and Tables</a>
+<li class="chapter" data-level="3.5" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections-figures-and-tables"><i class="fa fa-check"></i><b>3.5</b> Cross-Referencing Sections, Figures, and Tables</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections"><i class="fa fa-check"></i><b>2.5.1</b> Cross-Referencing Sections</a></li>
-<li class="chapter" data-level="2.5.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-figures"><i class="fa fa-check"></i><b>2.5.2</b> Cross-Referencing Figures</a></li>
-<li class="chapter" data-level="2.5.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-tables"><i class="fa fa-check"></i><b>2.5.3</b> Cross-Referencing Tables</a></li>
+<li class="chapter" data-level="3.5.1" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-sections"><i class="fa fa-check"></i><b>3.5.1</b> Cross-Referencing Sections</a></li>
+<li class="chapter" data-level="3.5.2" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-figures"><i class="fa fa-check"></i><b>3.5.2</b> Cross-Referencing Figures</a></li>
+<li class="chapter" data-level="3.5.3" data-path="writing-and-structuring-content.html"><a href="writing-and-structuring-content.html#cross-referencing-tables"><i class="fa fa-check"></i><b>3.5.3</b> Cross-Referencing Tables</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<li class="chapter" data-level="4" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>4</b> Cross-references</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
-<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
+<li class="chapter" data-level="4.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>4.1</b> Chapters and Sub-Chapters</a></li>
+<li class="chapter" data-level="4.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>4.2</b> Captioned Figures and Tables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="cross.html"><a href="cross.html#cross-referencing-figures-1"><i class="fa fa-check"></i><b>4.2.1</b> Cross-Referencing Figures</a></li>
+<li class="chapter" data-level="4.2.2" data-path="cross.html"><a href="cross.html#cross-referencing-tables-1"><i class="fa fa-check"></i><b>4.2.2</b> Cross-Referencing Tables</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="customizing-output.html"><a href="customizing-output.html"><i class="fa fa-check"></i><b>4</b> Customizing Output</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="customizing-output.html"><a href="customizing-output.html#choosing-an-output-format"><i class="fa fa-check"></i><b>4.1</b> Choosing an Output Format</a></li>
-<li class="chapter" data-level="4.2" data-path="customizing-output.html"><a href="customizing-output.html#customizing-html-output"><i class="fa fa-check"></i><b>4.2</b> Customizing HTML Output</a></li>
-<li class="chapter" data-level="4.3" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-html-appearance"><i class="fa fa-check"></i><b>4.3</b> Customizing the HTML Appearance</a></li>
-<li class="chapter" data-level="4.4" data-path="customizing-output.html"><a href="customizing-output.html#customizing-pdf-output"><i class="fa fa-check"></i><b>4.4</b> Customizing PDF Output</a></li>
-<li class="chapter" data-level="4.5" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-pdf-appearance"><i class="fa fa-check"></i><b>4.5</b> Customizing the PDF Appearance</a></li>
-<li class="chapter" data-level="4.6" data-path="customizing-output.html"><a href="customizing-output.html#customizing-epub-output"><i class="fa fa-check"></i><b>4.6</b> Customizing EPUB Output</a></li>
-<li class="chapter" data-level="4.7" data-path="customizing-output.html"><a href="customizing-output.html#specifying-global-settings-in-_bookdown.yml"><i class="fa fa-check"></i><b>4.7</b> Specifying Global Settings in <code>_bookdown.yml</code></a></li>
-<li class="chapter" data-level="4.8" data-path="customizing-output.html"><a href="customizing-output.html#example-output"><i class="fa fa-check"></i><b>4.8</b> Example Output</a></li>
+<li class="chapter" data-level="4.3" data-path="cross.html"><a href="cross.html#summary"><i class="fa fa-check"></i><b>4.3</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html"><i class="fa fa-check"></i><b>5</b> Advanced Features and Practical Example</a>
+<li class="chapter" data-level="5" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html"><i class="fa fa-check"></i><b>5</b> LaTeX in Bookdown</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#adding-citations-and-managing-references"><i class="fa fa-check"></i><b>5.1</b> Adding Citations and Managing References</a>
+<li class="chapter" data-level="5.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#including-latex-packages-in-bookdown"><i class="fa fa-check"></i><b>5.1</b> Including LaTeX Packages in Bookdown</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-create-a-.bib-file"><i class="fa fa-check"></i><b>5.1.1</b> Step 1: Create a <code>.bib</code> File</a></li>
-<li class="chapter" data-level="5.1.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-link-the-.bib-file-in-index.rmd"><i class="fa fa-check"></i><b>5.1.2</b> Step 2: Link the <code>.bib</code> File in <code>index.Rmd</code></a></li>
-<li class="chapter" data-level="5.1.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-cite-sources-in-your-text"><i class="fa fa-check"></i><b>5.1.3</b> Step 3: Cite Sources in Your Text</a></li>
-<li class="chapter" data-level="5.1.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-customize-citation-style-optional"><i class="fa fa-check"></i><b>5.1.4</b> Step 4: Customize Citation Style (Optional)</a></li>
+<li class="chapter" data-level="5.1.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#using-a-preamble.tex-file"><i class="fa fa-check"></i><b>5.1.1</b> Using a <code>preamble.tex</code> File</a></li>
+<li class="chapter" data-level="5.1.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#debugging-errors"><i class="fa fa-check"></i><b>5.1.2</b> Debugging Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#using-cross-references-with-citations"><i class="fa fa-check"></i><b>5.2</b> Using Cross-References with Citations</a></li>
-<li class="chapter" data-level="5.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#practical-example-incorporating-an-existing-paper"><i class="fa fa-check"></i><b>5.3</b> Practical Example: Incorporating an Existing Paper</a>
+<li class="chapter" data-level="5.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#mathematical-equations"><i class="fa fa-check"></i><b>5.2</b> Mathematical Equations</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-import-the-document-content"><i class="fa fa-check"></i><b>5.3.1</b> Step 1: Import the Document Content</a></li>
-<li class="chapter" data-level="5.3.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-add-figures-and-tables"><i class="fa fa-check"></i><b>5.3.2</b> Step 2: Add Figures and Tables</a></li>
-<li class="chapter" data-level="5.3.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-integrate-citations"><i class="fa fa-check"></i><b>5.3.3</b> Step 3: Integrate Citations</a></li>
-<li class="chapter" data-level="5.3.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-create-a-table-of-contents-and-links"><i class="fa fa-check"></i><b>5.3.4</b> Step 4: Create a Table of Contents and Links</a></li>
+<li class="chapter" data-level="5.2.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#inline-equations"><i class="fa fa-check"></i><b>5.2.1</b> Inline Equations</a></li>
+<li class="chapter" data-level="5.2.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#display-equations"><i class="fa fa-check"></i><b>5.2.2</b> Display Equations</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#example-output-and-render-settings"><i class="fa fa-check"></i><b>5.4</b> Example Output and Render Settings</a></li>
-<li class="chapter" data-level="5.5" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#conclusion"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<li class="chapter" data-level="5.3" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#theorems-lemmas-and-proofs"><i class="fa fa-check"></i><b>5.3</b> Theorems, Lemmas, and Proofs</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
-<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
-<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
+<li class="chapter" data-level="5.3.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-theorem"><i class="fa fa-check"></i><b>5.3.1</b> Adding a Theorem</a></li>
+<li class="chapter" data-level="5.3.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-lemma"><i class="fa fa-check"></i><b>5.3.2</b> Adding a Lemma</a></li>
+<li class="chapter" data-level="5.3.3" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#adding-a-proof"><i class="fa fa-check"></i><b>5.3.3</b> Adding a Proof</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<li class="chapter" data-level="5.4" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#cross-referencing"><i class="fa fa-check"></i><b>5.4</b> Cross-Referencing</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
-<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
-<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+<li class="chapter" data-level="5.4.1" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#referencing-sections"><i class="fa fa-check"></i><b>5.4.1</b> Referencing Sections</a></li>
+<li class="chapter" data-level="5.4.2" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#referencing-equations-figures-and-tables"><i class="fa fa-check"></i><b>5.4.2</b> Referencing Equations, Figures, and Tables</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="drought-in-california.html"><a href="drought-in-california.html"><i class="fa fa-check"></i><b>8</b> Drought in California</a>
+<li class="chapter" data-level="5.5" data-path="latex-in-bookdown.html"><a href="latex-in-bookdown.html#tips-for-latex-in-bookdown"><i class="fa fa-check"></i><b>5.5</b> Tips for LaTeX in Bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html"><i class="fa fa-check"></i><b>6</b> Advanced Features and Practical Example</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="drought-in-california.html"><a href="drought-in-california.html#introduction"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2" data-path="drought-in-california.html"><a href="drought-in-california.html#types-of-droughts"><i class="fa fa-check"></i><b>8.2</b> Types of Droughts</a></li>
-<li class="chapter" data-level="8.3" data-path="drought-in-california.html"><a href="drought-in-california.html#causes-of-drought-in-california"><i class="fa fa-check"></i><b>8.3</b> Causes of Drought in California</a></li>
-<li class="chapter" data-level="8.4" data-path="drought-in-california.html"><a href="drought-in-california.html#socioeconomic-impacts"><i class="fa fa-check"></i><b>8.4</b> Socioeconomic Impacts</a></li>
-<li class="chapter" data-level="8.5" data-path="drought-in-california.html"><a href="drought-in-california.html#wildfire-risk"><i class="fa fa-check"></i><b>8.5</b> Wildfire Risk</a></li>
-<li class="chapter" data-level="8.6" data-path="drought-in-california.html"><a href="drought-in-california.html#climate-change-and-drought"><i class="fa fa-check"></i><b>8.6</b> Climate Change and Drought</a></li>
-<li class="chapter" data-level="8.7" data-path="drought-in-california.html"><a href="drought-in-california.html#mitigation-strategies"><i class="fa fa-check"></i><b>8.7</b> Mitigation Strategies</a></li>
-<li class="chapter" data-level="8.8" data-path="drought-in-california.html"><a href="drought-in-california.html#conclusion-1"><i class="fa fa-check"></i><b>8.8</b> Conclusion</a></li>
+<li class="chapter" data-level="6.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#adding-citations-and-managing-references"><i class="fa fa-check"></i><b>6.1</b> Adding Citations and Managing References</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-create-a-.bib-file"><i class="fa fa-check"></i><b>6.1.1</b> Step 1: Create a <code>.bib</code> File</a></li>
+<li class="chapter" data-level="6.1.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-link-the-.bib-file-in-index.rmd"><i class="fa fa-check"></i><b>6.1.2</b> Step 2: Link the <code>.bib</code> File in <code>index.Rmd</code></a></li>
+<li class="chapter" data-level="6.1.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-cite-sources-in-your-text"><i class="fa fa-check"></i><b>6.1.3</b> Step 3: Cite Sources in Your Text</a></li>
+<li class="chapter" data-level="6.1.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-customize-citation-style-optional"><i class="fa fa-check"></i><b>6.1.4</b> Step 4: Customize Citation Style (Optional)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#using-cross-references-with-citations"><i class="fa fa-check"></i><b>6.2</b> Using Cross-References with Citations</a></li>
+<li class="chapter" data-level="6.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#practical-example-incorporating-an-existing-paper"><i class="fa fa-check"></i><b>6.3</b> Practical Example: Incorporating an Existing Paper</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-1-import-the-document-content"><i class="fa fa-check"></i><b>6.3.1</b> Step 1: Import the Document Content</a></li>
+<li class="chapter" data-level="6.3.2" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-2-add-figures-and-tables"><i class="fa fa-check"></i><b>6.3.2</b> Step 2: Add Figures and Tables</a></li>
+<li class="chapter" data-level="6.3.3" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-3-integrate-citations"><i class="fa fa-check"></i><b>6.3.3</b> Step 3: Integrate Citations</a></li>
+<li class="chapter" data-level="6.3.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#step-4-create-a-table-of-contents-and-links"><i class="fa fa-check"></i><b>6.3.4</b> Step 4: Create a Table of Contents and Links</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#example-output-and-render-settings"><i class="fa fa-check"></i><b>6.4</b> Example Output and Render Settings</a></li>
+<li class="chapter" data-level="6.5" data-path="advanced-features-and-practical-example.html"><a href="advanced-features-and-practical-example.html#conclusion"><i class="fa fa-check"></i><b>6.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="customizing-output.html"><a href="customizing-output.html"><i class="fa fa-check"></i><b>7</b> Customizing Output</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="customizing-output.html"><a href="customizing-output.html#choosing-an-output-format"><i class="fa fa-check"></i><b>7.1</b> Choosing an Output Format</a></li>
+<li class="chapter" data-level="7.2" data-path="customizing-output.html"><a href="customizing-output.html#customizing-html-output"><i class="fa fa-check"></i><b>7.2</b> Customizing HTML Output</a></li>
+<li class="chapter" data-level="7.3" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-html-appearance"><i class="fa fa-check"></i><b>7.3</b> Customizing the HTML Appearance</a></li>
+<li class="chapter" data-level="7.4" data-path="customizing-output.html"><a href="customizing-output.html#customizing-pdf-output"><i class="fa fa-check"></i><b>7.4</b> Customizing PDF Output</a></li>
+<li class="chapter" data-level="7.5" data-path="customizing-output.html"><a href="customizing-output.html#customizing-the-pdf-appearance"><i class="fa fa-check"></i><b>7.5</b> Customizing the PDF Appearance</a></li>
+<li class="chapter" data-level="7.6" data-path="customizing-output.html"><a href="customizing-output.html#customizing-epub-output"><i class="fa fa-check"></i><b>7.6</b> Customizing EPUB Output</a></li>
+<li class="chapter" data-level="7.7" data-path="customizing-output.html"><a href="customizing-output.html#specifying-global-settings-in-_bookdown.yml"><i class="fa fa-check"></i><b>7.7</b> Specifying Global Settings in <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="7.8" data-path="customizing-output.html"><a href="customizing-output.html#example-output"><i class="fa fa-check"></i><b>7.8</b> Example Output</a></li>
+<li class="chapter" data-level="7.9" data-path="customizing-output.html"><a href="customizing-output.html#blocks"><i class="fa fa-check"></i><b>7.9</b> Blocks</a></li>
+<li class="chapter" data-level="7.10" data-path="customizing-output.html"><a href="customizing-output.html#equations"><i class="fa fa-check"></i><b>7.10</b> Equations</a></li>
+<li class="chapter" data-level="7.11" data-path="customizing-output.html"><a href="customizing-output.html#theorems-and-proofs"><i class="fa fa-check"></i><b>7.11</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="7.12" data-path="customizing-output.html"><a href="customizing-output.html#callout-blocks"><i class="fa fa-check"></i><b>7.12</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>8</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>8.1</b> Publishing</a></li>
+<li class="chapter" data-level="8.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>8.2</b> 404 pages</a></li>
+<li class="chapter" data-level="8.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>8.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html"><i class="fa fa-check"></i><b>9</b> LaTeX Distributions for Bookdown</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#recommended-latex-distributions"><i class="fa fa-check"></i><b>9.1</b> Recommended LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#tinytex-recommended"><i class="fa fa-check"></i><b>9.1.1</b> 1. <strong>TinyTeX</strong> (Recommended)</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#additional-latex-distributions"><i class="fa fa-check"></i><b>9.2</b> Additional LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#tex-live"><i class="fa fa-check"></i><b>9.2.1</b> 2. <strong>TeX Live</strong></a></li>
+<li class="chapter" data-level="9.2.2" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#miktex"><i class="fa fa-check"></i><b>9.2.2</b> 3. <strong>MikTeX</strong></a></li>
+<li class="chapter" data-level="9.2.3" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#mactex-for-macos"><i class="fa fa-check"></i><b>9.2.3</b> 4. <strong>MacTeX</strong> (for macOS)</a></li>
+<li class="chapter" data-level="9.2.4" data-path="latex-distributions-for-bookdown.html"><a href="latex-distributions-for-bookdown.html#protext-for-windows"><i class="fa fa-check"></i><b>9.2.4</b> 5. <strong>ProTeXt</strong> (for Windows)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="drought-in-california.html"><a href="drought-in-california.html"><i class="fa fa-check"></i><b>10</b> Drought in California</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="drought-in-california.html"><a href="drought-in-california.html#introduction"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="drought-in-california.html"><a href="drought-in-california.html#types-of-droughts"><i class="fa fa-check"></i><b>10.2</b> Types of Droughts</a></li>
+<li class="chapter" data-level="10.3" data-path="drought-in-california.html"><a href="drought-in-california.html#causes-of-drought-in-california"><i class="fa fa-check"></i><b>10.3</b> Causes of Drought in California</a></li>
+<li class="chapter" data-level="10.4" data-path="drought-in-california.html"><a href="drought-in-california.html#socioeconomic-impacts"><i class="fa fa-check"></i><b>10.4</b> Socioeconomic Impacts</a></li>
+<li class="chapter" data-level="10.5" data-path="drought-in-california.html"><a href="drought-in-california.html#wildfire-risk"><i class="fa fa-check"></i><b>10.5</b> Wildfire Risk</a></li>
+<li class="chapter" data-level="10.6" data-path="drought-in-california.html"><a href="drought-in-california.html#climate-change-and-drought"><i class="fa fa-check"></i><b>10.6</b> Climate Change and Drought</a></li>
+<li class="chapter" data-level="10.7" data-path="drought-in-california.html"><a href="drought-in-california.html#mitigation-strategies"><i class="fa fa-check"></i><b>10.7</b> Mitigation Strategies</a></li>
+<li class="chapter" data-level="10.8" data-path="drought-in-california.html"><a href="drought-in-california.html#conclusion-1"><i class="fa fa-check"></i><b>10.8</b> Conclusion</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="11" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html"><i class="fa fa-check"></i><b>11</b> LaTeX in Bookdown</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#including-latex-packages-in-bookdown-1"><i class="fa fa-check"></i><b>11.1</b> Including LaTeX Packages in Bookdown</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#using-a-preamble.tex-file-1"><i class="fa fa-check"></i><b>11.1.1</b> Using a <code>preamble.tex</code> File</a></li>
+<li class="chapter" data-level="11.1.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#example-using-amsmath"><i class="fa fa-check"></i><b>11.1.2</b> Example: Using AMSMath</a></li>
+<li class="chapter" data-level="11.1.3" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#adding-multiple-packages"><i class="fa fa-check"></i><b>11.1.3</b> Adding Multiple Packages</a></li>
+<li class="chapter" data-level="11.1.4" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#tips-for-using-latex-packages"><i class="fa fa-check"></i><b>11.1.4</b> Tips for Using LaTeX Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#mathematical-equations-1"><i class="fa fa-check"></i><b>11.2</b> Mathematical Equations</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#inline-equations-1"><i class="fa fa-check"></i><b>11.2.1</b> Inline Equations</a></li>
+<li class="chapter" data-level="11.2.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#display-equations-1"><i class="fa fa-check"></i><b>11.2.2</b> Display Equations</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#theorems-lemmas-and-proofs-1"><i class="fa fa-check"></i><b>11.3</b> Theorems, Lemmas, and Proofs</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#adding-a-theorem-1"><i class="fa fa-check"></i><b>11.3.1</b> Adding a Theorem</a></li>
+<li class="chapter" data-level="11.3.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#adding-a-lemma-1"><i class="fa fa-check"></i><b>11.3.2</b> Adding a Lemma</a></li>
+<li class="chapter" data-level="11.3.3" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#adding-a-proof-1"><i class="fa fa-check"></i><b>11.3.3</b> Adding a Proof</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#cross-referencing-1"><i class="fa fa-check"></i><b>11.4</b> Cross-Referencing</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#referencing-sections-1"><i class="fa fa-check"></i><b>11.4.1</b> Referencing Sections</a></li>
+<li class="chapter" data-level="11.4.2" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#referencing-equations-figures-and-tables-1"><i class="fa fa-check"></i><b>11.4.2</b> Referencing Equations, Figures, and Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="latex-in-bookdown-1.html"><a href="latex-in-bookdown-1.html#tips-for-latex-in-bookdown-1"><i class="fa fa-check"></i><b>11.5</b> Tips for LaTeX in Bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="latex-distributions.html"><a href="latex-distributions.html"><i class="fa fa-check"></i><b>12</b> LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="latex-distributions.html"><a href="latex-distributions.html#recommended-latex-distribution"><i class="fa fa-check"></i><b>12.1</b> Recommended LaTeX Distribution</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="latex-distributions.html"><a href="latex-distributions.html#tinytex-recommended-1"><i class="fa fa-check"></i><b>12.1.1</b> 1. <strong>TinyTeX</strong> (Recommended)</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="latex-distributions.html"><a href="latex-distributions.html#additional-latex-distributions-1"><i class="fa fa-check"></i><b>12.2</b> Additional LaTeX Distributions</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="latex-distributions.html"><a href="latex-distributions.html#tex-live-1"><i class="fa fa-check"></i><b>12.2.1</b> 2. <strong>TeX Live</strong></a></li>
+<li class="chapter" data-level="12.2.2" data-path="latex-distributions.html"><a href="latex-distributions.html#miktex-1"><i class="fa fa-check"></i><b>12.2.2</b> 3. <strong>MikTeX</strong></a></li>
+<li class="chapter" data-level="12.2.3" data-path="latex-distributions.html"><a href="latex-distributions.html#mactex-for-macos-1"><i class="fa fa-check"></i><b>12.2.3</b> 4. <strong>MacTeX</strong> (for macOS)</a></li>
+<li class="chapter" data-level="12.2.4" data-path="latex-distributions.html"><a href="latex-distributions.html#protext-for-windows-1"><i class="fa fa-check"></i><b>12.2.4</b> 5. <strong>ProTeXt</strong> (for Windows)</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -270,26 +353,25 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sharing-your-book" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Sharing your book<a href="sharing-your-book.html#sharing-your-book" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="publishing" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> Publishing<a href="sharing-your-book.html#publishing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sharing-your-book" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Sharing your book<a href="sharing-your-book.html#sharing-your-book" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="publishing" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Publishing<a href="sharing-your-book.html#publishing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>HTML books can be published online, see: <a href="https://bookdown.org/yihui/bookdown/publishing.html" class="uri">https://bookdown.org/yihui/bookdown/publishing.html</a></p>
 </div>
-<div id="pages" class="section level2 hasAnchor" number="7.2">
-<h2><span class="header-section-number">7.2</span> 404 pages<a href="sharing-your-book.html#pages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="pages" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> 404 pages<a href="sharing-your-book.html#pages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you’d like to customize your 404 page instead of using the default, you may add either a <code>_404.Rmd</code> or <code>_404.md</code> file to your project root and use code and/or Markdown syntax.</p>
 </div>
-<div id="metadata-for-sharing" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Metadata for sharing<a href="sharing-your-book.html#metadata-for-sharing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="metadata-for-sharing" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Metadata for sharing<a href="sharing-your-book.html#metadata-for-sharing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the <code>index.Rmd</code> YAML. To setup, set the <code>url</code> for your book and the path to your <code>cover-image</code> file. Your book’s <code>title</code> and <code>description</code> are also used.</p>
 <p>This <code>gitbook</code> uses the same social sharing data across all chapters in your book- all links shared will look the same.</p>
 <p>Specify your book’s source repository on GitHub using the <code>edit</code> key under the configuration options in the <code>_output.yml</code> file, which allows users to suggest an edit by linking to a chapter’s source file.</p>
 <p>Read more about the features of this output format here:</p>
 <p><a href="https://pkgs.rstudio.com/bookdown/reference/gitbook.html" class="uri">https://pkgs.rstudio.com/bookdown/reference/gitbook.html</a></p>
 <p>Or use:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="sharing-your-book.html#cb34-1" tabindex="-1"></a>?bookdown<span class="sc">::</span>gitbook</span></code></pre></div>
-
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="sharing-your-book.html#cb59-1" tabindex="-1"></a>?bookdown<span class="sc">::</span>gitbook</span></code></pre></div>
 </div>
 </div>
             </section>
@@ -297,8 +379,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="blocks.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="drought-in-california.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="customizing-output.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="latex-distributions-for-bookdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -329,7 +411,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-share.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-advanced-features.Rmd",
 "text": "Edit"
 },
 "history": {
